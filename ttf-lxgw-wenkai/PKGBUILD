@@ -16,19 +16,16 @@ sha256sums=('7081c6a13c3fbd6abb9eefb780281b61c254de1a52e0dc5d34b327bb6d6f6ee0'
             'd9778e37ac3357c3ae16c14a4462a9b0e254c5002c42c16846efaf0f25a83242')
 
 package_ttf-lxgw-wenkai() {
-    cd "lxgw-wenkai-v${pkgver}"
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    install -Dm 644 "${srcdir}/lxgw-wenkai-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
 }
 
 package_ttf-lxgw-wenkai-gb() {
-    cd "lxgw-wenkai-gb-v${pkgver}"
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
+    install -Dm 644 "${srcdir}/lxgw-wenkai-gb-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
 }
 
 package_ttf-lxgw-wenkai-tc() {
-    cd "lxgw-wenkai-tc-v${pkgver}"
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    install -Dm 644 "${srcdir}/lxgw-wenkai-tc-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
 }

@@ -1,0 +1,66 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgbase=maplemono-normal
+pkgname=("ttf-maplemono-normal" "ttf-maplemono-normal-cn" "ttf-maplemono-normal-nf" "ttf-maplemono-normal-nf-cn")
+pkgver=7.0
+pkgrel=1
+pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
+url="https://github.com/subframe7536/maple-font"
+arch=("any")
+license=('OFL-1.1-RFN')
+source=("MapleMonoNormal-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-TTF.zip"
+        "MapleMonoNormal-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-CN.zip"
+        "MapleMonoNormal-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF.zip"
+        "MapleMonoNormal-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF-CN.zip"
+        "MapleMonoNormalNL-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-TTF.zip"
+        "MapleMonoNormalNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-CN.zip"
+        "MapleMonoNormalNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF.zip"
+        "MapleMonoNormalNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF-CN.zip")
+sha256sums=('bcbe9f47010fd8648e441ace1af120480f9fc63ad9c989a96cd7ae20ca55bd83'
+            '3834d607ef674cc9a011aaa5bf5fc5ab8180061e3908b4c0d072961ccf46f40c'
+            '48c9ed6745d546c74ba1c49df41b0ddff3919a4522f178134a27142ea106d29a'
+            'e4993f16a77ba4cb8382185a16f21e80f26a2b6d62309b8dfe726df72e6179b7'
+            'c5ba756616d8cac1c738a928532bb44efefafe30ea09ba3653a7f31e214fb79d'
+            'a46c6c2941523b987338f596d2b8181bc7e982e9e63e4b309d9f1af82e40f933'
+            '8fc2e2f88fcd81d352c13018df561b0491537362177dfcaa427bff2957c178c5'
+            '962ff13c01c9205b560c42b54edb50b8e8d9ece26a5e4f9d9dc1c5a70b21dc56')
+noextract=("MapleMonoNormal-TTF-v${pkgver}.zip"
+           "MapleMonoNormal-CN-v${pkgver}.zip"
+           "MapleMonoNormal-NF-v${pkgver}.zip"
+           "MapleMonoNormal-NF-CN-v${pkgver}.zip"
+           "MapleMonoNormalNL-TTF-v${pkgver}.zip"
+           "MapleMonoNormalNL-CN-v${pkgver}.zip"
+           "MapleMonoNormalNL-NF-v${pkgver}.zip"
+           "MapleMonoNormalNL-NF-CN-v${pkgver}.zip")
+
+package_ttf-maplemono-normal() {
+    unzip -o MapleMonoNormal-TTF-v${pkgver}.zip -d MapleMonoNormal-TTF
+    unzip -o MapleMonoNormalNL-TTF-v${pkgver}.zip -d MapleMonoNormalNL-TTF
+    install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/normal"
+    install -Dm 644 "${srcdir}/MapleMonoNormal-TTF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal"
+    install -Dm 644 "${srcdir}/MapleMonoNormalNL-TTF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal"
+}
+
+package_ttf-maplemono-normal-cn() {
+    unzip -o MapleMonoNormal-CN-v${pkgver}.zip -d MapleMonoNormal-CN
+    unzip -o MapleMonoNormalNL-CN-v${pkgver}.zip -d MapleMonoNormalNL-CN
+    install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/normal"
+    install -Dm 644 "${srcdir}/MapleMonoNormal-CN/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal"
+    install -Dm 644 "${srcdir}/MapleMonoNormalNL-CN/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal"
+}
+
+package_ttf-maplemono-normal-nf() {
+    unzip -o MapleMonoNormal-NF-v${pkgver}.zip -d MapleMonoNormal-NF
+    unzip -o MapleMonoNormalNL-NF-v${pkgver}.zip -d MapleMonoNormalNL-NF
+    install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+    install -Dm 644 "${srcdir}/MapleMonoNormal-NF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+    install -Dm 644 "${srcdir}/MapleMonoNormalNL-NF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+}
+
+package_ttf-maplemono-normal-nf-cn() {
+    unzip -o MapleMonoNormal-NF-CN-v${pkgver}.zip -d MapleMonoNormal-NF-CN
+    unzip -o MapleMonoNormalNL-NF-CN-v${pkgver}.zip -d MapleMonoNormalNL-NF-CN
+    install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+    install -Dm 644 "${srcdir}/MapleMonoNormal-NF-CN/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+    install -Dm 644 "${srcdir}/MapleMonoNormalNL-NF-CN/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/normal-nf"
+}

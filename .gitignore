@@ -1,3 +1,5 @@
 *.7z
+*.part
 *.tar.gz
 *.ttf
+*.zip

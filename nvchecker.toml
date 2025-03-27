@@ -28,7 +28,7 @@ source = "github"
 github= "lxgw/LxgwNeoZhiSong"
 use_latest_release = true
 
-[ttf-maplemono-normal]
+[ttf-maplemono]
 source = "github"
 github= "subframe7536/maple-font"
 use_latest_release = true

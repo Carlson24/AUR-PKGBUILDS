@@ -20,22 +20,19 @@ noextract=("LXGWBright-v${pkgver}.7z"
            "LXGWBrightTC-v${pkgver}.7z")
 
 package_ttf-lxgw-bright() {
-    7z x "LXGWBright-v${pkgver}.7z" 
-    cd "LXGWBright"
+    7z x -y "LXGWBright-v${pkgver}.7z" 
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+    install -Dm 644 "${srcdir}/LXGWBright/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
 }
 
 package_ttf-lxgw-bright-gb() {
-    7z x "LXGWBrightGB-v${pkgver}.7z" 
-    cd "LXGWBrightGB"
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+    7z x -y "LXGWBrightGB-v${pkgver}.7z" 
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright-gb"
+    install -Dm 644 "${srcdir}/LXGWBrightGB/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright-gb"
 }
 
 package_ttf-lxgw-bright-tc() {
-    7z x "LXGWBrightTC-v${pkgver}.7z" 
-    cd "LXGWBrightTC"
+    7z x -y "LXGWBrightTC-v${pkgver}.7z" 
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
-    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+    install -Dm 644 "${srcdir}/LXGWBrightTC/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
 }

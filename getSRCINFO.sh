@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 要执行的命令
-COMMAND="makepkg --printsrcinfo > .SRCINFO"
+COMMAND="updpkgsums && makepkg --printsrcinfo > .SRCINFO"
 
 # 要排除的目录列表
 EXCLUDED_DIRS=(
@@ -23,7 +23,7 @@ for dir in */; do
 
     # 如果没有排除，则执行命令
     if ! $skip; then
-      echo "正在为包 $dir 生成 SRCINFO 文件"
+      echo "进入目录 $dir，更新哈希并生成 SRCINFO 文件"
       cd "$dir"
         eval "$COMMAND"
       cd -  # 返回到原来的目录

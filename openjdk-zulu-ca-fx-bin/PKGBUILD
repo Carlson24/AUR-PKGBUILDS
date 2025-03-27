@@ -35,7 +35,7 @@ provides=("java-environment=${_javaver}"
           "jre${_javaver}-openjdk-headless=${_javaver}"
           "java${_javaver}-openjfx=${_javaver}")
 source=("https://cdn.azul.com/zulu/bin/zulu${_zuluver}-ca-fx-jdk${_jdkver}-linux_x64.tar.gz")
-b2sums=("cde1af579aa4cf27a5665bb5ab46690bcbb95d0ca302927d5bba9863e3e4653ea6a281df1eb944d9ab9884f29e3bde2d214a8990030b36132483d9335708f0a3")
+b2sums=('cde1af579aa4cf27a5665bb5ab46690bcbb95d0ca302927d5bba9863e3e4653ea6a281df1eb944d9ab9884f29e3bde2d214a8990030b36132483d9335708f0a3')
 install="install_${pkgname}.sh"
 
 _jvmdir="/usr/lib/jvm/${pkgname}"

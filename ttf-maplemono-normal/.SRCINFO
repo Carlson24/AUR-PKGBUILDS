@@ -1,0 +1,39 @@
+pkgbase = maplemono-normal
+	pkgdesc = Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options.
+	pkgver = 7.0
+	pkgrel = 1
+	url = https://github.com/subframe7536/maple-font
+	arch = any
+	license = OFL-1.1-RFN
+	noextract = MapleMonoNormal-TTF-v7.0.zip
+	noextract = MapleMonoNormal-CN-v7.0.zip
+	noextract = MapleMonoNormal-NF-v7.0.zip
+	noextract = MapleMonoNormal-NF-CN-v7.0.zip
+	noextract = MapleMonoNormalNL-TTF-v7.0.zip
+	noextract = MapleMonoNormalNL-CN-v7.0.zip
+	noextract = MapleMonoNormalNL-NF-v7.0.zip
+	noextract = MapleMonoNormalNL-NF-CN-v7.0.zip
+	source = MapleMonoNormal-TTF-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormal-TTF.zip
+	source = MapleMonoNormal-CN-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormal-CN.zip
+	source = MapleMonoNormal-NF-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormal-NF.zip
+	source = MapleMonoNormal-NF-CN-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormal-NF-CN.zip
+	source = MapleMonoNormalNL-TTF-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormalNL-TTF.zip
+	source = MapleMonoNormalNL-CN-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormalNL-CN.zip
+	source = MapleMonoNormalNL-NF-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormalNL-NF.zip
+	source = MapleMonoNormalNL-NF-CN-v7.0.zip::https://github.com/subframe7536/maple-font/releases/download/v7.0/MapleMonoNormalNL-NF-CN.zip
+	sha256sums = bcbe9f47010fd8648e441ace1af120480f9fc63ad9c989a96cd7ae20ca55bd83
+	sha256sums = 3834d607ef674cc9a011aaa5bf5fc5ab8180061e3908b4c0d072961ccf46f40c
+	sha256sums = 48c9ed6745d546c74ba1c49df41b0ddff3919a4522f178134a27142ea106d29a
+	sha256sums = e4993f16a77ba4cb8382185a16f21e80f26a2b6d62309b8dfe726df72e6179b7
+	sha256sums = c5ba756616d8cac1c738a928532bb44efefafe30ea09ba3653a7f31e214fb79d
+	sha256sums = a46c6c2941523b987338f596d2b8181bc7e982e9e63e4b309d9f1af82e40f933
+	sha256sums = 8fc2e2f88fcd81d352c13018df561b0491537362177dfcaa427bff2957c178c5
+	sha256sums = 962ff13c01c9205b560c42b54edb50b8e8d9ece26a5e4f9d9dc1c5a70b21dc56
+
+pkgname = ttf-maplemono-normal
+
+pkgname = ttf-maplemono-normal-cn
+
+pkgname = ttf-maplemono-normal-nf
+
+pkgname = ttf-maplemono-normal-nf-cn
