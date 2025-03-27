@@ -1,0 +1,20 @@
+# Maintainer: Harshal Rathore <harshalrathore2014@gmail.com>
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=list-orphans-hook
+pkgver=1.0
+pkgrel=6
+pkgdesc="A pacman hook that lists orphaned packages in prettier format."
+arch=('any')
+url="https://aur.archlinux.org/packages/list-orphans-hook"
+license=('Creative Commons Zero v1.0 Universal')
+depends=('bash' 'pacman' 'bc')
+source=("list-orphans.sh"
+        "list-orphans.hook")
+sha256sums=('aabda65e6f21d85e435841a8a830e04aef2425fc4862d0b559def60e8996c04a'
+            'a7002ef646d4af042afdbb2dec81ae94cf9e5eb5784d62a3ffd666e0baa0ea82')
+
+package() {
+    install -Dm 755 "${srcdir}/list-orphans.sh" "${pkgdir}/usr/bin/list-orphans"
+    install -Dm 644 "${srcdir}/list-orphans.hook" "${pkgdir}/usr/share/libalpm/hooks/list-orphans.hook"
+}

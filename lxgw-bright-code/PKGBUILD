@@ -1,0 +1,41 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgbase=lxgw-bright-code
+pkgname=("ttf-lxgw-bright-code" "ttf-lxgw-bright-code-gb" "ttf-lxgw-bright-code-tc")
+pkgver=2.711
+pkgrel=1
+pkgdesc="A merged font of Monaspace Argon and LXGW WenKai."
+url="https://github.com/lxgw/LxgwBright-Code"
+arch=("any")
+license=('OFL-1.1-RFN')
+makedepends=("7zip")
+source=("LXGWBrightCode-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightCode.7z"
+        "LXGWBrightCodeGB-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightCodeGB.7z"
+        "LXGWBrightCodeTC-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightCodeTC.7z")
+sha256sums=('b0e410d28202b44320779429752c90e9c58870017c0c8e8d0200632adb0c2229'
+            'b9bee88e1131828522de7ec2161158b963d2539fcccbbdbd1aa3c80145912f3e'
+            '8f917ad422100af6879bbe023db520a220d04e2695563aea0238475bd3c2ac1a')
+noextract=("LXGWBrightCode-v${pkgver}.7z"
+           "LXGWBrightCodeGB-v${pkgver}.7z"
+           "LXGWBrightCodeTC-v${pkgver}.7z")
+
+package_ttf-lxgw-bright-code() {
+    7z x "LXGWBrightCode-v${pkgver}.7z" 
+    cd "LxgwBrightCode"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+}
+
+package_ttf-lxgw-bright-code-gb() {
+    7z x "LXGWBrightCodeGB-v${pkgver}.7z" 
+    cd "LxgwBrightCodeGB"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+}
+
+package_ttf-lxgw-bright-code-tc() {
+    7z x "LXGWBrightCodeTC-v${pkgver}.7z" 
+    cd "LxgwBrightCodeTC"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright-code"
+}

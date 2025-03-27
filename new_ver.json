@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "data": {
+    "list-orphans-hook": {
+      "version": "1.0-6",
+      "url": "https://aur.archlinux.org/packages/list-orphans-hook"
+    },
+    "ttf-lxgw-bright": {
+      "version": "v5.517",
+      "gitref": "refs/tags/v5.517",
+      "url": "https://github.com/lxgw/LxgwBright/releases/tag/v5.517"
+    },
+    "ttf-lxgw-bright-code": {
+      "version": "v2.611",
+      "gitref": "refs/tags/v2.611",
+      "url": "https://github.com/lxgw/LxgwBright-Code/releases/tag/v2.611"
+    },
+    "ttf-lxgw-neo-xihei": {
+      "version": "v1.216.1",
+      "gitref": "refs/tags/v1.216.1",
+      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.216.1"
+    },
+    "ttf-lxgw-neo-zhisong": {
+      "version": "v1.030.1",
+      "gitref": "refs/tags/v1.030.1",
+      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.030.1"
+    },
+    "ttf-lxgw-wenkai": {
+      "version": "v1.511",
+      "gitref": "refs/tags/v1.511",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.511"
+    },
+    "ttf-maplemono-normal": {
+      "version": "v7.0",
+      "gitref": "refs/tags/v7.0",
+      "url": "https://github.com/subframe7536/maple-font/releases/tag/v7.0"
+    }
+  }
+}

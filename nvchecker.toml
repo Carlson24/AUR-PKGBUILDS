@@ -1,0 +1,37 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+[ttf-lxgw-wenkai]
+source = "github"
+github= "lxgw/LxgwWenKai"
+use_latest_release = true
+
+
+[ttf-lxgw-bright]
+source = "github"
+github= "lxgw/LxgwBright"
+use_latest_release = true
+
+[ttf-lxgw-bright-code]
+source = "github"
+github= "lxgw/LxgwBright-Code"
+use_latest_release = true
+
+[ttf-lxgw-neo-xihei]
+source = "github"
+github= "lxgw/LxgwNeoXiHei"
+use_latest_release = true
+
+[ttf-lxgw-neo-zhisong]
+source = "github"
+github= "lxgw/LxgwNeoZhiSong"
+use_latest_release = true
+
+[ttf-maplemono-normal]
+source = "github"
+github= "subframe7536/maple-font"
+use_latest_release = true
+
+[list-orphans-hook]
+source = "aur"

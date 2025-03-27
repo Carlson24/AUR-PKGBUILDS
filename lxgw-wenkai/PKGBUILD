@@ -1,0 +1,34 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgbase=lxgw-wenkai
+pkgname=("ttf-lxgw-wenkai" "ttf-lxgw-wenkai-gb" "ttf-lxgw-wenkai-tc")
+pkgver=1.511
+pkgrel=1
+pkgdesc="An open-source Chinese font derived from Fontworks' Klee One."
+url="https://github.com/lxgw/LxgwWenKai"
+arch=("any")
+license=('OFL-1.1-RFN')
+source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-v${pkgver}.tar.gz"
+        "${url}GB/releases/download/v${pkgver}/lxgw-wenkai-gb-v${pkgver}.tar.gz"
+        "${url}TC/releases/download/v${pkgver}/lxgw-wenkai-tc-v${pkgver}.tar.gz")
+sha256sums=('7081c6a13c3fbd6abb9eefb780281b61c254de1a52e0dc5d34b327bb6d6f6ee0'
+            'f2ab65dd0c9b71c37f4ba29a3320f0749a6bbe692cd6363c4d6056bf39f2a9f9'
+            'd9778e37ac3357c3ae16c14a4462a9b0e254c5002c42c16846efaf0f25a83242')
+
+package_ttf-lxgw-wenkai() {
+    cd "lxgw-wenkai-v${pkgver}"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+}
+
+package_ttf-lxgw-wenkai-gb() {
+    cd "lxgw-wenkai-gb-v${pkgver}"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+}
+
+package_ttf-lxgw-wenkai-tc() {
+    cd "lxgw-wenkai-tc-v${pkgver}"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+}

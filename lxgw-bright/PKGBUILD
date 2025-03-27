@@ -1,0 +1,41 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgbase=lxgw-bright
+pkgname=("ttf-lxgw-bright" "ttf-lxgw-bright-gb" "ttf-lxgw-bright-tc")
+pkgver=5.517
+pkgrel=1
+pkgdesc="A merged font of Ysabeau and LXGW WenKai."
+url="https://github.com/lxgw/LxgwBright"
+arch=("any")
+license=('OFL-1.1-RFN')
+makedepends=("7zip")
+source=("LXGWBright-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBright.7z"
+        "LXGWBrightGB-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightGB.7z"
+        "LXGWBrightTC-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightTC.7z")
+sha256sums=('2c46d781c7699a6b0553bb12541a73e5c308c3176ba5551e40879a48e489c01d'
+            '2ddfd3d6b8e85930cb6a5b142e5f94fe826413c8078e30e651ffeacda157dcc5'
+            '43ed03a42f2ca8004fa6c4647e1f85a9f08380f58365b185852f14d3d2f81651')
+noextract=("LXGWBright-v${pkgver}.7z"
+           "LXGWBrightGB-v${pkgver}.7z"
+           "LXGWBrightTC-v${pkgver}.7z")
+
+package_ttf-lxgw-bright() {
+    7z x "LXGWBright-v${pkgver}.7z" 
+    cd "LXGWBright"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+}
+
+package_ttf-lxgw-bright-gb() {
+    7z x "LXGWBrightGB-v${pkgver}.7z" 
+    cd "LXGWBrightGB"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+}
+
+package_ttf-lxgw-bright-tc() {
+    7z x "LXGWBrightTC-v${pkgver}.7z" 
+    cd "LXGWBrightTC"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
+    cp *.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
+}

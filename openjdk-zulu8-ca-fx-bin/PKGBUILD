@@ -70,13 +70,13 @@ package() {
   install -dm 755 "${pkgdir}/etc/openjdk-zulu/${pkgname}"
   for f in "${_conf_files[@]}"; do
     _file="${_jvmdir}/jre/lib/$f"
-    install -D -m 644 "${pkgdir}${_file}" "${pkgdir}/etc/openjdk-zulu/${pkgname}/$f"
+    install -Dm 644 "${pkgdir}${_file}" "${pkgdir}/etc/openjdk-zulu/${pkgname}/$f"
     ln -sf "/etc/openjdk-zulu/${pkgname}/$f" "${pkgdir}${_file}"
   done
 
   # Legal
-  install -d -m 755 "${pkgdir}/usr/share/licenses/${pkgname}/"
-  install -m 644 ASSEMBLY_EXCEPTION LICENSE THIRD_PARTY_README "${pkgdir}/usr/share/licenses/${pkgname}"
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}/"
+  install -Dm 644 ASSEMBLY_EXCEPTION LICENSE THIRD_PARTY_README "${pkgdir}/usr/share/licenses/${pkgname}"
 
   # Man pages
   for f in bin/*; do
