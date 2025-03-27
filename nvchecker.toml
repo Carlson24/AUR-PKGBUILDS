@@ -7,7 +7,6 @@ source = "github"
 github= "lxgw/LxgwWenKai"
 use_latest_release = true
 
-
 [ttf-lxgw-bright]
 source = "github"
 github= "lxgw/LxgwBright"
@@ -34,4 +33,7 @@ github= "subframe7536/maple-font"
 use_latest_release = true
 
 [list-orphans-hook]
+source = "aur"
+
+[linuxqq-nt-bwrap]
 source = "aur"

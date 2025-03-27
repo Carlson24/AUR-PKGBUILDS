@@ -1,6 +1,10 @@
 {
   "version": 2,
   "data": {
+    "linuxqq-nt-bwrap": {
+      "version": "3.2.16_250307-1",
+      "url": "https://aur.archlinux.org/packages/linuxqq-nt-bwrap"
+    },
     "list-orphans-hook": {
       "version": "1.0-6",
       "url": "https://aur.archlinux.org/packages/list-orphans-hook"
@@ -11,9 +15,9 @@
       "url": "https://github.com/lxgw/LxgwBright/releases/tag/v5.517"
     },
     "ttf-lxgw-bright-code": {
-      "version": "v2.611",
-      "gitref": "refs/tags/v2.611",
-      "url": "https://github.com/lxgw/LxgwBright-Code/releases/tag/v2.611"
+      "version": "v2.711",
+      "gitref": "refs/tags/v2.711",
+      "url": "https://github.com/lxgw/LxgwBright-Code/releases/tag/v2.711"
     },
     "ttf-lxgw-neo-xihei": {
       "version": "v1.216.1",
@@ -30,7 +34,7 @@
       "gitref": "refs/tags/v1.511",
       "url": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.511"
     },
-    "ttf-maplemono-normal": {
+    "ttf-maplemono": {
       "version": "v7.0",
       "gitref": "refs/tags/v7.0",
       "url": "https://github.com/subframe7536/maple-font/releases/tag/v7.0"
