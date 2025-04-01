@@ -2,38 +2,79 @@
 oldver = "old_ver.json"
 newver = "new_ver.json"
 
-[ttf-lxgw-wenkai]
+[jetbrains-jbr-runtime]
 source = "github"
-github= "lxgw/LxgwWenKai"
+github = "JetBrains/JetBrainsRuntime"
 use_latest_release = true
 
-[ttf-lxgw-bright]
-source = "github"
-github= "lxgw/LxgwBright"
-use_latest_release = true
+[jetbrains-clion-eap]
+source = "aur"
+aur = "clion-eap"
 
-[ttf-lxgw-bright-code]
-source = "github"
-github= "lxgw/LxgwBright-Code"
-use_latest_release = true
+[jetbrains-goland-eap]
+source = "aur"
+aur = "goland-eap"
 
-[ttf-lxgw-neo-xihei]
-source = "github"
-github= "lxgw/LxgwNeoXiHei"
-use_latest_release = true
+[jetbrains-intellij-idea-ultimate-eap]
+source = "aur"
+aur = "intellij-idea-ce-eap"
 
-[ttf-lxgw-neo-zhisong]
-source = "github"
-github= "lxgw/LxgwNeoZhiSong"
-use_latest_release = true
+[jetbrains-phpstorm-eap]
+source = "aur"
+aur = "phpstorm-eap"
 
-[ttf-maplemono]
-source = "github"
-github= "subframe7536/maple-font"
-use_latest_release = true
+[jetbrains-pycharm-eap]
+source = "aur"
+aur = "pycharm-eap"
+
+[jetbrains-rider-eap]
+source = "aur"
+aur = "rider-eap"
+
+[jetbrains-rubymine-eap]
+source = "aur"
+aur = "rubymine-eap"
+
+[jetbrains-rustrover-eap]
+source = "aur"
+aur = "rustrover-eap"
+
+[jetbrains-webstorm-eap]
+source = "aur"
+aur = "webstorm-eap"
 
 [list-orphans-hook]
 source = "aur"
 
 [linuxqq-nt-bwrap]
 source = "aur"
+
+[ttf-lxgw-wenkai]
+source = "github"
+github = "lxgw/LxgwWenKai"
+use_latest_release = true
+
+[ttf-lxgw-bright]
+source = "github"
+github = "lxgw/LxgwBright"
+use_latest_release = true
+
+[ttf-lxgw-bright-code]
+source = "github"
+github = "lxgw/LxgwBright-Code"
+use_latest_release = true
+
+[ttf-lxgw-neo-xihei]
+source = "github"
+github = "lxgw/LxgwNeoXiHei"
+use_latest_release = true
+
+[ttf-lxgw-neo-zhisong]
+source = "github"
+github = "lxgw/LxgwNeoZhiSong"
+use_latest_release = true
+
+[ttf-maplemono]
+source = "github"
+github = "subframe7536/maple-font"
+use_latest_release = true

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Ultimate (EAP)
+Icon=idea
+Comment=IntelliJ IDEA Ultimate (EAP)
+Exec=/usr/bin/idea-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-idea
+Categories=Development;IDE;

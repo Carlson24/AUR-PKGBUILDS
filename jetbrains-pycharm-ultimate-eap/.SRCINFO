@@ -1,0 +1,20 @@
+pkgbase = pycharm-eap
+	pkgdesc = PyCharm Professional (EAP)
+	pkgver = 2025.1+251.23774.211
+	pkgrel = 2
+	url = https://www.jetbrains.com/pycharm/nextversion/
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	backup = opt/jetbrains/pycharm-eap/bin/pycharm64.vmoptions
+	backup = opt/jetbrains/pycharm-eap/bin/idea.properties
+	source = jetbrains-pycharm-eap.desktop
+	source = https://download.jetbrains.com/python/pycharm-professional-251.23774.211.tar.gz
+	source = https://download.jetbrains.com/python/pycharm-professional-251.23774.211.tar.gz.sha256
+	sha256sums = 9c2f2754c99adaee19a92ad6f682d21cc0d5dd62d9449e6fb613f72e3f38c43f
+	sha256sums = 4bd06cc4e11608ea3a2a76c6ff5a343a1b41e8a9ce0d827bc8e57fcf5be5f18b
+	sha256sums = 83a1a131a49a4fd5ab41aaf167f2aaba5d778f8635a40f1d0c04cd0fc3d6948a
+
+pkgname = pycharm-eap

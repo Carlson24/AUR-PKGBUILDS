@@ -1,0 +1,54 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+_buildver=251.23774.211
+_pkgver=2025.1
+_pkgname=pycharm
+
+pkgname=pycharm-eap
+pkgver=${_pkgver}+${_buildver}
+pkgrel=2
+pkgdesc='PyCharm Professional (EAP)'
+arch=('x86_64')
+url="https://www.jetbrains.com/pycharm/nextversion/"
+license=('custom:jetbrains')
+depends=('libdbusmenu-glib' 'jbr-runtime')
+options=('!strip')
+source=("jetbrains-${pkgname}.desktop"
+        "https://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz"
+        "https://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz.sha256")
+sha256sums=('9c2f2754c99adaee19a92ad6f682d21cc0d5dd62d9449e6fb613f72e3f38c43f'
+            '4bd06cc4e11608ea3a2a76c6ff5a343a1b41e8a9ce0d827bc8e57fcf5be5f18b'
+            '83a1a131a49a4fd5ab41aaf167f2aaba5d778f8635a40f1d0c04cd0fc3d6948a')
+backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
+        "opt/jetbrains/${pkgname}/bin/idea.properties")
+
+prepare() {
+  sha256sum -c pycharm-professional-${_buildver}.tar.gz.sha256
+}
+
+package() {
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/pycharm-${_buildver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+
+  install -dm 755 "${pkgdir}/usr/bin"
+  ln -s "/opt/jetbrains/${pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}-eap"
+
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/license/." "${pkgdir}/usr/share/licenses/${pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/license"
+  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/license"
+
+  install -dm 755 "${pkgdir}/usr/share/applications"
+  install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+
+  install -dm 755 "${pkgdir}/usr/share/pixmaps"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.png"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.png" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+}

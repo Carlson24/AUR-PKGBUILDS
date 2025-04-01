@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RubyMine (EAP)
+Icon=rubymine
+Comment=RubyMine (EAP)
+Exec=/usr/bin/rubymine-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-rubymine
+Categories=Development;IDE;

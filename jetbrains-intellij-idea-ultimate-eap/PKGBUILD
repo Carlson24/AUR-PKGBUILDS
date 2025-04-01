@@ -1,0 +1,54 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+_buildver=251.23774.200
+_pkgver=2025.1
+_pkgname=idea
+
+pkgname=intellij-idea-ultimate-eap
+pkgver=${_pkgver}+${_buildver}
+pkgrel=2
+pkgdesc='IntelliJ IDEA Ultimate (EAP)'
+arch=('x86_64')
+url="https://www.jetbrains.com/idea/nextversion/"
+license=('custom:jetbrains')
+depends=('libdbusmenu-glib' 'jbr-runtime')
+options=('!strip')
+source=("jetbrains-${pkgname}.desktop"
+        "https://download.jetbrains.com/idea/ideaIU-${_buildver}.tar.gz"
+        "https://download.jetbrains.com/idea/ideaIU-${_buildver}.tar.gz.sha256")
+sha256sums=('a2349ff836ea44169be181ff63ec4b72a711b6702ac4dfefe880ab7837b070cb'
+            '7ce57055e3a5ee92582eb90c2dea469b48a6e7165e74fe085ef1923c16ba7faa'
+            'a519e1dee728a38d6271a0c5458b78c32b74ab7b199d61ea7d48014e71dc11f5')
+backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
+        "opt/jetbrains/${pkgname}/bin/idea.properties")
+
+prepare() {
+  sha256sum -c ideaIU-${_buildver}.tar.gz.sha256
+}
+
+package() {
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+
+  install -dm 755 "${pkgdir}/usr/bin"
+  ln -s "/opt/jetbrains/${pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}-eap"
+
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/license/." "${pkgdir}/usr/share/licenses/${pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/license"
+  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/license"
+
+  install -dm 755 "${pkgdir}/usr/share/applications"
+  install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+
+  install -dm 755 "${pkgdir}/usr/share/pixmaps"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.png"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.png" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+}

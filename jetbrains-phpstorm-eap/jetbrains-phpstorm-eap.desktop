@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PhpStorm (EAP)
+Icon=phpstorm
+Comment=PhpStorm (EAP)
+Exec=/usr/bin/phpstorm-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-phpstorm
+Categories=Development;IDE;

@@ -1,0 +1,20 @@
+pkgbase = phpstorm-eap
+	pkgdesc = PhpStorm (EAP)
+	pkgver = 2025.1+251.23774.209
+	pkgrel = 2
+	url = https://www.jetbrains.com/phpstorm/nextversion/
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	backup = opt/jetbrains/phpstorm-eap/bin/phpstorm64.vmoptions
+	backup = opt/jetbrains/phpstorm-eap/bin/idea.properties
+	source = jetbrains-phpstorm-eap.desktop
+	source = https://download.jetbrains.com/webide/PhpStorm-251.23774.209.tar.gz
+	source = https://download.jetbrains.com/webide/PhpStorm-251.23774.209.tar.gz.sha256
+	sha256sums = e6a9a2eb28fbfb6a136db528337f56b827fcd4109c40c5e618fd6286aad3e6f2
+	sha256sums = 3baaf25b438c7584b9d2454895b65a25592e0f092559d896169fc6d31fd84925
+	sha256sums = 6e78c59a0d9203de1f3cf0b49ae9b1d1e639d923975818ac4b6cadd4811e9652
+
+pkgname = phpstorm-eap

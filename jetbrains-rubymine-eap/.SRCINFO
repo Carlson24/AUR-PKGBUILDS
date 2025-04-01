@@ -1,0 +1,20 @@
+pkgbase = rubymine-eap
+	pkgdesc = RubyMine (EAP)
+	pkgver = 2025.1+251.23774.208
+	pkgrel = 2
+	url = https://www.jetbrains.com/ruby/nextversion/
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	backup = opt/jetbrains/rubymine-eap/bin/rubymine64.vmoptions
+	backup = opt/jetbrains/rubymine-eap/bin/idea.properties
+	source = jetbrains-rubymine-eap.desktop
+	source = https://download.jetbrains.com/ruby/RubyMine-251.23774.208.tar.gz
+	source = https://download.jetbrains.com/ruby/RubyMine-251.23774.208.tar.gz.sha256
+	sha256sums = f6e18303409f72ec3feba0b3e5baff3cf6fa561eb3c5ede1c415be0f2f1822fd
+	sha256sums = d738ada1ed93e194e76cd4bcdd18316ac0fce7ee3b65a43e64779af7b82f00cd
+	sha256sums = 439c2dbae1194af9715fdbe7a02007da56dab3503b01deacbe1df9ded2dcfb44
+
+pkgname = rubymine-eap

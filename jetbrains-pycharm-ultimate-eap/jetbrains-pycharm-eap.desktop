@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PyCharm Professional (EAP)
+Icon=pycharm
+Comment=PyCharm Professional (EAP)
+Exec=/usr/bin/pycharm-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-pycharm
+Categories=Development;IDE;

@@ -1,0 +1,20 @@
+pkgbase = goland-eap
+	pkgdesc = GoLand (EAP)
+	pkgver = 2025.1+251.23774.216
+	pkgrel = 2
+	url = https://www.jetbrains.com/go/nextversion/
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	backup = opt/jetbrains/goland-eap/bin/goland64.vmoptions
+	backup = opt/jetbrains/goland-eap/bin/idea.properties
+	source = jetbrains-goland-eap.desktop
+	source = https://download.jetbrains.com/go/goland-251.23774.216.tar.gz
+	source = https://download.jetbrains.com/go/goland-251.23774.216.tar.gz.sha256
+	sha256sums = 31bdf42b6f4b373290150d8e59adb6cd44b55b0aa1bbc801dfd7f1a08b9ed01a
+	sha256sums = 9c74be72b091a866d35b3561f697c4161750dee8350e7b2f3563b6012c9333d0
+	sha256sums = c8cd8109fd7ede13b8f2ea4aefad18a8062f72704fdcab99708f1f7ae84e7dba
+
+pkgname = goland-eap

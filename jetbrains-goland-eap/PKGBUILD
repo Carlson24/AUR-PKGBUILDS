@@ -1,0 +1,54 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+_buildver=251.23774.216
+_pkgver=2025.1
+_pkgname=goland
+
+pkgname=${_pkgname}-eap
+pkgver=${_pkgver}+${_buildver}
+pkgrel=2
+pkgdesc='GoLand (EAP)'
+arch=('x86_64')
+url="https://www.jetbrains.com/go/nextversion/"
+license=('custom:jetbrains')
+depends=('libdbusmenu-glib' 'jbr-runtime')
+options=('!strip')
+source=("jetbrains-${pkgname}.desktop"
+        "https://download.jetbrains.com/go/goland-${_buildver}.tar.gz"
+        "https://download.jetbrains.com/go/goland-${_buildver}.tar.gz.sha256")
+sha256sums=('31bdf42b6f4b373290150d8e59adb6cd44b55b0aa1bbc801dfd7f1a08b9ed01a'
+            '9c74be72b091a866d35b3561f697c4161750dee8350e7b2f3563b6012c9333d0'
+            'c8cd8109fd7ede13b8f2ea4aefad18a8062f72704fdcab99708f1f7ae84e7dba')
+backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
+        "opt/jetbrains/${pkgname}/bin/idea.properties")
+
+prepare() {
+  sha256sum -c goland-${_buildver}.tar.gz.sha256
+}
+
+package() {
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/GoLand-${_buildver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+
+  install -dm 755 "${pkgdir}/usr/bin"
+  ln -s "/opt/jetbrains/${pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}-eap"
+
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/license/." "${pkgdir}/usr/share/licenses/${pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/license"
+  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/license"
+
+  install -dm 755 "${pkgdir}/usr/share/applications"
+  install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+
+  install -dm 755 "${pkgdir}/usr/share/pixmaps"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.png"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.png" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}-eap.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${_pkgname}-eap.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+}

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GoLand (EAP)
+Icon=goland
+Comment=GoLand (EAP)
+Exec=/usr/bin/goland-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-goland
+Categories=Development;IDE;

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CLion (EAP)
+Icon=clion
+Comment=CLion (EAP)
+Exec=/usr/bin/clion-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-clion
+Categories=Development;IDE;

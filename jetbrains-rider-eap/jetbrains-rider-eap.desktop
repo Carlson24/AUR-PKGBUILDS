@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Rider (EAP)
+Icon=rider
+Comment=Rider (EAP)
+Exec=/usr/bin/rider-eap %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-rider
+Categories=Development;IDE;

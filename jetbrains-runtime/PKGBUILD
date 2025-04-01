@@ -1,0 +1,32 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+_buildver=b895.105
+_javaver=21.0.6
+_pkgname=jbr
+
+pkgname=jbr-runtime
+pkgver=${_javaver}+${_buildver}
+pkgrel=1
+pkgdesc='JetBrains Java Runtime'
+arch=('x86_64')
+url="https://github.com/JetBrains/JetBrainsRuntime"
+license=('custom:jetbrains')
+options=('!strip')
+source=("https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz"
+        "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz.checksum")
+sha256sums=('3824f7ee262fa370612b15ad64bf90b1971dd3487ab9b5171978bb0758a64751'
+            '838bea96bf46b91e8f072d3d87013bdf4e979fb0ba29603a0e3aab173d9a2a52')
+
+prepare() {
+  sha512sum -c jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz.checksum
+}
+
+package() {
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/jbr_jcef-${_javaver}-linux-x64-${_buildver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  cp -r "${srcdir}/jbr_jcef-${_javaver}-linux-x64-${_buildver}/legal/." "${pkgdir}/usr/share/licenses/${pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/legal"
+  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/legal"
+}
