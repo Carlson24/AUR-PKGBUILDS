@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-orphans=$(pacman -Qdtq)
+orphans=$(pacman -Qdttq)
 orphan_count=$(echo "$orphans" | wc -l)
 total_size=0
 
@@ -22,5 +22,5 @@ if [[ -n "$orphans" ]]; then
     done <<< "$orphans"
 
     echo -e "\033[1;37m--------------------------------\033[0m"
-    echo -e "\033[1;37mTotal                \033[1;32m$(printf "%.2f" $total_size) MiB\033[0m"
+    echo -e "\033[1;37mTotal                \033[1;32m$(printf "%.2f" "$total_size") MiB\033[0m"
 fi

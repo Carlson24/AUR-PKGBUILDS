@@ -2,8 +2,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=list-orphans-hook
-pkgver=1.0
-pkgrel=6
+pkgver=1.1
+pkgrel=1
 pkgdesc="A pacman hook that lists orphaned packages in prettier format."
 arch=('any')
 url="https://aur.archlinux.org/packages/list-orphans-hook"
@@ -11,7 +11,7 @@ license=('Creative Commons Zero v1.0 Universal')
 depends=('bash' 'pacman' 'bc')
 source=("list-orphans.sh"
         "list-orphans.hook")
-sha256sums=('aabda65e6f21d85e435841a8a830e04aef2425fc4862d0b559def60e8996c04a'
+sha256sums=('3566ab62b49506db8d82778c3a61dc00ebca199407daa84aa3ed01c6d33b183c'
             'a7002ef646d4af042afdbb2dec81ae94cf9e5eb5784d62a3ffd666e0baa0ea82')
 
 package() {
