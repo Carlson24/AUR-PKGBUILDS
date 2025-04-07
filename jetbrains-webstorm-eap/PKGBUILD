@@ -6,8 +6,9 @@ _pkgname=webstorm
 
 pkgname=webstorm-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='WebStorm (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='Make development more productive and enjoyable (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/rust/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/webstorm/WebStorm-${_buildver}.tar.gz"
         "https://download.jetbrains.com/webstorm/WebStorm-${_buildver}.tar.gz.sha256")
-sha256sums=('a7b08de660c3b654b3154065c61b5c51e058f4cef8761d17af1b47c4d0fb7220'
+sha256sums=('3b9ac1b9db8027f103d83065ce9f002c95b4d15f7167691c5d7e1672b8177852'
             '1a09196e5c8e6b54dde0acdc05e40d2e784b249e081d6ca2acf26f59894ed0bb'
             'cbd2e22211a9d33800565bcd94515d9e94e24155ad8c5e95832f9783d9cba44f')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c WebStorm-${_buildver}.tar.gz.sha256

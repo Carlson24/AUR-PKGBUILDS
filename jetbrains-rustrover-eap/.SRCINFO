@@ -1,19 +1,18 @@
 pkgbase = rustrover-eap
-	pkgdesc = RustRover (EAP)
+	pkgdesc = A powerhouse IDE for Rust developers (EAP)
 	pkgver = 2025.1+251.23774.207
-	pkgrel = 2
+	pkgrel = 1
+	epoch = 1
 	url = https://www.jetbrains.com/rust/nextversion/
 	arch = x86_64
 	license = custom:jetbrains
 	depends = libdbusmenu-glib
 	depends = jbr-runtime
 	options = !strip
-	backup = opt/jetbrains/rustrover-eap/bin/rustrover64.vmoptions
-	backup = opt/jetbrains/rustrover-eap/bin/idea.properties
 	source = jetbrains-rustrover-eap.desktop
 	source = https://download.jetbrains.com/rustrover/RustRover-251.23774.207.tar.gz
 	source = https://download.jetbrains.com/rustrover/RustRover-251.23774.207.tar.gz.sha256
-	sha256sums = 0910ca3c935bc94208aba286fbefabffcbc29249325e61ff021acd33a3d43604
+	sha256sums = 66d4cf22d23484b2d58545cbc9ee9418ea19ea036b3bf8fb8da8527612a1e110
 	sha256sums = 1c81ec3be3785edaa4afcb85b68baeebad8744d8f52716ffcb2ad8f3ed38ffd4
 	sha256sums = 05e67fa0d09442c1e806fefa42d1557a343c66e5ca6956cb241418ee919c99de
 

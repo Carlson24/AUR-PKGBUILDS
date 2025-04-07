@@ -6,8 +6,9 @@ _pkgname=idea
 
 pkgname=intellij-idea-ultimate-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='IntelliJ IDEA Ultimate (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='in Java and Kotlin (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/idea/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/idea/ideaIU-${_buildver}.tar.gz"
         "https://download.jetbrains.com/idea/ideaIU-${_buildver}.tar.gz.sha256")
-sha256sums=('a2349ff836ea44169be181ff63ec4b72a711b6702ac4dfefe880ab7837b070cb'
+sha256sums=('06b8e01a66fbe19bf86c5ed2c6dc6a8d936adcc9bff09064c4d1963c970de191'
             '7ce57055e3a5ee92582eb90c2dea469b48a6e7165e74fe085ef1923c16ba7faa'
             'a519e1dee728a38d6271a0c5458b78c32b74ab7b199d61ea7d48014e71dc11f5')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c ideaIU-${_buildver}.tar.gz.sha256

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-orphans=$(pacman -Qdttq)
+orphans=$(pacman -Qdtq)
 orphan_count=$(echo "$orphans" | wc -l)
 total_size=0
 

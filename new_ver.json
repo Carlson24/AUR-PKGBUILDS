@@ -2,7 +2,7 @@
   "version": 2,
   "data": {
     "jetbrains-clion-eap": {
-      "version": "251.23774.112-1",
+      "version": "251.23774.202-1",
       "url": "https://aur.archlinux.org/packages/jetbrains-clion-eap"
     },
     "jetbrains-goland-eap": {
@@ -14,16 +14,16 @@
       "url": "https://aur.archlinux.org/packages/jetbrains-intellij-idea-ultimate-eap"
     },
     "jetbrains-jbr-runtime": {
-      "version": "jbr-release-21.0.6b895.105",
-      "gitref": "refs/tags/jbr-release-21.0.6b895.105",
-      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-21.0.6b895.105"
+      "version": "jbr-release-21.0.6b895.109",
+      "gitref": "refs/tags/jbr-release-21.0.6b895.109",
+      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-21.0.6b895.109"
     },
     "jetbrains-phpstorm-eap": {
       "version": "251.23774.209-1",
       "url": "https://aur.archlinux.org/packages/jetbrains-phpstorm-eap"
     },
     "jetbrains-pycharm-eap": {
-      "version": "251.23774.123_2025.1-1",
+      "version": "251.23774.211_2025.1-1",
       "url": "https://aur.archlinux.org/packages/jetbrains-pycharm-eap"
     },
     "jetbrains-rider-eap": {

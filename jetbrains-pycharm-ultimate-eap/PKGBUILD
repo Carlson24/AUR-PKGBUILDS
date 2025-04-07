@@ -6,8 +6,9 @@ _pkgname=pycharm
 
 pkgname=pycharm-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='PyCharm Professional (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='Supercharge your development with an AI-enhanced IDE experience (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/pycharm/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz"
         "https://download.jetbrains.com/python/pycharm-professional-${_buildver}.tar.gz.sha256")
-sha256sums=('9c2f2754c99adaee19a92ad6f682d21cc0d5dd62d9449e6fb613f72e3f38c43f'
+sha256sums=('5b82cbab463d1c170fe1916cdcdea9f660b0b19ffe50ca72e9366ba16ee74170'
             '4bd06cc4e11608ea3a2a76c6ff5a343a1b41e8a9ce0d827bc8e57fcf5be5f18b'
             '83a1a131a49a4fd5ab41aaf167f2aaba5d778f8635a40f1d0c04cd0fc3d6948a')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c pycharm-professional-${_buildver}.tar.gz.sha256

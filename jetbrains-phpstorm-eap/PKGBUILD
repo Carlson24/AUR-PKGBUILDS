@@ -6,8 +6,9 @@ _pkgname=phpstorm
 
 pkgname=phpstorm-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='PhpStorm (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='Code smarter with the PHP IDE (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/${_pkgname}/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/webide/PhpStorm-${_buildver}.tar.gz"
         "https://download.jetbrains.com/webide/PhpStorm-${_buildver}.tar.gz.sha256")
-sha256sums=('e6a9a2eb28fbfb6a136db528337f56b827fcd4109c40c5e618fd6286aad3e6f2'
+sha256sums=('29532d84ff122cedb5852e31e2c0aaead69bceaf210aff15c82dad1c53f1f4c6'
             '3baaf25b438c7584b9d2454895b65a25592e0f092559d896169fc6d31fd84925'
             '6e78c59a0d9203de1f3cf0b49ae9b1d1e639d923975818ac4b6cadd4811e9652')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c PhpStorm-${_buildver}.tar.gz.sha256

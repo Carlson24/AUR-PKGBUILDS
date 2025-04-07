@@ -6,8 +6,9 @@ _pkgname=goland
 
 pkgname=${_pkgname}-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='GoLand (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='The complete IDE crafted for Gophers (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/go/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/go/goland-${_buildver}.tar.gz"
         "https://download.jetbrains.com/go/goland-${_buildver}.tar.gz.sha256")
-sha256sums=('31bdf42b6f4b373290150d8e59adb6cd44b55b0aa1bbc801dfd7f1a08b9ed01a'
+sha256sums=('db62a29fda1c33279b6e253443a35a5be9332731191d2715847979d2db4c9c3f'
             '9c74be72b091a866d35b3561f697c4161750dee8350e7b2f3563b6012c9333d0'
             'c8cd8109fd7ede13b8f2ea4aefad18a8062f72704fdcab99708f1f7ae84e7dba')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c goland-${_buildver}.tar.gz.sha256

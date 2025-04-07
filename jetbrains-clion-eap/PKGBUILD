@@ -6,8 +6,9 @@ _pkgname=clion
 
 pkgname=clion-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='CLion (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='A cross-platform IDE for C and C++ (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/${_pkgname}/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/cpp/CLion-${_buildver}.tar.gz"
         "https://download.jetbrains.com/cpp/CLion-${_buildver}.tar.gz.sha256")
-sha256sums=('29470d7702618a359a903a2ea7652d9d9138c993f4826fea33f0d985f9754b75'
+sha256sums=('99cfb97f1149cc257c604645cb9d55c43a56c987897e8622bd3a8c56c2fc4223'
             '0c9665b0f8360fa53d9fcf74d78a35aac74645fe2d38249737cf6aa7ccd50ab4'
             'bb641b549ad084f97767358c7d7f5b8a6e8c367300b9e0145d21ab7551235c2d')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c CLion-${_buildver}.tar.gz.sha256

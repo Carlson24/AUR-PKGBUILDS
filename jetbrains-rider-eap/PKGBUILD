@@ -6,8 +6,9 @@ _pkgname=rider
 
 pkgname=rider-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='Rider (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc="The world's most loved .NET and game dev IDE (EAP)"
 arch=('x86_64')
 url="https://www.jetbrains.com/rider/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/rider/JetBrains.Rider-${_pkgver}-EAP9-${_buildver}.Checked.tar.gz"
         "https://download.jetbrains.com/rider/JetBrains.Rider-${_pkgver}-EAP9-${_buildver}.Checked.tar.gz.sha256")
-sha256sums=('787365fb48b57371d79840b7df46b8b9c7b59e9e89d2d507642906960df29ae8'
+sha256sums=('805b823cd51887a0b7450f7308cce725424a7654418c3702e1801dd12854b263'
             '60db3a6cf5e4bd2e6cbaabcf3d53ebad81c6e4e16ced89414cabf5468fef6b6e'
             'a6608de01a12400a52d8b176995653586e59f229db8162075064a3c596f4d3b0')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c JetBrains.Rider-${_pkgver}-EAP9-${_buildver}.Checked.tar.gz.sha256

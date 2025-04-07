@@ -6,8 +6,9 @@ _pkgname=rubymine
 
 pkgname=rubymine-eap
 pkgver=${_pkgver}+${_buildver}
-pkgrel=2
-pkgdesc='RubyMine (EAP)'
+pkgrel=1
+epoch=1
+pkgdesc='Code Smarter with Ruby on Rails IDE (EAP)'
 arch=('x86_64')
 url="https://www.jetbrains.com/ruby/nextversion/"
 license=('custom:jetbrains')
@@ -16,11 +17,9 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/ruby/RubyMine-${_buildver}.tar.gz"
         "https://download.jetbrains.com/ruby/RubyMine-${_buildver}.tar.gz.sha256")
-sha256sums=('f6e18303409f72ec3feba0b3e5baff3cf6fa561eb3c5ede1c415be0f2f1822fd'
+sha256sums=('d0b99896bba03ccfa05b35cde542321241d93f17246190a6394159019690dbe3'
             'd738ada1ed93e194e76cd4bcdd18316ac0fce7ee3b65a43e64779af7b82f00cd'
             '439c2dbae1194af9715fdbe7a02007da56dab3503b01deacbe1df9ded2dcfb44')
-backup=("opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-        "opt/jetbrains/${pkgname}/bin/idea.properties")
 
 prepare() {
   sha256sum -c RubyMine-${_buildver}.tar.gz.sha256

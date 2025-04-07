@@ -1,19 +1,18 @@
 pkgbase = intellij-idea-ultimate-eap
-	pkgdesc = IntelliJ IDEA Ultimate (EAP)
+	pkgdesc = in Java and Kotlin (EAP)
 	pkgver = 2025.1+251.23774.200
-	pkgrel = 2
+	pkgrel = 1
+	epoch = 1
 	url = https://www.jetbrains.com/idea/nextversion/
 	arch = x86_64
 	license = custom:jetbrains
 	depends = libdbusmenu-glib
 	depends = jbr-runtime
 	options = !strip
-	backup = opt/jetbrains/intellij-idea-ultimate-eap/bin/idea64.vmoptions
-	backup = opt/jetbrains/intellij-idea-ultimate-eap/bin/idea.properties
 	source = jetbrains-intellij-idea-ultimate-eap.desktop
 	source = https://download.jetbrains.com/idea/ideaIU-251.23774.200.tar.gz
 	source = https://download.jetbrains.com/idea/ideaIU-251.23774.200.tar.gz.sha256
-	sha256sums = a2349ff836ea44169be181ff63ec4b72a711b6702ac4dfefe880ab7837b070cb
+	sha256sums = 06b8e01a66fbe19bf86c5ed2c6dc6a8d936adcc9bff09064c4d1963c970de191
 	sha256sums = 7ce57055e3a5ee92582eb90c2dea469b48a6e7165e74fe085ef1923c16ba7faa
 	sha256sums = a519e1dee728a38d6271a0c5458b78c32b74ab7b199d61ea7d48014e71dc11f5
 
