@@ -1,0 +1,32 @@
+pkgbase = ttf-wenyuan-fonts
+	pkgdesc = A more suitable open-source Chinese font collection for Simplified Chinese environment & TeX field.
+	pkgver = 0.701
+	pkgrel = 1
+	url = https://github.com/takushun-wu/WenYuanFonts
+	arch = any
+	license = OFL-1.1-RFN
+	makedepends = 7zip
+	noextract = WenYuanRoundedSC-TTF-v0.701.7z
+	noextract = WenYuanRoundedSCC-TTF-v0.701.7z
+	noextract = WenYuanSansSC-TTF-v0.701.7z
+	noextract = WenYuanSansSCC-TTF-v0.701.7z
+	noextract = WenYuanSerifSC-TTF-v0.701.7z
+	noextract = WenYuanSerifSCC-TTF-v0.701.7z
+	source = WenYuanRoundedSC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanRoundedSC-TTF.7z
+	source = WenYuanRoundedSCC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanRoundedSCC-TTF.7z
+	source = WenYuanSansSC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanSansSC-TTF.7z
+	source = WenYuanSansSCC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanSansSCC-TTF.7z
+	source = WenYuanSerifSC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanSerifSC-TTF.7z
+	source = WenYuanSerifSCC-TTF-v0.701.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/v0.701/WenYuanSerifSCC-TTF.7z
+	sha256sums = dbc321ae59af3eae45e688dd7db913eb6f687d0ad868580144c90800668cfacd
+	sha256sums = be67c5278251de985e23859977297a6f154cd91e28b334296e53f00cb8a733be
+	sha256sums = a06f6aed6a332ee4c18c8d19351570a1b0be8d77acc03fd97ea034bf3a02a0ad
+	sha256sums = 2d292ce34feb0c38d1372a73fe6262d1915c7bba02042b3f903afaf4caab4fb7
+	sha256sums = a353762d5c1a1872b399167302010f1df5961f310c74872625166875abe68589
+	sha256sums = b4a3d7ee05ddf71c9278ab9313694aff4fcfffed3b3737927c1e48fba87758c1
+
+pkgname = ttf-wenyuan-rounded
+
+pkgname = ttf-wenyuan-sans
+
+pkgname = ttf-wenyuan-serif

@@ -1,0 +1,50 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgbase=ttf-wenyuan-fonts
+pkgname=("ttf-wenyuan-rounded" "ttf-wenyuan-sans" "ttf-wenyuan-serif")
+pkgver=0.701
+pkgrel=1
+pkgdesc="A more suitable open-source Chinese font collection for Simplified Chinese environment & TeX field. "
+url="https://github.com/takushun-wu/WenYuanFonts"
+arch=("any")
+license=('OFL-1.1-RFN')
+makedepends=("7zip")
+source=("WenYuanRoundedSC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanRoundedSC-TTF.7z"
+        "WenYuanRoundedSCC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanRoundedSCC-TTF.7z"
+        "WenYuanSansSC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanSansSC-TTF.7z"
+        "WenYuanSansSCC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanSansSCC-TTF.7z"
+        "WenYuanSerifSC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanSerifSC-TTF.7z"
+        "WenYuanSerifSCC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenYuanSerifSCC-TTF.7z")
+sha256sums=('dbc321ae59af3eae45e688dd7db913eb6f687d0ad868580144c90800668cfacd'
+            'be67c5278251de985e23859977297a6f154cd91e28b334296e53f00cb8a733be'
+            'a06f6aed6a332ee4c18c8d19351570a1b0be8d77acc03fd97ea034bf3a02a0ad'
+            '2d292ce34feb0c38d1372a73fe6262d1915c7bba02042b3f903afaf4caab4fb7'
+            'a353762d5c1a1872b399167302010f1df5961f310c74872625166875abe68589'
+            'b4a3d7ee05ddf71c9278ab9313694aff4fcfffed3b3737927c1e48fba87758c1')
+noextract=("WenYuanRoundedSC-TTF-v${pkgver}.7z"
+           "WenYuanRoundedSCC-TTF-v${pkgver}.7z"
+           "WenYuanSansSC-TTF-v${pkgver}.7z"
+           "WenYuanSansSCC-TTF-v${pkgver}.7z"
+           "WenYuanSerifSC-TTF-v${pkgver}.7z"
+           "WenYuanSerifSCC-TTF-v${pkgver}.7z")
+
+package_ttf-wenyuan-rounded() {
+    7z x -y "WenYuanRoundedSC-TTF-v${pkgver}.7z"
+    7z x -y "WenYuanRoundedSCC-TTF-v${pkgver}.7z"
+    install -dm 755 "${pkgdir}/usr/share/fonts/wenyuan"
+    install -Dm 644 "${srcdir}/"WenYuanRoundedSC*.ttf "${pkgdir}/usr/share/fonts/wenyuan"
+}
+
+package_ttf-wenyuan-sans() {
+    7z x -y "WenYuanSansSC-TTF-v${pkgver}.7z"
+    7z x -y "WenYuanSansSCC-TTF-v${pkgver}.7z"
+    install -dm 755 "${pkgdir}/usr/share/fonts/wenyuan"
+    install -Dm 644 "${srcdir}/"WenYuanSansSC*.ttf "${pkgdir}/usr/share/fonts/wenyuan"
+}
+
+package_ttf-wenyuan-serif() {
+    7z x -y "WenYuanSerifSC-TTF-v${pkgver}.7z"
+    7z x -y "WenYuanSerifSCC-TTF-v${pkgver}.7z"
+    install -dm 755 "${pkgdir}/usr/share/fonts/wenyuan"
+    install -Dm 644 "${srcdir}/"WenYuanSerifSC*.ttf "${pkgdir}/usr/share/fonts/wenyuan"
+}

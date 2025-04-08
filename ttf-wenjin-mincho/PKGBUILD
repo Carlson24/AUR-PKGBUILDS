@@ -1,0 +1,23 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=ttf-wenjin-mincho
+pkgver=1.020
+pkgrel=1
+pkgdesc="A large character set fonts in Songti(Mincho) style."
+url="https://github.com/takushun-wu/WenJinMincho"
+arch=("any")
+license=('OFL-1.1-RFN')
+makedepends=("7zip")
+source=("WenJinMincho-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenJinMincho-TTF.7z"
+        "WenJinMinchoC-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenJinMinchoC-TTF.7z")
+sha256sums=('50806b92ec0e86087b71c3cb7317e44c9f93c6ac1320b1ca35d7c8ea9fbad3f3'
+            '7eb0cbd1f3fe9b08421751ca67cd257fc8f392af8d174fe550fd8ae2e8e0b3f4')
+noextract=("WenJinMincho-TTF-v${pkgver}.7z"
+           "WenJinMinchoC-TTF-v${pkgver}.7z")
+
+package() {
+    7z x -y "WenJinMincho-TTF-v${pkgver}.7z"
+    7z x -y "WenJinMinchoC-TTF-v${pkgver}.7z"
+    install -dm 755 "${pkgdir}/usr/share/fonts/wenjin-mincho"
+    install -Dm 644 "${srcdir}/"*.ttf "${pkgdir}/usr/share/fonts/wenjin-mincho"
+}
