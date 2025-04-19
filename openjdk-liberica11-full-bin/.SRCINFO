@@ -1,7 +1,8 @@
 pkgbase = openjdk-liberica11-full-bin
 	pkgdesc = Liberica 11 includes LibericaFX, which is based on OpenJFX 11 and Minimal VM, where suitable.
-	pkgver = 11+9+11.0.26
-	pkgrel = 4
+	pkgver = 11+9+11.0.27
+	pkgrel = 1
+	epoch = 1
 	url = https://https://bell-sw.com/pages/downloads
 	install = install_openjdk-liberica11-full-bin.sh
 	arch = x86_64
@@ -29,7 +30,7 @@ pkgbase = openjdk-liberica11-full-bin
 	provides = jdk11-openjdk=11
 	provides = jre11-openjdk-headless=11
 	provides = java11-openjfx=11
-	source = https://download.bell-sw.com/java/11.0.26+9/bellsoft-jdk11.0.26+9-linux-amd64-full.tar.gz
-	sha1sums = 4522b7b6886feafc4461eefa5aa2595ec8bcf21c
+	source = https://download.bell-sw.com/java/11.0.27+9/bellsoft-jdk11.0.27+9-linux-amd64-full.tar.gz
+	sha1sums = 14441eeca043b945045435dc2815a0f8c3edb6b9
 
 pkgname = openjdk-liberica11-full-bin
