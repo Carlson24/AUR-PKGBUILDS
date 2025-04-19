@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GoLand
+Icon=goland
+Comment=Go Productive. The complete IDE crafted for Gophers
+Exec=/usr/bin/goland %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-goland
+Categories=Development;IDE;

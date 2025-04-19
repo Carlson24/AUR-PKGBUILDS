@@ -1,0 +1,21 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=jetbra
+pkgver=1.0
+pkgrel=1
+epoch=1
+pkgdesc='An activation tool for jetbrains family products, including plugins'
+arch=('x86_64')
+url="https://github.com/novitechie/jetbra"
+license=('MIT')
+options=('!strip')
+source=("${url}/releases/download/Jetbra/jetbra-all.zip")
+sha256sums=('fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0')
+noextract=("jetbra-all.zip")
+
+package() {
+  unzip -o jetbra-all.zip
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}/trust-crt"
+  install -Dm 644 "${srcdir}/jetbra/"{block_url_keywords,jetbra-agent.jar} "${pkgdir}/opt/jetbrains/${pkgname}"
+  install -Dm 644 "${srcdir}/jetbra/trust-crt/"{janetfilter.crt,jetbra.crt} "${pkgdir}/opt/jetbrains/${pkgname}/trust-crt"
+}

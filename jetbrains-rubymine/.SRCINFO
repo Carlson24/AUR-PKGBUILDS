@@ -1,0 +1,20 @@
+pkgbase = rubymine
+	pkgdesc = Empowering Ruby Developers. Code Smarter with Ruby on Rails IDE
+	pkgver = 2025.1
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/ruby
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	depends = jetbra
+	options = !strip
+	source = jetbrains-rubymine.desktop
+	source = https://download.jetbrains.com/ruby/RubyMine-2025.1.tar.gz
+	source = https://download.jetbrains.com/ruby/RubyMine-2025.1.tar.gz.sha256
+	sha256sums = d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800
+	sha256sums = 6ad3960cf6a0fa88f3cfb6c166c1080ad7c3fb0f72f50379f9cafbe523813437
+	sha256sums = 99ad69a05cf43af1af7b9cb79dcbfb01f1372d7720069962ed0ae20fa8e4d8a4
+
+pkgname = rubymine

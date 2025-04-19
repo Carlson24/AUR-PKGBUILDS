@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Ultimate
+Icon=idea
+Comment=The IDE for Professional Development, in Java and Kotlin
+Exec=/usr/bin/idea %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-idea
+Categories=Development;IDE;

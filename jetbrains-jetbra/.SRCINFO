@@ -1,0 +1,14 @@
+pkgbase = jetbra
+	pkgdesc = An activation tool for jetbrains family products, including plugins
+	pkgver = 1.0
+	pkgrel = 1
+	epoch = 1
+	url = https://github.com/novitechie/jetbra
+	arch = x86_64
+	license = MIT
+	noextract = jetbra-all.zip
+	options = !strip
+	source = https://github.com/novitechie/jetbra/releases/download/Jetbra/jetbra-all.zip
+	sha256sums = fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0
+
+pkgname = jetbra

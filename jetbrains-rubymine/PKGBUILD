@@ -1,0 +1,53 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=rubymine
+pkgver=2025.1
+pkgrel=1
+epoch=1
+pkgdesc='Empowering Ruby Developers. Code Smarter with Ruby on Rails IDE'
+arch=('x86_64')
+url="https://www.jetbrains.com/ruby"
+license=('custom:jetbrains')
+depends=('libdbusmenu-glib' 'jbr-runtime' 'jetbra')
+options=('!strip')
+source=("jetbrains-${pkgname}.desktop"
+        "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz.sha256")
+sha256sums=('d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800'
+            '6ad3960cf6a0fa88f3cfb6c166c1080ad7c3fb0f72f50379f9cafbe523813437'
+            '99ad69a05cf43af1af7b9cb79dcbfb01f1372d7720069962ed0ae20fa8e4d8a4')
+
+prepare() {
+  sha256sum -c RubyMine-${pkgver}.tar.gz.sha256
+}
+
+package() {
+  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/RubyMine-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+
+  install -dm 755 "${pkgdir}/usr/bin"
+  ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
+
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+
+  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/license/." "${pkgdir}/usr/share/licenses/${pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/license"
+  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/license"
+
+  install -dm 755 "${pkgdir}/usr/share/applications"
+  install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
+
+  install -dm 755 "${pkgdir}/usr/share/pixmaps"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.png" "${pkgdir}/usr/share/pixmaps/${pkgname}.png"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.png"
+  ln -s "/usr/share/pixmaps/${pkgname}.png" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${pkgname}.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
+
+  # Forced use Wayland and Loading jetbra
+  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-javaagent:/opt/jetbrains/jetbra/jetbra-agent.jar" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+}

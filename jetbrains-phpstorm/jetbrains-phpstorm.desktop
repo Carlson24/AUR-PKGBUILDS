@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PhpStorm
+Icon=phpstorm
+Comment=Empowering PHP Developers. Code smarter with the PHP IDE
+Exec=/usr/bin/phpstorm %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-phpstorm
+Categories=Development;IDE;

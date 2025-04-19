@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CLion
+Icon=clion
+Comment=A cross-platform IDE for C and C++. Harness the power. Cut the complexity.
+Exec=/usr/bin/clion %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-clion
+Categories=Development;IDE;

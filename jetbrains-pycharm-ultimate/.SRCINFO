@@ -1,0 +1,20 @@
+pkgbase = pycharm-ultimate
+	pkgdesc = The only Python IDE you need. Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.
+	pkgver = 2025.1
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/pycharm
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	depends = jetbra
+	options = !strip
+	source = jetbrains-pycharm-ultimate.desktop
+	source = https://download.jetbrains.com/python/pycharm-professional-2025.1.tar.gz
+	source = https://download.jetbrains.com/python/pycharm-professional-2025.1.tar.gz.sha256
+	sha256sums = 3d57693f11c8244bfade4ec8b97c4cd0cf901c1b1b24bb6302a51820aabfe647
+	sha256sums = 1282907f134a726e17bb7fe8cb7088e406aa4fbf9d910def03633572f3a62f8c
+	sha256sums = 092965fd35f8bc80aa6f05fb73d5ebdd198e4c5302de9d9773e024cb5a6f161d
+
+pkgname = pycharm-ultimate

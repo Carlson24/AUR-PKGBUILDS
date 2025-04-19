@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RustRover
+Icon=rustrover
+Comment=A powerhouse IDE for Rust developers
+Exec=/usr/bin/rustrover %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-rustrover
+Categories=Development;IDE;

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=PyCharm Professional
+Icon=pycharm
+Comment=The only Python IDE you need. Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.
+Exec=/usr/bin/pycharm %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-pycharm
+Categories=Development;IDE;
