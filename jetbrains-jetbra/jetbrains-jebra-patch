@@ -1,8 +1,8 @@
 #!/bin/bash
 
 declare -a jetbrains=(
-  aqua clion datagrip dataspell fleet goland ideau
-  phpstorm pycharmu rider rubymine rustrover webstorm
+  aqua clion datagrip dataspell fleet goland idea
+  phpstorm pycharm rider rubymine rustrover webstorm
 )
 
 for jetbra in "${jetbrains[@]}"; do

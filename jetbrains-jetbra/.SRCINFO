@@ -13,7 +13,7 @@ pkgbase = jetbra
 	source = jetbrains-jebra-patch
 	source = jetbrains-jebra-patch.hook
 	sha256sums = fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0
-	sha256sums = d36b8353e0802dc3b150270acd1ef3b0d00212930b1cd6ca31bb0da5ac86d4cb
+	sha256sums = 692b6abf2fbf3f9c3b28dc8ce14727f6952818b1d9b402b30951422721b21779
 	sha256sums = 93c785cb8c4cc7e80028c7469f801e7973478c10d05b32d9409109382d70c2b8
 
 pkgname = jetbra

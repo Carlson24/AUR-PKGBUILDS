@@ -12,7 +12,7 @@ pkgbase = pycharm-ultimate
 	source = jetbrains-pycharm-ultimate.desktop
 	source = https://download.jetbrains.com/python/pycharm-professional-2025.1.tar.gz
 	source = https://download.jetbrains.com/python/pycharm-professional-2025.1.tar.gz.sha256
-	sha256sums = 8a6a20a5392e2238f09ac6720616cc3115451f536314ccde4a7a681a76a7cc6c
+	sha256sums = 3d57693f11c8244bfade4ec8b97c4cd0cf901c1b1b24bb6302a51820aabfe647
 	sha256sums = 1282907f134a726e17bb7fe8cb7088e406aa4fbf9d910def03633572f3a62f8c
 	sha256sums = 092965fd35f8bc80aa6f05fb73d5ebdd198e4c5302de9d9773e024cb5a6f161d
 

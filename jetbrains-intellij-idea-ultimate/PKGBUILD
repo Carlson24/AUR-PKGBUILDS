@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=intellij-idea-ultimate
-_pkgname=ideau
+_pkgname=idea
 pkgver=2025.1
 _buildver=251.23774.435
 pkgrel=2
@@ -15,7 +15,7 @@ options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz"
         "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz.sha256")
-sha256sums=('9b5ac76b3f2b17fa2290f842b08eea4802b778c39ef282643a2ef36e0c737568'
+sha256sums=('031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1'
             '9946a690072f166607fd7b0d29e9e9c6a24c79fd5d7365a5600366b0b27532ec'
             'd5f5eebee20b35df82ebb02ead84ab8f5da7023092ac73a81c369127cfd70dbd')
 
@@ -24,31 +24,31 @@ prepare() {
 }
 
 package() {
-  install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  install -dm 755 "${pkgdir}/opt/jetbrains/${_pkgname}"
+  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
-  ln -s "/opt/jetbrains/${pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
+  ln -s "/opt/jetbrains/${_pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
 
-  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
-  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${pkgname}/jbr"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/jbr"
+  ln -s "/opt/jetbrains/jbr-runtime" "${pkgdir}/opt/jetbrains/${_pkgname}/jbr"
 
-  install -dm 755 "${pkgdir}/usr/share/licenses/${pkgname}"
-  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/license/." "${pkgdir}/usr/share/licenses/${pkgname}"
-  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/license"
-  ln -s "/usr/share/licenses/${pkgname}" "${pkgdir}/opt/jetbrains/${pkgname}/license"
+  install -dm 755 "${pkgdir}/usr/share/licenses/${_pkgname}"
+  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/license/." "${pkgdir}/usr/share/licenses/${_pkgname}"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/license"
+  ln -s "/usr/share/licenses/${_pkgname}" "${pkgdir}/opt/jetbrains/${_pkgname}/license"
 
   install -dm 755 "${pkgdir}/usr/share/applications"
   install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
 
   install -dm 755 "${pkgdir}/usr/share/pixmaps"
-  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}.png"
-  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
-  ln -s "/usr/share/pixmaps/${_pkgname}.png" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.png"
-  cp -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}.svg"
-  rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
-  ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
+  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}.png"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png"
+  ln -s "/usr/share/pixmaps/${_pkgname}.png" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}64.vmoptions"
 }
