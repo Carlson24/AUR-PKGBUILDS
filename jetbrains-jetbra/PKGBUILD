@@ -11,18 +11,18 @@ license=('MIT')
 depends=('unzip')
 options=('!strip')
 source=("${url}/releases/download/Jetbra/jetbra-all.zip"
-        "jetbrains-jebra-patch"
-        "jetbrains-jebra-patch.hook")
+        "jetbrains-jetbra-patch"
+        "jetbrains-jetbra-patch.hook")
 sha256sums=('fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0'
             '692b6abf2fbf3f9c3b28dc8ce14727f6952818b1d9b402b30951422721b21779'
-            '93c785cb8c4cc7e80028c7469f801e7973478c10d05b32d9409109382d70c2b8')
+            'c2e9d384000708804ab6de1fd78003155cb20123afd1a0dd326ed568c7436866')
 noextract=("jetbra-all.zip")
 
 package() {
   unzip -o jetbra-all.zip
   install -dm 755 "${pkgdir}/usr/share/libalpm/"{hooks,scripts}
-  install -Dm 644 "${srcdir}/jetbrains-jebra-patch.hook" "${pkgdir}/usr/share/libalpm/hooks"
-  install -Dm 755 "${srcdir}/jetbrains-jebra-patch" "${pkgdir}/usr/share/libalpm/scripts"
+  install -Dm 644 "${srcdir}/jetbrains-jetbra-patch.hook" "${pkgdir}/usr/share/libalpm/hooks"
+  install -Dm 755 "${srcdir}/jetbrains-jetbra-patch" "${pkgdir}/usr/share/libalpm/scripts"
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}/trust-crt"
   install -Dm 644 "${srcdir}/jetbra/"{block_url_keywords,jetbra-agent.jar} "${pkgdir}/opt/jetbrains/${pkgname}"
   install -Dm 644 "${srcdir}/jetbra/trust-crt/"{janetfilter.crt,jetbra.crt} "${pkgdir}/opt/jetbrains/${pkgname}/trust-crt"

@@ -8,5 +8,5 @@ Target = !opt/jetbrains/*/bin/*client64.vmoptions
 [Action]
 Description = Patching JetBrains Software...
 When = PostTransaction
-Exec = /usr/share/libalpm/scripts/jetbrains-jebria-patch
+Exec = /usr/share/libalpm/scripts/jetbrains-jetbra-patch
 NeedsTargets

@@ -10,10 +10,10 @@ pkgbase = jetbra
 	noextract = jetbra-all.zip
 	options = !strip
 	source = https://github.com/novitechie/jetbra/releases/download/Jetbra/jetbra-all.zip
-	source = jetbrains-jebra-patch
-	source = jetbrains-jebra-patch.hook
+	source = jetbrains-jetbra-patch
+	source = jetbrains-jetbra-patch.hook
 	sha256sums = fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0
 	sha256sums = 692b6abf2fbf3f9c3b28dc8ce14727f6952818b1d9b402b30951422721b21779
-	sha256sums = 93c785cb8c4cc7e80028c7469f801e7973478c10d05b32d9409109382d70c2b8
+	sha256sums = c2e9d384000708804ab6de1fd78003155cb20123afd1a0dd326ed568c7436866
 
 pkgname = jetbra
