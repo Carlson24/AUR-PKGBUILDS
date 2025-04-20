@@ -1,14 +1,13 @@
 pkgbase = clion
 	pkgdesc = A cross-platform IDE for C and C++. Harness the power. Cut the complexity.
 	pkgver = 2025.1
-	pkgrel = 1
+	pkgrel = 2
 	epoch = 1
 	url = https://www.jetbrains.com/clion
 	arch = x86_64
 	license = custom:jetbrains
 	depends = libdbusmenu-glib
 	depends = jbr-runtime
-	depends = jetbra
 	options = !strip
 	source = jetbrains-clion.desktop
 	source = https://download.jetbrains.com/cpp/CLion-2025.1.tar.gz

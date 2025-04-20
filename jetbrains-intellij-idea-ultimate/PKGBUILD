@@ -1,21 +1,21 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=intellij-idea-ultimate
-_pkgname=idea
+_pkgname=ideau
 pkgver=2025.1
 _buildver=251.23774.435
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc='The IDE for Professional Development, in Java and Kotlin'
 arch=('x86_64')
 url="https://www.jetbrains.com/idea"
 license=('custom:jetbrains')
-depends=('libdbusmenu-glib' 'jbr-runtime' 'jetbra')
+depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz"
         "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz.sha256")
-sha256sums=('031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1'
+sha256sums=('9b5ac76b3f2b17fa2290f842b08eea4802b778c39ef282643a2ef36e0c737568'
             '9946a690072f166607fd7b0d29e9e9c6a24c79fd5d7365a5600366b0b27532ec'
             'd5f5eebee20b35df82ebb02ead84ab8f5da7023092ac73a81c369127cfd70dbd')
 
@@ -49,7 +49,6 @@ package() {
   rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
   ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}.svg"
 
-  # Forced use Wayland and Loading jetbra
+  # Forced use Wayland
   echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
-  echo "-javaagent:/opt/jetbrains/jetbra/jetbra-agent.jar" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${_pkgname}64.vmoptions"
 }

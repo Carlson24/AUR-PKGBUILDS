@@ -1,0 +1,16 @@
+#!/bin/bash
+
+declare -a jetbrains=(
+  aqua clion datagrip dataspell fleet goland ideau
+  phpstorm pycharmu rider rubymine rustrover webstorm
+)
+
+for jetbra in "${jetbrains[@]}"; do
+  if [[ -f "/opt/jetbrains/${jetbra}/bin/${jetbra}64.vmoptions" ]]; then
+    TEST=$(grep -o "jetbra-agent.jar" "/opt/jetbrains/${jetbra}/bin/${jetbra}64.vmoptions")
+    if [[ "${TEST}" != "jetbra-agent.jar" ]]; then
+      echo "-javaagent:/opt/jetbrains/jetbra/jetbra-agent.jar" >> "/opt/jetbrains/${jetbra}/bin/${jetbra}64.vmoptions"
+      echo "patched ${jetbra}64.vmoptions"
+    fi
+  fi
+done

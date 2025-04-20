@@ -1,14 +1,13 @@
 pkgbase = goland
 	pkgdesc = Go Productive. The complete IDE crafted for Gophers
 	pkgver = 2025.1
-	pkgrel = 1
+	pkgrel = 2
 	epoch = 1
 	url = https://www.jetbrains.com/go
 	arch = x86_64
 	license = custom:jetbrains
 	depends = libdbusmenu-glib
 	depends = jbr-runtime
-	depends = jetbra
 	options = !strip
 	source = jetbrains-goland.desktop
 	source = https://download.jetbrains.com/go/goland-2025.1.tar.gz

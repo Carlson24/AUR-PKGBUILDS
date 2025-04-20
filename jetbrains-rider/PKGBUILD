@@ -2,13 +2,13 @@
 
 pkgname=rider
 pkgver=2025.1
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc="The world's most loved .NET and game dev IDE"
 arch=('x86_64')
 url="https://www.jetbrains.com/rider"
 license=('custom:jetbrains')
-depends=('libdbusmenu-glib' 'jbr-runtime' 'jetbra')
+depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/rider/JetBrains.Rider-${pkgver}.tar.gz"
@@ -47,7 +47,6 @@ package() {
   rm -r "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
-  # Forced use Wayland and Loading jetbra
+  # Forced use Wayland
   echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
-  echo "-javaagent:/opt/jetbrains/jetbra/jetbra-agent.jar" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }
