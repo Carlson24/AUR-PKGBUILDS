@@ -2,9 +2,10 @@
 
 pkgname=intellij-idea-ultimate
 _pkgname=idea
-pkgver=2025.1
-_buildver=251.23774.435
-pkgrel=2
+_version=2025.1.1.1
+_buildver=251.25410.129
+pkgver=${_version}+${_buildver}
+pkgrel=1
 epoch=1
 pkgdesc='The IDE for Professional Development, in Java and Kotlin'
 arch=('x86_64')
@@ -13,14 +14,14 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz"
-        "https://download.jetbrains.com/idea/ideaIU-${pkgver}.tar.gz.sha256")
+        "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz"
+        "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz.sha256")
 sha256sums=('031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1'
-            '9946a690072f166607fd7b0d29e9e9c6a24c79fd5d7365a5600366b0b27532ec'
-            'd5f5eebee20b35df82ebb02ead84ab8f5da7023092ac73a81c369127cfd70dbd')
+            '337d34b20cdaa8da30d71b98e1b36817bdfe2f2245c491ef38f0cee02f0d0316'
+            'e43db631cf9c8290d22e5552977f44d1ebf955c15f2ee2b9605ea4318464de84')
 
 prepare() {
-  sha256sum -c ideaIU-${pkgver}.tar.gz.sha256
+  sha256sum -c ideaIU-${_version}.tar.gz.sha256
 }
 
 package() {

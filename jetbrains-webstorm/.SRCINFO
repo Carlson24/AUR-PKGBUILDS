@@ -1,7 +1,7 @@
 pkgbase = webstorm
 	pkgdesc = The JavaScript and TypeScript IDE. Make development more productive and enjoyable.
-	pkgver = 2025.1
-	pkgrel = 2
+	pkgver = 2025.1.1+251.25410.117
+	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/rust
 	arch = x86_64
@@ -10,10 +10,10 @@ pkgbase = webstorm
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-webstorm.desktop
-	source = https://download.jetbrains.com/webstorm/WebStorm-2025.1.tar.gz
-	source = https://download.jetbrains.com/webstorm/WebStorm-2025.1.tar.gz.sha256
+	source = https://download.jetbrains.com/webstorm/WebStorm-2025.1.1.tar.gz
+	source = https://download.jetbrains.com/webstorm/WebStorm-2025.1.1.tar.gz.sha256
 	sha256sums = 251d1d5274d8e350b94ddadce4cfd2f40b8ba7833910cf8da45d7b63c419cfec
-	sha256sums = f181eb1348c04a60f860fd9ea9616261c6c012a7916e76380652d129e87503ea
-	sha256sums = facb4ae0c347667deac1221dffab60d08e94fcc26b00931cc0d7dc25d4bb471e
+	sha256sums = 411b6d93e47d7743aa9189f4a3cab3956c573ce406908da5621f8dee0098ad99
+	sha256sums = 48536770dab81a31907a0618ba31b61e3597f2802d59be5b9468ad33a0123126
 
 pkgname = webstorm
