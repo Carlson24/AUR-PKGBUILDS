@@ -3,7 +3,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _pkgname=linuxqq
-_base_pkgver=3.2.17_250429
+_base_pkgver=3.2.17_250521
 _update_pkgver=${_base_pkgver}
 #_md5=08c52833
 pkgname=linuxqq-nt-bwrap
@@ -35,7 +35,7 @@ sha256sums=('2748a351259d378ab9773000cbf1ea0448de5ae92f28bb9e366fa795e1715739'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             'cc002ee0eb2e8702c97d16f4ce628841cd5fe10195875a075432e92248741424'
             '32a68199730f679ca7a3b445196eeb11d9b9f1ae11d959f36d637708b4d81acc'
-            '0c3a8b1e5f0883b9a265385e465b41abeae22d7c861a75bc36d70e2343e02ad7')
+            '046e90cfe86ab9ec526b9402c16c7abee71be134b475443a518281ff39242358')
 
 prepare() {
     local base_ver=${_base_pkgver}
