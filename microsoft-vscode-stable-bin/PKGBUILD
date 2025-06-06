@@ -2,7 +2,7 @@
 
 pkgname=microsoft-vscode-stable-bin
 _pkgname=vscode
-pkgver=1.100.2
+pkgver=1.100.3
 pkgrel=1
 pkgdesc="Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)"
 arch=('x86_64')
@@ -31,17 +31,17 @@ source=(vscode-${pkgver}.desktop.in::https://raw.githubusercontent.com/microsoft
 sha256sums=('2f1782b30c4e040efff655fd9cf477930c5a0c81ddae27749b0cbb922c1d248e'
             'c361efa7e02fcad759ed80d2fbab67877f33219b981578af6fffaf18aeb12d9b'
             '3af748dd6578a1775e8eb7248ba397b7e11840df2ea6ee234ff76fee3dc306cf'
-            '5c2cbbeaa08b92340dce899a78d66be8d92c09b4d75313bfdfc46fb3bddca5c0'
+            'ad193cffdfb1df1bb14fff51ff92240bbe2b0c8c8c60484b8c479eb0d0b2a44d'
             '70bd4b21a906c0bec8446786de111dd08d3d5b7337970822776c467afd9cfb6e')
 
 
 _set_meta_info() {
   sed 's/@@NAME_LONG@@/Visual Studio Code/g' "$1" |\
-    sed 's/@@NAME_SHORT@@/Code/g' |\
-    sed 's/@@NAME@@/code/g' |\
-    sed 's#@@EXEC@@#/usr/bin/code#g' |\
-    sed 's/@@ICON@@/visual-studio-code/g' |\
-    sed 's/@@URLPROTOCOL@@/vscode/g'
+  sed 's/@@NAME_SHORT@@/Code/g' |\
+  sed 's/@@NAME@@/code/g' |\
+  sed 's#@@EXEC@@#/usr/bin/code#g' |\
+  sed 's/@@ICON@@/visual-studio-code/g' |\
+  sed 's/@@URLPROTOCOL@@/vscode/g'
 }
 
 prepare() {
