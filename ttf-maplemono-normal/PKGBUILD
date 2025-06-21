@@ -2,36 +2,36 @@
 
 pkgbase=maplemono-normal
 pkgname=("ttf-maplemono-normal" "ttf-maplemono-normal-cn" "ttf-maplemono-normal-nf" "ttf-maplemono-normal-nf-cn")
-pkgver=7.0
+pkgver=7.3
 pkgrel=1
 pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
 url="https://github.com/subframe7536/maple-font"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("MapleMonoNormal-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-TTF.zip"
-        "MapleMonoNormal-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-CN.zip"
-        "MapleMonoNormal-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF.zip"
-        "MapleMonoNormal-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF-CN.zip"
-        "MapleMonoNormalNL-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-TTF.zip"
-        "MapleMonoNormalNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-CN.zip"
-        "MapleMonoNormalNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF.zip"
-        "MapleMonoNormalNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF-CN.zip")
-sha256sums=('bcbe9f47010fd8648e441ace1af120480f9fc63ad9c989a96cd7ae20ca55bd83'
-            '3834d607ef674cc9a011aaa5bf5fc5ab8180061e3908b4c0d072961ccf46f40c'
-            '48c9ed6745d546c74ba1c49df41b0ddff3919a4522f178134a27142ea106d29a'
-            'e4993f16a77ba4cb8382185a16f21e80f26a2b6d62309b8dfe726df72e6179b7'
-            'c5ba756616d8cac1c738a928532bb44efefafe30ea09ba3653a7f31e214fb79d'
-            'a46c6c2941523b987338f596d2b8181bc7e982e9e63e4b309d9f1af82e40f933'
-            '8fc2e2f88fcd81d352c13018df561b0491537362177dfcaa427bff2957c178c5'
-            '962ff13c01c9205b560c42b54edb50b8e8d9ece26a5e4f9d9dc1c5a70b21dc56')
+    "MapleMonoNormal-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-CN.zip"
+    "MapleMonoNormal-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF.zip"
+    "MapleMonoNormal-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormal-NF-CN.zip"
+    "MapleMonoNormalNL-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-TTF.zip"
+    "MapleMonoNormalNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-CN.zip"
+    "MapleMonoNormalNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF.zip"
+    "MapleMonoNormalNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF-CN.zip")
+sha256sums=('7140bdbadcb48ae7729b5af72cd47e858a1621ebf22225c2d0c6cad44a65e92e'
+            '3332fb0126f0daa2591d83bac62abb93445aded16ff721a54bc482cc93332716'
+            'abe15544f5b2ab99b245c937914a049bffe91cce6a2220a586380d0ad3fb7ff9'
+            '47c9f3be4bc9efc6ecc9239b69bd6ee1f6296098b8f3cc4b5534689f40bcca14'
+            '6b49574bbc062bb402c536ec5a37fca63e24d01d65ebf38fb3c5426d94856baf'
+            '66f923b305fd40f251f1c00cd73e87a907d92a0a6089dbe9bc094646547248ff'
+            '22f91819118e359f3edda17ff2975e6b5d38945f379066de88002b2ccc246b36'
+            'd94ec51c41f60ec49ca434c253f0889a1f7c25916ec3c1a85e8143691b81de93')
 noextract=("MapleMonoNormal-TTF-v${pkgver}.zip"
-           "MapleMonoNormal-CN-v${pkgver}.zip"
-           "MapleMonoNormal-NF-v${pkgver}.zip"
-           "MapleMonoNormal-NF-CN-v${pkgver}.zip"
-           "MapleMonoNormalNL-TTF-v${pkgver}.zip"
-           "MapleMonoNormalNL-CN-v${pkgver}.zip"
-           "MapleMonoNormalNL-NF-v${pkgver}.zip"
-           "MapleMonoNormalNL-NF-CN-v${pkgver}.zip")
+    "MapleMonoNormal-CN-v${pkgver}.zip"
+    "MapleMonoNormal-NF-v${pkgver}.zip"
+    "MapleMonoNormal-NF-CN-v${pkgver}.zip"
+    "MapleMonoNormalNL-TTF-v${pkgver}.zip"
+    "MapleMonoNormalNL-CN-v${pkgver}.zip"
+    "MapleMonoNormalNL-NF-v${pkgver}.zip"
+    "MapleMonoNormalNL-NF-CN-v${pkgver}.zip")
 
 package_ttf-maplemono-normal() {
     unzip -o MapleMonoNormal-TTF-v${pkgver}.zip -d MapleMonoNormal-TTF

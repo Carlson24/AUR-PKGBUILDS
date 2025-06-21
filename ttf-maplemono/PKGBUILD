@@ -2,36 +2,36 @@
 
 pkgbase=maplemono
 pkgname=("ttf-maplemono" "ttf-maplemono-cn" "ttf-maplemono-nf" "ttf-maplemono-nf-cn")
-pkgver=7.0
+pkgver=7.3
 pkgrel=1
 pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
 url="https://github.com/subframe7536/maple-font"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("MapleMono-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-TTF.zip"
-        "MapleMono-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-CN.zip"
-        "MapleMono-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-NF.zip"
-        "MapleMono-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-NF-CN.zip"
-        "MapleMonoNL-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-TTF.zip"
-        "MapleMonoNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-CN.zip"
-        "MapleMonoNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF.zip"
-        "MapleMonoNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF-CN.zip")
-sha256sums=('1609689e46e7a618b09b11a3ed9d28cdf1ccc29263efef7a83a58cb4c7b7ac8a'
-            'bd09190f5c1afe9cc0651f1bf64adf029182512f8046464dbe1a89fd91a99cbb'
-            '1e066422b115e73991841bc0238fee4fe9df5210da0f41fcd6ea535df24d85a0'
-            '214047481216fffbd6c25ba679f156e3c79250b26663d7bc17d62685bb7f294d'
-            '6db27170861aadfb6b8a704ef6b2c0a94cf78cba16ce4719faa64298b7a4a3c5'
-            '2540875764e40d3171a595e26cbabcfc43729fb28447902a4f9631e2d2ba796f'
-            '93e16c07195985e680cc915da5d2adaf83544e74ae7ba18d80d6bf53907a74f2'
-            '4bd6bca97a5e6d83262664abf891bde39198bae7100b96db5117f78748f01f8d')
+    "MapleMono-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-CN.zip"
+    "MapleMono-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-NF.zip"
+    "MapleMono-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMono-NF-CN.zip"
+    "MapleMonoNL-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-TTF.zip"
+    "MapleMonoNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-CN.zip"
+    "MapleMonoNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF.zip"
+    "MapleMonoNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF-CN.zip")
+sha256sums=('055aec4dbcbfbd588adb6b0048e43af97ab46be62f9aaec4b12aa169e6248ca1'
+            'a9c15945c27b42b37328a686c535138cc43e5dde2a7c89dcf4835206c8ada025'
+            '24df676622e72c1ac75bf175f458b82230059ba373fe83de3e70ffc96e40c023'
+            '4e3aeb8754908ef16e9c2a6b9efbb60a04031f6e53416a5ebe254040981ff341'
+            '449a80a8d7192831705ba5e743175b0fe30fe8bfad9756f6d4dd69f72a6b7dfe'
+            'ca73eb68318ad9732bc3913d5f54a3243c624f2d1ba93173239050f6518cfbb5'
+            '8ac1d991174f90c79f9a76944f68e94a6a055b8d3b17be29129318f41b916f6c'
+            '4aaf51a5754aac105d20dc7a31c9c8f96f6abaf346ce1e5c1a5763c4067a0950')
 noextract=("MapleMono-TTF-v${pkgver}.zip"
-           "MapleMono-CN-v${pkgver}.zip"
-           "MapleMono-NF-v${pkgver}.zip"
-           "MapleMono-NF-CN-v${pkgver}.zip"
-           "MapleMonoNL-TTF-v${pkgver}.zip"
-           "MapleMonoNL-CN-v${pkgver}.zip"
-           "MapleMonoNL-NF-v${pkgver}.zip"
-           "MapleMonoNL-NF-CN-v${pkgver}.zip")
+    "MapleMono-CN-v${pkgver}.zip"
+    "MapleMono-NF-v${pkgver}.zip"
+    "MapleMono-NF-CN-v${pkgver}.zip"
+    "MapleMonoNL-TTF-v${pkgver}.zip"
+    "MapleMonoNL-CN-v${pkgver}.zip"
+    "MapleMonoNL-NF-v${pkgver}.zip"
+    "MapleMonoNL-NF-CN-v${pkgver}.zip")
 
 package_ttf-maplemono() {
     unzip -o MapleMono-TTF-v${pkgver}.zip -d MapleMono-TTF

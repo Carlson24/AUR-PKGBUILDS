@@ -2,7 +2,7 @@
 
 pkgname=microsoft-vscode-stable-bin
 _pkgname=vscode
-pkgver=1.100.3
+pkgver=1.101.1
 pkgrel=1
 pkgdesc="Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)"
 arch=('x86_64')
@@ -18,36 +18,35 @@ install=$pkgname.install
 # xdg-utils: needed for opening web links with xdg-open
 depends=(libxkbfile gnupg gtk3 libsecret nss gcc-libs libnotify libxss glibc lsof shared-mime-info xdg-utils alsa-lib)
 optdepends=('glib2: Needed for move to trash functionality'
-            'libdbusmenu-glib: Needed for KDE global menu'
-            'org.freedesktop.secrets: Needed for settings sync'
-             # See https://github.com/MicrosoftDocs/live-share/issues/4650
-            'icu69: Needed for live share' )
+  'libdbusmenu-glib: Needed for KDE global menu'
+  'org.freedesktop.secrets: Needed for settings sync'
+  # See https://github.com/MicrosoftDocs/live-share/issues/4650
+  'icu69: Needed for live share')
 source=(vscode-${pkgver}.desktop.in::https://raw.githubusercontent.com/microsoft/vscode/${pkgver}/resources/linux/code.desktop
-        vscode-${pkgver}-url-handler.desktop.in::https://raw.githubusercontent.com/microsoft/vscode/${pkgver}/resources/linux/code-url-handler.desktop
-        vscode-${pkgver}-workspace.xml.in::https://raw.githubusercontent.com/microsoft/vscode/${pkgver}/resources/linux/code-workspace.xml
-        code_x64_${pkgver}.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable
-        ${pkgname}.sh)
+  vscode-${pkgver}-url-handler.desktop.in::https://raw.githubusercontent.com/microsoft/vscode/${pkgver}/resources/linux/code-url-handler.desktop
+  vscode-${pkgver}-workspace.xml.in::https://raw.githubusercontent.com/microsoft/vscode/${pkgver}/resources/linux/code-workspace.xml
+  code_x64_${pkgver}.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable
+  ${pkgname}.sh)
 
 sha256sums=('2f1782b30c4e040efff655fd9cf477930c5a0c81ddae27749b0cbb922c1d248e'
             'c361efa7e02fcad759ed80d2fbab67877f33219b981578af6fffaf18aeb12d9b'
             '3af748dd6578a1775e8eb7248ba397b7e11840df2ea6ee234ff76fee3dc306cf'
-            'ad193cffdfb1df1bb14fff51ff92240bbe2b0c8c8c60484b8c479eb0d0b2a44d'
+            '46bec935696857856480693dcc31270ff5911d262fe6cbbc52b392225df6e3b7'
             '70bd4b21a906c0bec8446786de111dd08d3d5b7337970822776c467afd9cfb6e')
 
-
 _set_meta_info() {
-  sed 's/@@NAME_LONG@@/Visual Studio Code/g' "$1" |\
-  sed 's/@@NAME_SHORT@@/Code/g' |\
-  sed 's/@@NAME@@/code/g' |\
-  sed 's#@@EXEC@@#/usr/bin/code#g' |\
-  sed 's/@@ICON@@/visual-studio-code/g' |\
-  sed 's/@@URLPROTOCOL@@/vscode/g'
+  sed 's/@@NAME_LONG@@/Visual Studio Code/g' "$1" |
+    sed 's/@@NAME_SHORT@@/Code/g' |
+    sed 's/@@NAME@@/code/g' |
+    sed 's#@@EXEC@@#/usr/bin/code#g' |
+    sed 's/@@ICON@@/visual-studio-code/g' |
+    sed 's/@@URLPROTOCOL@@/vscode/g'
 }
 
 prepare() {
-  _set_meta_info "${srcdir}/vscode-${pkgver}.desktop.in" > "${srcdir}/code.desktop"
-  _set_meta_info "${srcdir}/vscode-${pkgver}-url-handler.desktop.in" > "${srcdir}/code-url-handler.desktop"
-  _set_meta_info "${srcdir}/vscode-${pkgver}-workspace.xml.in" > "${srcdir}/code-workspace.xml"
+  _set_meta_info "${srcdir}/vscode-${pkgver}.desktop.in" >"${srcdir}/code.desktop"
+  _set_meta_info "${srcdir}/vscode-${pkgver}-url-handler.desktop.in" >"${srcdir}/code-url-handler.desktop"
+  _set_meta_info "${srcdir}/vscode-${pkgver}-workspace.xml.in" >"${srcdir}/code-workspace.xml"
 }
 
 package() {
@@ -67,4 +66,3 @@ package() {
   install -Dm 644 "${srcdir}/VSCode-linux-x64/resources/completions/bash/code" "${pkgdir}/usr/share/bash-completion/completions/code"
   install -Dm 644 "${srcdir}/VSCode-linux-x64/resources/completions/zsh/_code" "${pkgdir}/usr/share/zsh/site-functions/_code"
 }
-
