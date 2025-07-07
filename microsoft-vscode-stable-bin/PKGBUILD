@@ -2,7 +2,7 @@
 
 pkgname=microsoft-vscode-stable-bin
 _pkgname=vscode
-pkgver=1.101.1
+pkgver=1.101.2
 pkgrel=1
 pkgdesc="Visual Studio Code (vscode): Editor for building and debugging modern web and cloud applications (official binary version)"
 arch=('x86_64')
@@ -31,7 +31,7 @@ source=(vscode-${pkgver}.desktop.in::https://raw.githubusercontent.com/microsoft
 sha256sums=('2f1782b30c4e040efff655fd9cf477930c5a0c81ddae27749b0cbb922c1d248e'
             'c361efa7e02fcad759ed80d2fbab67877f33219b981578af6fffaf18aeb12d9b'
             '3af748dd6578a1775e8eb7248ba397b7e11840df2ea6ee234ff76fee3dc306cf'
-            '46bec935696857856480693dcc31270ff5911d262fe6cbbc52b392225df6e3b7'
+            'ef62ab0835017bec498e7498fe79eb347f7610fe2da7bd71d5f69d8743ded033'
             '70bd4b21a906c0bec8446786de111dd08d3d5b7337970822776c467afd9cfb6e')
 
 _set_meta_info() {
