@@ -13,7 +13,7 @@ options=('!strip')
 source=("${url}/releases/download/Jetbra/jetbra-all.zip"
         "jetbrains-jetbra-patch"
         "jetbrains-jetbra-patch.hook")
-sha256sums=('fef67d9cf64524e9d83582a243003aaca7b593b9100a2c515430847a7289bec0'
+sha256sums=('2e33c3df1306077f8771d2166661992f358ae3badd301d59464dc1672329074d'
             '174773764ddf1c4407bd7a22d4bea691ff20ba05b80b4da1d60366009af8a4be'
             'c2e9d384000708804ab6de1fd78003155cb20123afd1a0dd326ed568c7436866')
 noextract=("jetbra-all.zip")

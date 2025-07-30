@@ -1,9 +1,10 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=phpstorm
-pkgver=2025.1
-_buildver=251.23774.436
-pkgrel=2
+_version=2025.1.4.1
+_buildver=251.27812.52
+pkgver=${_version}+${_buildver}
+pkgrel=1
 epoch=1
 pkgdesc='Empowering PHP Developers. Code smarter with the PHP IDE'
 arch=('x86_64')
@@ -12,14 +13,14 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/webide/PhpStorm-${pkgver}.tar.gz"
-        "https://download.jetbrains.com/webide/PhpStorm-${pkgver}.tar.gz.sha256")
+        "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz"
+        "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz.sha256")
 sha256sums=('c823ed26d67670a0bb673dc29f613630087dcd48a3b6f7d5d4b48299bc550238'
-            '2ead794b5bc6d31be4ad886788110e9d8e5c708e2e542b20d17a2407b9e58998'
-            'e61d66577bb729e19cd2a5d616732e134b6dc7c1e9af9c3f13af5e1e9862f3c8')
+            '92cd8d570d0307188190761c7cd0d0f77351ff119735073c2a101e4a364292b4'
+            '4872f4169d514bd05c87426f9009e1dd770575ed109ad0f7968d3aa4f39e5a86')
 
 prepare() {
-  sha256sum -c PhpStorm-${pkgver}.tar.gz.sha256
+  sha256sum -c PhpStorm-${_version}.tar.gz.sha256
 }
 
 package() {

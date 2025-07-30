@@ -1,20 +1,20 @@
 pkgbase = lxgw-bright-code
 	pkgdesc = A merged font of Monaspace Argon and LXGW WenKai.
-	pkgver = 2.711
+	pkgver = 2.720
 	pkgrel = 1
 	url = https://github.com/lxgw/LxgwBright-Code
 	arch = any
 	license = OFL-1.1-RFN
 	makedepends = 7zip
-	noextract = LXGWBrightCode-v2.711.7z
-	noextract = LXGWBrightCodeGB-v2.711.7z
-	noextract = LXGWBrightCodeTC-v2.711.7z
-	source = LXGWBrightCode-v2.711.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.711/LXGWBrightCode.7z
-	source = LXGWBrightCodeGB-v2.711.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.711/LXGWBrightCodeGB.7z
-	source = LXGWBrightCodeTC-v2.711.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.711/LXGWBrightCodeTC.7z
-	sha256sums = b0e410d28202b44320779429752c90e9c58870017c0c8e8d0200632adb0c2229
-	sha256sums = b9bee88e1131828522de7ec2161158b963d2539fcccbbdbd1aa3c80145912f3e
-	sha256sums = 8f917ad422100af6879bbe023db520a220d04e2695563aea0238475bd3c2ac1a
+	noextract = LXGWBrightCode-v2.720.7z
+	noextract = LXGWBrightCodeGB-v2.720.7z
+	noextract = LXGWBrightCodeTC-v2.720.7z
+	source = LXGWBrightCode-v2.720.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.720/LXGWBrightCode.7z
+	source = LXGWBrightCodeGB-v2.720.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.720/LXGWBrightCodeGB.7z
+	source = LXGWBrightCodeTC-v2.720.7z::https://github.com/lxgw/LxgwBright-Code/releases/download/v2.720/LXGWBrightCodeTC.7z
+	sha256sums = 833a872796b89ff580804af56b12a5ac1a051ddeaec095b06271b589863bf4de
+	sha256sums = aaf10ba8164797972ff4a8500b6cb28667aee072b2efbdce251111e02619d23b
+	sha256sums = 2b9efe92416fa73ef0904d3c99626f57fdf44833a536efa85c541457657cb591
 
 pkgname = ttf-lxgw-bright-code
 

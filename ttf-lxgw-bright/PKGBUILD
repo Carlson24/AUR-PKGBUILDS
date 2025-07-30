@@ -2,7 +2,7 @@
 
 pkgbase=lxgw-bright
 pkgname=("ttf-lxgw-bright" "ttf-lxgw-bright-gb" "ttf-lxgw-bright-tc")
-pkgver=5.517
+pkgver=5.526
 pkgrel=1
 pkgdesc="A merged font of Ysabeau and LXGW WenKai."
 url="https://github.com/lxgw/LxgwBright"
@@ -12,9 +12,9 @@ makedepends=("7zip")
 source=("LXGWBright-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBright.7z"
         "LXGWBrightGB-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightGB.7z"
         "LXGWBrightTC-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightTC.7z")
-sha256sums=('2c46d781c7699a6b0553bb12541a73e5c308c3176ba5551e40879a48e489c01d'
-            '2ddfd3d6b8e85930cb6a5b142e5f94fe826413c8078e30e651ffeacda157dcc5'
-            '43ed03a42f2ca8004fa6c4647e1f85a9f08380f58365b185852f14d3d2f81651')
+sha256sums=('e5502c2ad8142d496650d188a0645ec15ee6605c60ccdb21945f6bd6cd266e21'
+            'e2adc37688c94fc152d1fc40186c37f3380bf6188d269aad61b88331e7ecd35c'
+            '3028306493e0fd310fa6883b1977ac081ebf69b6ac54bb9e6e88de9308fa6109')
 noextract=("LXGWBright-v${pkgver}.7z"
            "LXGWBrightGB-v${pkgver}.7z"
            "LXGWBrightTC-v${pkgver}.7z")

@@ -2,8 +2,8 @@
 
 pkgname=intellij-idea-ultimate
 _pkgname=idea
-_version=2025.1.1.1
-_buildver=251.25410.129
+_version=2025.1.4.1
+_buildver=251.27812.49
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -17,8 +17,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz"
         "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz.sha256")
 sha256sums=('031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1'
-            '337d34b20cdaa8da30d71b98e1b36817bdfe2f2245c491ef38f0cee02f0d0316'
-            'e43db631cf9c8290d22e5552977f44d1ebf955c15f2ee2b9605ea4318464de84')
+            'd1335bcdcac3746a10d6b3346f06ab6d34c9ad14c4af759322d9a93f7b428894'
+            '82dfbe322b8bec8c52fa534cc045db402f43cd6df82f91052180d6e10606c5f7')
 
 prepare() {
   sha256sum -c ideaIU-${_version}.tar.gz.sha256

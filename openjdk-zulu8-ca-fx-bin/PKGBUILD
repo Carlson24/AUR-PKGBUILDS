@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _javaver=8
-_zuluver=8.86.0.25
-_jdkver=8.0.452
+_zuluver=8.88.0.19
+_jdkver=8.0.462
 
 pkgname="openjdk-zulu${_javaver}-ca-fx-bin"
 pkgver="${_javaver}+${_zuluver}+${_jdkver}"
@@ -36,7 +36,7 @@ provides=("java-environment=${_javaver}"
           "jre${_javaver}-openjdk-headless=${_javaver}"
           "java${_javaver}-openjfx=${_javaver}")
 source=("https://cdn.azul.com/zulu/bin/zulu${_zuluver}-ca-fx-jdk${_jdkver}-linux_x64.tar.gz")
-b2sums=('00fc5898f81483a48693adfb68696f606c8d78a37bc7e7e8e3ee4dc2c71f7605c8d7c81c4b52aea588562bf4d7868ecdb399ffad406824c9056e6dd0f5ec79bd')
+b2sums=('a7eb3614c5a7a6a1f85e74e4300512f38b940ac7f01d05b9a12ce7d7066d6c64794d1b4bda9260ca546e99d30b33bd5cc3273dd5707a4c08316f27572e2e2597')
 install="install_${pkgname}.sh"
 
 _jvmdir="/usr/lib/jvm/${pkgname}"

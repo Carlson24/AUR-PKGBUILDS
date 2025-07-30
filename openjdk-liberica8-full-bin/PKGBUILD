@@ -2,7 +2,7 @@
 
 _javaver=8
 _bellver=11
-_jdkver=8u452
+_jdkver=8u462
 
 pkgname="openjdk-liberica8-full-bin"
 pkgver="${_javaver}+${_bellver}+${_jdkver}"
@@ -36,7 +36,7 @@ provides=("java-environment=${_javaver}"
           "jre${_javaver}-openjdk-headless=${_javaver}"
           "java${_javaver}-openjfx=${_javaver}")
 source=("https://download.bell-sw.com/java/${_jdkver}+${_bellver}/bellsoft-jdk${_jdkver}+${_bellver}-linux-amd64-full.tar.gz")
-sha1sums=('b1cc647bbc01f48bc7362e81494f54f4669a9fca')
+sha1sums=('b4bb41a43d2856caf15f4632790d91e4c101cdea')
 install="install_${pkgname}.sh"
 
 _jvmdir="/usr/lib/jvm/${pkgname}"

@@ -1,8 +1,10 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rubymine
-pkgver=2025.1
-pkgrel=2
+_version=2025.1.4.1
+_buildver=251.27812.51
+pkgver=${_version}+${_buildver}
+pkgrel=1
 epoch=1
 pkgdesc='Empowering Ruby Developers. Code Smarter with Ruby on Rails IDE'
 arch=('x86_64')
@@ -11,19 +13,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz"
-        "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz.sha256")
+        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz"
+        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz.sha256")
 sha256sums=('d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800'
-            '6ad3960cf6a0fa88f3cfb6c166c1080ad7c3fb0f72f50379f9cafbe523813437'
-            '99ad69a05cf43af1af7b9cb79dcbfb01f1372d7720069962ed0ae20fa8e4d8a4')
+            'c89dcc2a6e50b3bb9e588a5109a7f1de80c2fd09576199904b386547e585d0e4'
+            '961a1a3c5e5e2d0e6939ac24aacf1e5998ccae469a6422ab41760f1686efe5cf')
 
 prepare() {
-  sha256sum -c RubyMine-${pkgver}.tar.gz.sha256
+  sha256sum -c RubyMine-${_version}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/RubyMine-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/RubyMine-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

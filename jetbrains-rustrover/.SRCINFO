@@ -1,6 +1,6 @@
 pkgbase = rustrover
 	pkgdesc = A powerhouse IDE for Rust developers
-	pkgver = 2025.1.2+251.25410.115
+	pkgver = 2025.1.5+251.26927.79
 	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/rust
@@ -10,10 +10,10 @@ pkgbase = rustrover
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-rustrover.desktop
-	source = https://download.jetbrains.com/rustrover/RustRover-2025.1.2.tar.gz
-	source = https://download.jetbrains.com/rustrover/RustRover-2025.1.2.tar.gz.sha256
+	source = https://download.jetbrains.com/rustrover/RustRover-2025.1.5.tar.gz
+	source = https://download.jetbrains.com/rustrover/RustRover-2025.1.5.tar.gz.sha256
 	sha256sums = 65603213e1a492f0d6cf0a067ee13d2c4a627275ee85bf71a1740039484fce0e
-	sha256sums = b2974feb5406153817797b7dc93baaafe35c7b3687d38091d5d1b5d010a03132
-	sha256sums = 6ccf5ae3ffadd9ab6cf6986b171c8190861c2e6ed89316e78bbe92be5ae53186
+	sha256sums = 54eda433719c132c48e733b659b29113d362fea3b9c7dd4109497ed31da7c6f6
+	sha256sums = 5166024c8fb59c0ae46f7582c3d68be6016e369cace7eb3e3ecc3d015bedd3b0
 
 pkgname = rustrover

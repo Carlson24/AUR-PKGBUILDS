@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _javaver=11
-_bellver=9
-_jdkver=11.0.27
+_bellver=12
+_jdkver=11.0.28
 
 pkgname="openjdk-liberica11-full-bin"
 pkgver="${_javaver}+${_bellver}+${_jdkver}"
@@ -36,7 +36,7 @@ provides=("java-environment=${_javaver}"
           "jre${_javaver}-openjdk-headless=${_javaver}"
           "java${_javaver}-openjfx=${_javaver}")
 source=("https://download.bell-sw.com/java/${_jdkver}+${_bellver}/bellsoft-jdk${_jdkver}+${_bellver}-linux-amd64-full.tar.gz")
-sha1sums=('14441eeca043b945045435dc2815a0f8c3edb6b9')
+sha1sums=('125fae7060893611160d7f74f5a336777ab1f1a6')
 install="install_${pkgname}.sh"
 
 _jvmdir="/usr/lib/jvm/${pkgname}"

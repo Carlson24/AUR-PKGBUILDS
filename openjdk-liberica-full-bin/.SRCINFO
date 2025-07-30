@@ -1,6 +1,6 @@
 pkgbase = openjdk-liberica-full-bin
 	pkgdesc = Liberica 24 includes LibericaFX, which is based on OpenJFX 24 and Minimal VM, where suitable.
-	pkgver = 24+11+24.0.1
+	pkgver = 24+12+24.0.2
 	pkgrel = 1
 	epoch = 1
 	url = https://bell-sw.com/pages/downloads
@@ -30,7 +30,7 @@ pkgbase = openjdk-liberica-full-bin
 	provides = jdk24-openjdk=24
 	provides = jre24-openjdk-headless=24
 	provides = java24-openjfx=24
-	source = https://download.bell-sw.com/java/24.0.1+11/bellsoft-jdk24.0.1+11-linux-amd64-full.tar.gz
-	sha1sums = bc6a7c86582e2414c1229a95a9269c741cbbba7c
+	source = https://download.bell-sw.com/java/24.0.2+12/bellsoft-jdk24.0.2+12-linux-amd64-full.tar.gz
+	sha1sums = e7f98ecdcaeb98c7691d0859c54a80cd401f0fbf
 
 pkgname = openjdk-liberica-full-bin

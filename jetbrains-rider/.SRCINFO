@@ -1,7 +1,7 @@
 pkgbase = rider
 	pkgdesc = The world's most loved .NET and game dev IDE
-	pkgver = 2025.1
-	pkgrel = 2
+	pkgver = 2025.1.4+251.26927.67
+	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/rider
 	arch = x86_64
@@ -10,10 +10,10 @@ pkgbase = rider
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-rider.desktop
-	source = https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.tar.gz
-	source = https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.tar.gz.sha256
+	source = https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.4.tar.gz
+	source = https://download.jetbrains.com/rider/JetBrains.Rider-2025.1.4.tar.gz.sha256
 	sha256sums = 0860363846e65d4d13abaeef03fcac0041c5ed4e33a866231af7d5f54facf006
-	sha256sums = bd00eb4d43db2386c6219415b098b0fad5abca5796b813d44beeb76c23408260
-	sha256sums = 40bcf3dd8861a06a100fc7ca4878b94ae5ec843ce73aa02af124c31530c06971
+	sha256sums = 88dc7c4b6581aab5f6a2713061ea10e7ad0f0735e92258f4a3aaba59964440ee
+	sha256sums = 79f94f285196ba0370bd5540e6a732f98905ebc92a5648d5434073b750da6a31
 
 pkgname = rider
