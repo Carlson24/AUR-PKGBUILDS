@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=clion
-_version=2025.1.4
-_buildver=251.27812.15
+_version=2025.2
+_buildver=252.23892.426
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
-        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
+  "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
+  "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
 sha256sums=('ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58'
-            '8d90be9d11c0f47b380f4a9f705058215817edf043bdcea2223d788d25193f78'
-            'e96a9211f605429c7e2cce5a0ccf481e4deacf2a7327541d526fcad9bc60569d')
+            'a12d094544f0b5222d34e2cd8b36b1ea834e7c7acdea7b65aae5cb3522ca108e'
+            'd08408111f10e2ab47a9f683f7e94bc7090cce5ba87de401029b70269bf26723')
 
 prepare() {
   sha256sum -c CLion-${_version}.tar.gz.sha256
@@ -50,5 +50,5 @@ package() {
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }

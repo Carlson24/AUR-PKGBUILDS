@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=pycharm
-_version=2025.1.3.1
-_buildver=251.26927.90
+_version=2025.2
+_buildver=252.23892.439
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz"
-        "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz.sha256")
+  "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz"
+  "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz.sha256")
 sha256sums=('cbdf8c58a6d239fc09733b49e33cb2fb7e3cfa43ebaac06b7189d19935dd35d3'
-            'c8f5b42843ef21673dd94f0d565cda2d09dae595736e39cf510de9a0a8a07239'
-            'a5328fed669ccc06f20eb98781c141a45d4df21ee0cf9cc835a30e325f6bf606')
+            'bc3fbb31ea10e171686b9be8734051382233748502f124393c52848aefe97b32'
+            'e614c2d7826dd68e1b9d35febb3ebdad187daf91694dd5135f9784a563dce7c5')
 
 prepare() {
   sha256sum -c pycharm-${_version}.tar.gz.sha256
@@ -50,5 +50,5 @@ package() {
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }

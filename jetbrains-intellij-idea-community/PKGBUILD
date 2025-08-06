@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgname=intellij-idea-ultimate
-_pkgname=idea
+pkgname=intellij-idea-community
+_pkgname=idea-ce
 _version=2025.2
 _buildver=252.23892.409
 pkgver=${_version}+${_buildver}
@@ -14,19 +14,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz"
-  "https://download.jetbrains.com/idea/ideaIU-${_version}.tar.gz.sha256")
-sha256sums=('031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1'
-            'd28d0d647cf5f0d2eedd49602493be4a3182aec83c73df01b887164f56db0ff4'
-            'a6c217feb5b5f50cb208497758941e32659b8197e2b83abe90a4ad7a59b4e8e4')
+  "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz"
+  "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz.sha256")
+sha256sums=('f9d03b555ca323727a902b00cc39587deca11b1fd6b199056d4c65a3d2a7bdee'
+            '30e917c55507443c61674d0bdd5cbb40a5b02c628d5073f8a0028ef49e0c50b5'
+            'b53d4f27f61a85529be51b529fb2096a118bcd5d545de850abfc8026e0ff3e16')
 
 prepare() {
-  sha256sum -c ideaIU-${_version}.tar.gz.sha256
+  sha256sum -c ideaIC-${_version}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${_pkgname}"
-  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
+  cp -a "${srcdir}/idea-IC-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${_pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
@@ -51,5 +51,5 @@ package() {
   ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea64.vmoptions"
 }

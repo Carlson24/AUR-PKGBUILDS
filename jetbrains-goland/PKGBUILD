@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=goland
-_version=2025.1.4
-_buildver=251.27812.54
+_version=2025.2
+_buildver=252.23892.449
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
-        "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
+  "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
+  "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
 sha256sums=('774f82d08909d39da78b619c85c1f03b6747665e51386e4c8237fa49ad704b36'
-            '42efe9cc97248403e868180339f403ab390e9a335a658bd7aa905b64c03c7a31'
-            '1b03f0f2355c5ebf9853f350d0397252f53de2a6dba976f97fddaca1adfbf815')
+            'd285c10055af9002db8c913557535ba46e3158c5733b236add3d71f93873e85a'
+            '85f0f6a5933a70a1d4918a829abe2e92169e5d0681b181e721b6e0fef10379b2')
 
 prepare() {
   sha256sum -c goland-${_version}.tar.gz.sha256
@@ -50,5 +50,5 @@ package() {
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }

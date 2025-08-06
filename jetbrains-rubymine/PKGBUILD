@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rubymine
-_version=2025.1.4.1
-_buildver=251.27812.51
+_version=2025.2
+_buildver=252.23892.415
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz"
-        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz.sha256")
+  "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz"
+  "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz.sha256")
 sha256sums=('d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800'
-            'c89dcc2a6e50b3bb9e588a5109a7f1de80c2fd09576199904b386547e585d0e4'
-            '961a1a3c5e5e2d0e6939ac24aacf1e5998ccae469a6422ab41760f1686efe5cf')
+            '2a9c2a4b4ed222bdf0038553f46424f8bea1a2ebe6542c764d9586d82351381d'
+            '5689789a65265f95f6f59467f848f594e381333efc857a9022f3b7ac821bd5cc')
 
 prepare() {
   sha256sum -c RubyMine-${_version}.tar.gz.sha256
@@ -50,5 +50,5 @@ package() {
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }

@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=phpstorm
-_version=2025.1.4.1
-_buildver=251.27812.52
+_version=2025.2
+_buildver=252.23892.419
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz"
-        "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz.sha256")
+  "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz"
+  "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz.sha256")
 sha256sums=('c823ed26d67670a0bb673dc29f613630087dcd48a3b6f7d5d4b48299bc550238'
-            '92cd8d570d0307188190761c7cd0d0f77351ff119735073c2a101e4a364292b4'
-            '4872f4169d514bd05c87426f9009e1dd770575ed109ad0f7968d3aa4f39e5a86')
+            'd0d3e61aaed7c4765b4947a8410a885cf7e1123c488340585ed72151f8c05350'
+            '3f2fd3bef81bf36685b82c47d69cfd89b6ce4acea79d95da8049bcc10dea6f47')
 
 prepare() {
   sha256sum -c PhpStorm-${_version}.tar.gz.sha256
@@ -50,5 +50,5 @@ package() {
   ln -s "/usr/share/pixmaps/${pkgname}.svg" "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >> "${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${pkgname}/bin/${pkgname}64.vmoptions"
 }
