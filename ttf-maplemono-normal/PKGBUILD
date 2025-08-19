@@ -2,7 +2,7 @@
 
 pkgbase=maplemono-normal
 pkgname=("ttf-maplemono-normal" "ttf-maplemono-normal-cn" "ttf-maplemono-normal-nf" "ttf-maplemono-normal-nf-cn")
-pkgver=7.4
+pkgver=7.5
 pkgrel=1
 pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
 url="https://github.com/subframe7536/maple-font"
@@ -16,14 +16,14 @@ source=("MapleMonoNormal-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}
     "MapleMonoNormalNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-CN.zip"
     "MapleMonoNormalNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF.zip"
     "MapleMonoNormalNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNormalNL-NF-CN.zip")
-sha256sums=('62450d979f679654d071ad43ba3f6986edb4acb3224d299c097734465b8a967e'
-            '4a84b9d8bd3da36a99972285b9104ee45e0f297045005c48eb1a5ce047f55c77'
-            '120de129c1e4b25b2f1b39090eb864c8dd08018ae31c9f9eaf3140540bbf2b48'
-            '6dc1fd2cc2cc68a27903ef7df78caf6cca14360cf8def4140d3b36d3461e1e7e'
-            '299041e1fc90993515c17b110bccaa899b46f440f78ac8fae3fb44f2c0e0492e'
-            'fdce6353b3ba33e86745866e14357183f3c0fb093be4776594d5f92086abc369'
-            '6365d2341f7108e1b1f72d5f9c41c6ced2bb73d06301d623e0f1f6f85b7d710f'
-            '1151e8154e0f4246c792795f11f69f6330cac0fc1f42c01dfb5a19693f2179aa')
+sha256sums=('9b7d07b5645a82ae4cea1797a1d2530ab4fdfb82b3fa6914bfa33ac70f31494d'
+            '000e6b476a8677665728a35a79e43869454cfbdc576e263f1058bd620a81317d'
+            'd2a358e43c24450e40a17a075770fcbc73a678db93b6cfa5a3f9ea047b1e2a7c'
+            '947b79da06fcdaf6c14fcee346799f8ba99a618e220961c42ebb2191f30c8005'
+            'c41ef7fcc1e2284c67f861c87b38e4da6b1d93dc7e34850cf6f26b2678636056'
+            '93811b2062d4968f3a75f351aba56cf952a7ed8cb168f8cfa678f3e67646c36f'
+            'e89ac787b6521a1ba39dfa0afa535040af22e4cb2a5c2728e96a7e12531a4a0c'
+            'bc88f5f9428828095e6c05bc4e98fbf87ab448f88283c7716b63528b0e014405')
 noextract=("MapleMonoNormal-TTF-v${pkgver}.zip"
     "MapleMonoNormal-CN-v${pkgver}.zip"
     "MapleMonoNormal-NF-v${pkgver}.zip"

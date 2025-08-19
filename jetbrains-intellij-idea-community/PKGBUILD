@@ -17,8 +17,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz"
   "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz.sha256")
 sha256sums=('f9d03b555ca323727a902b00cc39587deca11b1fd6b199056d4c65a3d2a7bdee'
-  '30e917c55507443c61674d0bdd5cbb40a5b02c628d5073f8a0028ef49e0c50b5'
-  'b53d4f27f61a85529be51b529fb2096a118bcd5d545de850abfc8026e0ff3e16')
+            '30e917c55507443c61674d0bdd5cbb40a5b02c628d5073f8a0028ef49e0c50b5'
+            'b53d4f27f61a85529be51b529fb2096a118bcd5d545de850abfc8026e0ff3e16')
 
 prepare() {
   sha256sum -c ideaIC-${_version}.tar.gz.sha256
