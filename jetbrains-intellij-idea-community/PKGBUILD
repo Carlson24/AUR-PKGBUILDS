@@ -2,8 +2,8 @@
 
 pkgname=intellij-idea-community
 _pkgname=idea-ce
-_version=2025.2
-_buildver=252.23892.409
+_version=2025.2.1
+_buildver=252.25557.131
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -17,8 +17,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz"
   "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz.sha256")
 sha256sums=('f9d03b555ca323727a902b00cc39587deca11b1fd6b199056d4c65a3d2a7bdee'
-            '30e917c55507443c61674d0bdd5cbb40a5b02c628d5073f8a0028ef49e0c50b5'
-            'b53d4f27f61a85529be51b529fb2096a118bcd5d545de850abfc8026e0ff3e16')
+            'fc76fe8b6693b18d5d7385bb005f415287dbd5897b313287b9ef56dd0df9d5bd'
+            '9740cbf713ca5a01b5000226d4213ee5d1ee1a4194c6ad85e98bae97d92f0caf')
 
 prepare() {
   sha256sum -c ideaIC-${_version}.tar.gz.sha256

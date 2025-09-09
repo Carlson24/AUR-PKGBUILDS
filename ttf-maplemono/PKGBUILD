@@ -2,7 +2,7 @@
 
 pkgbase=maplemono
 pkgname=("ttf-maplemono" "ttf-maplemono-cn" "ttf-maplemono-nf" "ttf-maplemono-nf-cn")
-pkgver=7.5
+pkgver=7.6
 pkgrel=1
 pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
 url="https://github.com/subframe7536/maple-font"
@@ -16,14 +16,14 @@ source=("MapleMono-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/Maple
     "MapleMonoNL-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-CN.zip"
     "MapleMonoNL-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF.zip"
     "MapleMonoNL-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNL-NF-CN.zip")
-sha256sums=('495b9a8691f4a041dd378a318b6d57f819ac86751d3f599c6937a38bce6fdcbc'
-            '02ef49fed39a67fd6306ef9828ac915b3aa14b94a4cefb5bbabf4702df93f537'
-            '51da1afc4ae7d2803bf38849c720e9a11c2c9f4accdcdef9eb9224bdb098628f'
-            '206e1064d5611ffb18f8950088b54ffef4e8d53858c28205bd7d5c02b6180ba3'
-            '755c5f8d55ee99ec735adf571fd5cce5649a46653e2fcd707e219b4dff24fcee'
-            'b893777fa3539eae82171c9d3b35112195fecf734f7cbde969c0df3f011da449'
-            'c63a1c62da9d94c0d75e70b1795e1f5f7b5df1e015e7be6151e3eac57dcbf4b1'
-            '63bc152d4a6caf95640032577dd67e7fcf0c29036c107f85ecea3750abdbe8ea')
+sha256sums=('9f8922bcf45c23cd23123edd457dff48ac961e20628975e86388c457b7824922'
+            '045f153fab991e0caecbf5f48a27b8de3749eb3c895025c79731ede9f38f1044'
+            '21ffe4280162c8eb39367c57783386b0b49946c09d8439a03ad3f44ae37dea98'
+            'ab7c08bd2b3384e2f2664aaf82f8a9436784bc6f4add27f6a3986ba474b6bc3f'
+            '3cce43cb5954e4c5f99e29711c0df8c798c1358a789bc0649c9fda1eba6bc696'
+            'aece5670e051f52615b0216883a098d3846cb527d999bc28e07bb0a5e1b0fd5f'
+            '1d90720cb8469093c357bb742d7b0834b0cc60ab28d7d6c90fbd8c89653ff0de'
+            '683badb8495a78eadc2818cdc62d3de9213296fb121d57b9166723df2a13d7d3')
 noextract=("MapleMono-TTF-v${pkgver}.zip"
     "MapleMono-CN-v${pkgver}.zip"
     "MapleMono-NF-v${pkgver}.zip"

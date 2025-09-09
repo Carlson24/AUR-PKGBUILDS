@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=webstorm
-_version=2025.2
-_buildver=252.23892.411
+_version=2025.2.1
+_buildver=252.25557.126
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz"
   "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz.sha256")
 sha256sums=('251d1d5274d8e350b94ddadce4cfd2f40b8ba7833910cf8da45d7b63c419cfec'
-            '85c83e8ed716e9cda03be922fd10d95c482f9f3c27e095dd768ddefd1e69462f'
-            '566dc4ea616885a0e9a624633fde3b5b6b8ee287fd3e4804f7ad379b66567978')
+            '8d03ae22e4bac309edbf58310b4fc758fedaee5dc065467eeda005fac5217d2b'
+            '41f3a27fe56c63552ee3e89ca8e19e4b8f03f6e6c8b8a9d49a3fd9930ed8fcf2')
 
 prepare() {
   sha256sum -c WebStorm-${_version}.tar.gz.sha256
