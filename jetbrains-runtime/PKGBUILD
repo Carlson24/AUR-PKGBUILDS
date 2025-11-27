@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-_buildver=b1038.71
-_javaver=21.0.8
+_buildver=b1038.76
+_javaver=21.0.9
 _pkgname=jbr
 
 pkgname=jbr-runtime
@@ -15,8 +15,8 @@ license=('custom:jetbrains')
 options=('!strip')
 source=("https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz"
   "https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz.checksum")
-sha256sums=('426e5bc38048878e7fd4998d4e6bb44036b7a516263526328e8a3d91e6d95407'
-            'ddca9db0089c450989948a05a61caf299c308963d5caeb5454e164760b960488')
+sha256sums=('b442645779d959e632fca152947d9196160f68b524943e947f37d30f42336c44'
+            'b26e0995d1750ca8c1b73988a984c5123beff8d11139c022c920b34a9ffe48a5')
 
 prepare() {
   sha512sum -c jbr_jcef-${_javaver}-linux-x64-${_buildver}.tar.gz.checksum

@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=pycharm
-_version=2025.2.1.1
-_buildver=252.25557.178
+_version=2025.2.4
+_buildver=252.27397.106
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz"
   "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz.sha256")
 sha256sums=('cbdf8c58a6d239fc09733b49e33cb2fb7e3cfa43ebaac06b7189d19935dd35d3'
-            '280da5efe11f17d86e5173fe0cf05af4704b9c858f1c9c2fea6de6b2071ada83'
-            'f4dd322967d859efbe05173845d1f52257ab2a8119bb1436ed4237e1d3482d83')
+            'f1613a171ab07ba0e7ccd13cb537af4da8920c89cf4a13c64a3f7ae72e803701'
+            '04256e4f946c6bd50e93e865884a7a2d874b3de63bca0977cc3a7ad8fa94aecb')
 
 prepare() {
   sha256sum -c pycharm-${_version}.tar.gz.sha256

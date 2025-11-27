@@ -1,6 +1,6 @@
 pkgbase = phpstorm
 	pkgdesc = Empowering PHP Developers. Code smarter with the PHP IDE
-	pkgver = 2025.2.1+252.25557.128
+	pkgver = 2025.2.5+252.28238.9
 	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/phpstorm
@@ -10,10 +10,10 @@ pkgbase = phpstorm
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-phpstorm.desktop
-	source = https://download.jetbrains.com/webide/PhpStorm-2025.2.1.tar.gz
-	source = https://download.jetbrains.com/webide/PhpStorm-2025.2.1.tar.gz.sha256
+	source = https://download.jetbrains.com/webide/PhpStorm-2025.2.5.tar.gz
+	source = https://download.jetbrains.com/webide/PhpStorm-2025.2.5.tar.gz.sha256
 	sha256sums = c823ed26d67670a0bb673dc29f613630087dcd48a3b6f7d5d4b48299bc550238
-	sha256sums = 0cc9235210dc09fb54602f176de881c4f2b6852d7a5f2ae9f7750d83a3ffa8f6
-	sha256sums = 5cecaf4625a4937efbd9b864e53b5f91320bcf98ed08d4f60c08952ff107a499
+	sha256sums = 4f102bb85add2527e46695f3b866c0e315423e19bc45e0adb0de0fe577a1efe6
+	sha256sums = a8e56767f27f32f54f0817957ce2cddc9f7bbaedba184d09c25e5cd553564c05
 
 pkgname = phpstorm

@@ -2,7 +2,7 @@
 
 pkgbase=lxgw-bright
 pkgname=("ttf-lxgw-bright" "ttf-lxgw-bright-gb" "ttf-lxgw-bright-tc")
-pkgver=5.526
+pkgver=5.527
 pkgrel=1
 pkgdesc="A merged font of Ysabeau and LXGW WenKai."
 url="https://github.com/lxgw/LxgwBright"
@@ -10,29 +10,29 @@ arch=("any")
 license=('OFL-1.1-RFN')
 makedepends=("7zip")
 source=("LXGWBright-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBright.7z"
-        "LXGWBrightGB-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightGB.7z"
-        "LXGWBrightTC-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightTC.7z")
-sha256sums=('e5502c2ad8142d496650d188a0645ec15ee6605c60ccdb21945f6bd6cd266e21'
-            'e2adc37688c94fc152d1fc40186c37f3380bf6188d269aad61b88331e7ecd35c'
-            '3028306493e0fd310fa6883b1977ac081ebf69b6ac54bb9e6e88de9308fa6109')
+    "LXGWBrightGB-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightGB.7z"
+    "LXGWBrightTC-v${pkgver}.7z::${url}/releases/download/v${pkgver}/LXGWBrightTC.7z")
+sha256sums=('08e0458c2e38ba2014cff0d2527681fe569096ae102bc837f7d1cb8879f34ced'
+            '7e3a742824da8d76fc4a805e53651cb8fbf8fce899081efd15d21cf8247ef678'
+            '4112c0d503614639364e102136963063898e52bee9029dcf03f67f565ef6ce7a')
 noextract=("LXGWBright-v${pkgver}.7z"
-           "LXGWBrightGB-v${pkgver}.7z"
-           "LXGWBrightTC-v${pkgver}.7z")
+    "LXGWBrightGB-v${pkgver}.7z"
+    "LXGWBrightTC-v${pkgver}.7z")
 
 package_ttf-lxgw-bright() {
-    7z x -y "LXGWBright-v${pkgver}.7z" 
+    7z x -y "LXGWBright-v${pkgver}.7z"
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
     install -Dm 644 "${srcdir}/LXGWBright/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
 }
 
 package_ttf-lxgw-bright-gb() {
-    7z x -y "LXGWBrightGB-v${pkgver}.7z" 
+    7z x -y "LXGWBrightGB-v${pkgver}.7z"
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright-gb"
     install -Dm 644 "${srcdir}/LXGWBrightGB/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright-gb"
 }
 
 package_ttf-lxgw-bright-tc() {
-    7z x -y "LXGWBrightTC-v${pkgver}.7z" 
+    7z x -y "LXGWBrightTC-v${pkgver}.7z"
     install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/bright"
     install -Dm 644 "${srcdir}/LXGWBrightTC/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/bright"
 }

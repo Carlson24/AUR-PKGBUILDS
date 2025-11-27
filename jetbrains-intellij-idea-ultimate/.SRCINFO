@@ -1,6 +1,6 @@
 pkgbase = intellij-idea-ultimate
 	pkgdesc = The IDE for Professional Development, in Java and Kotlin
-	pkgver = 2025.2.1+252.25557.131
+	pkgver = 2025.2.5+252.28238.7
 	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/idea
@@ -10,10 +10,10 @@ pkgbase = intellij-idea-ultimate
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-intellij-idea-ultimate.desktop
-	source = https://download.jetbrains.com/idea/ideaIU-2025.2.1.tar.gz
-	source = https://download.jetbrains.com/idea/ideaIU-2025.2.1.tar.gz.sha256
+	source = https://download.jetbrains.com/idea/ideaIU-2025.2.5.tar.gz
+	source = https://download.jetbrains.com/idea/ideaIU-2025.2.5.tar.gz.sha256
 	sha256sums = 031f4adf5c9db1c734a16fb31c95737ce172d0d6b4e74a4c5a6276ce6bb095e1
-	sha256sums = ac36d03153894f393fb65c05f57be4722c2a2374d03b7374b37baf856705d5fd
-	sha256sums = 70d3c55e364a1cd8e91f483ae3a7b1bd5a5c6e810ee2de69a06cd41f1770b30f
+	sha256sums = dc92cd3850ba256d2cb1c9d884f9579f613f6fa747f628361458d21f66687393
+	sha256sums = cf9e2a4ecb31228592567ff0af421b9b86dd0a92a56d3134d7c3188a6316f0d1
 
 pkgname = intellij-idea-ultimate
