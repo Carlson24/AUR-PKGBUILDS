@@ -3,7 +3,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _pkgname=linuxqq
-_base_pkgver=3.2.21_251114
+_base_pkgver=3.2.21_251203
 _update_pkgver=${_base_pkgver}
 #_md5=08c52833
 pkgname=linuxqq-nt-bwrap

@@ -1,6 +1,6 @@
 pkgbase = clion
 	pkgdesc = A cross-platform IDE for C and C++. Harness the power. Cut the complexity.
-	pkgver = 2025.2.5+252.28238.22
+	pkgver = 2025.3+253.28294.335
 	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/clion
@@ -10,10 +10,10 @@ pkgbase = clion
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-clion.desktop
-	source = https://download.jetbrains.com/cpp/CLion-2025.2.5.tar.gz
-	source = https://download.jetbrains.com/cpp/CLion-2025.2.5.tar.gz.sha256
+	source = https://download.jetbrains.com/cpp/CLion-2025.3.tar.gz
+	source = https://download.jetbrains.com/cpp/CLion-2025.3.tar.gz.sha256
 	sha256sums = ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58
-	sha256sums = 91474a3c35a9b3d50f43f0549098317b65aa881f2f80c3345f8dee7587d31f9e
-	sha256sums = 10523ad3e49ccc16fd004d9d38fece658a9584966ff9f65988c847eb5ec2e489
+	sha256sums = b9daed1c33f2e4a93bf503e227cda5a9fbaa3129e064bb97d7c2bd1304a4a2a7
+	sha256sums = e4b5fae919d749335cfe7d88fe0f2e82f6d13c939b40b5eb68b863ec47e25950
 
 pkgname = clion

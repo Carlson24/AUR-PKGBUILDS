@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=goland
-_version=2025.2.4
-_buildver=252.27397.100
+_version=2025.3
+_buildver=253.28294.337
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
   "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
 sha256sums=('774f82d08909d39da78b619c85c1f03b6747665e51386e4c8237fa49ad704b36'
-            'fb42978d55271e6fa3165b1d010b3e0bacb8cd5c4f4073712332c62f32d2ebab'
-            '97b880a068775ceb416bf419d52482c213cdfdb2ddcf2056aafcd1e7dd983035')
+            '6151856286ea546eb8af9aeb025772cee6bd57134f45494a818e8da20a8691c6'
+            '359179cb06f5fe5dd226fb12c798992d1395c910c89c640ee2842e3fe47445e8')
 
 prepare() {
   sha256sum -c goland-${_version}.tar.gz.sha256

@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=clion
-_version=2025.2.5
-_buildver=252.28238.22
+_version=2025.3
+_buildver=253.28294.335
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
   "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
 sha256sums=('ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58'
-            '91474a3c35a9b3d50f43f0549098317b65aa881f2f80c3345f8dee7587d31f9e'
-            '10523ad3e49ccc16fd004d9d38fece658a9584966ff9f65988c847eb5ec2e489')
+            'b9daed1c33f2e4a93bf503e227cda5a9fbaa3129e064bb97d7c2bd1304a4a2a7'
+            'e4b5fae919d749335cfe7d88fe0f2e82f6d13c939b40b5eb68b863ec47e25950')
 
 prepare() {
   sha256sum -c CLion-${_version}.tar.gz.sha256
