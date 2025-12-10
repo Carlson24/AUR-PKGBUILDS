@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgname=intellij-idea-community
-_pkgname=idea-ce
+pkgname=intellij-idea
+_pkgname=idea
 _version=2025.3
 _buildver=253.28294.334
 pkgver=${_version}+${_buildver}
@@ -14,19 +14,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz"
-  "https://download.jetbrains.com/idea/ideaIC-${_version}.tar.gz.sha256")
-sha256sums=('f9d03b555ca323727a902b00cc39587deca11b1fd6b199056d4c65a3d2a7bdee'
-            '995c334cc3e143f13467abafef07a1ccf7d06275512bb6f4c91123948786ab7c'
-            '0fe7bf8975261c3e84715fd65a806c35ae22847c54c429f446859d3b7b1c181d')
+  "https://download.jetbrains.com/idea/idea-${_version}.tar.gz"
+  "https://download.jetbrains.com/idea/idea-${_version}.tar.gz.sha256")
+sha256sums=('4e9a00665363381a9c17e32f115744af38dc5f987f42502de8e01b120ecc2bfc'
+            '13f4174ba16c1cef04871cb261433536d002586c269a809392c20ee3f94959f5'
+            '3c90f80b9d2108f52a5b60ff69867fc07c9cfcaf3d944d6fb0663ca41a00afea')
 
 prepare() {
-  sha256sum -c ideaIC-${_version}.tar.gz.sha256
+  sha256sum -c idea-${_version}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${_pkgname}"
-  cp -a "${srcdir}/idea-IC-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
+  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${_pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
@@ -43,13 +43,13 @@ package() {
   install -Dm 644 "jetbrains-${pkgname}.desktop" "${pkgdir}/usr/share/applications"
 
   install -dm 755 "${pkgdir}/usr/share/pixmaps"
-  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}.png"
-  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.png"
-  ln -s "/usr/share/pixmaps/${_pkgname}.png" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.png"
-  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}.svg"
-  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.svg"
-  ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea.svg"
+  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png" "${pkgdir}/usr/share/pixmaps/${_pkgname}.png"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png"
+  ln -s "/usr/share/pixmaps/${_pkgname}.png" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.png"
+  cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}.svg"
+  rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
+  ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
 
   # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${_pkgname}/bin/idea64.vmoptions"
+  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}64.vmoptions"
 }

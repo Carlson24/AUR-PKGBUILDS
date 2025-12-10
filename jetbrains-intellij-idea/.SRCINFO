@@ -1,0 +1,19 @@
+pkgbase = intellij-idea
+	pkgdesc = The IDE for Professional Development, in Java and Kotlin
+	pkgver = 2025.3+253.28294.334
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/idea
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	source = jetbrains-intellij-idea.desktop
+	source = https://download.jetbrains.com/idea/idea-2025.3.tar.gz
+	source = https://download.jetbrains.com/idea/idea-2025.3.tar.gz.sha256
+	sha256sums = 4e9a00665363381a9c17e32f115744af38dc5f987f42502de8e01b120ecc2bfc
+	sha256sums = 13f4174ba16c1cef04871cb261433536d002586c269a809392c20ee3f94959f5
+	sha256sums = 3c90f80b9d2108f52a5b60ff69867fc07c9cfcaf3d944d6fb0663ca41a00afea
+
+pkgname = intellij-idea
