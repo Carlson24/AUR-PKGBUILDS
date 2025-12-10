@@ -1,0 +1,15 @@
+pkgbase = ttf-lxgw-yozai
+	pkgdesc = A Chinese handwriting font derived from YozFont.
+	pkgver = 0.868
+	pkgrel = 1
+	url = https://github.com/lxgw/yozai-font
+	arch = any
+	license = OFL-1.1-RFN
+	source = Yozai-Light-v0.868.ttf::https://github.com/lxgw/yozai-font/releases/download/v0.868/Yozai-Light.ttf
+	source = Yozai-Medium-v0.868.ttf::https://github.com/lxgw/yozai-font/releases/download/v0.868/Yozai-Medium.ttf
+	source = Yozai-Regular-v0.868.ttf::https://github.com/lxgw/yozai-font/releases/download/v0.868/Yozai-Regular.ttf
+	sha256sums = 0efc843308810c04ec394d8af27d0871ada3a9cc4860a226abde88a1bc67b3bd
+	sha256sums = 05f50f252b45197d0d6148a4abc3e37c7cd4cfdf03c955b57c25d53d924f835f
+	sha256sums = 25071998a0fe6a72f54c235e714986d259633e5ff670b1a2b5e264387f3316ac
+
+pkgname = ttf-lxgw-yozai

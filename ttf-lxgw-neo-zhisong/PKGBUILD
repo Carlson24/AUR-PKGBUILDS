@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-lxgw-neo-zhisong
-pkgver=1.051
+pkgver=1.053
 pkgrel=1
 pkgdesc="A Chinese serif font derived from IPAmj Mincho."
 url="https://github.com/lxgw/LxgwNeoZhiSong"
@@ -9,11 +9,11 @@ arch=("any")
 license=('OFL-1.1-RFN')
 source=("LxgwNeoZhiSong-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LxgwNeoZhiSong.ttf"
     "LxgwNeoZhiSongPlus-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LxgwNeoZhiSongPlus.ttf")
-sha256sums=('5649458424cb7663432a5a71f936f87edf8c843bde7114f88e9261619a9e0d88'
-            '425853a675632e14e86b11cf964872be7ca1fd8384ad6cdd755481f826029529')
+sha256sums=('806283555fef14df38814304ad10b9df32b5a2df58d22fa6638ada35c3a3a92c'
+            '48f6ef92248f7415b07d0ee5548fa8826715eae0418b325603315c4dec8eed3c')
 
 package() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/neo"
-    install -Dm 644 "${srcdir}/LxgwNeoZhiSong-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LxgwNeoZhiSong.ttf"
-    install -Dm 644 "${srcdir}/LxgwNeoZhiSongPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LxgwNeoZhiSongPlus.ttf"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw"
+    install -Dm 644 "${srcdir}/LxgwNeoZhiSong-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LxgwNeoZhiSong.ttf"
+    install -Dm 644 "${srcdir}/LxgwNeoZhiSongPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LxgwNeoZhiSongPlus.ttf"
 }

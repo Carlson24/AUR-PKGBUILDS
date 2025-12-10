@@ -1,0 +1,13 @@
+pkgbase = ttf-lxgw-kose
+	pkgdesc = A Chinese handwriting font derived from SetoFont.
+	pkgver = 3.126
+	pkgrel = 1
+	url = https://github.com/lxgw/kose-font
+	arch = any
+	license = OFL-1.1-RFN
+	source = Xiaolai-Regular-v3.126.ttf::https://github.com/lxgw/kose-font/releases/download/v3.126/Xiaolai-Regular.ttf
+	source = XiaolaiMono-Regular-v3.126.ttf::https://github.com/lxgw/kose-font/releases/download/v3.126/XiaolaiMono-Regular.ttf
+	sha256sums = e2f68daf0e72777a8cf58bc83de1b98634b251e537ddbfca24b0ae50d1802da2
+	sha256sums = 802b658db492e02ae5b659f5b56d7d4ef8f77609515bdcc82f462ae912888c33
+
+pkgname = ttf-lxgw-kose

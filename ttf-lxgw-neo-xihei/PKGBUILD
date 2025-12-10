@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-lxgw-neo-xihei
-pkgver=1.231
+pkgver=1.234
 pkgrel=1
 pkgdesc="A Chinese sans-serif font derived from IPAex Gothic."
 url="https://github.com/lxgw/LxgwNeoXiHei"
@@ -9,11 +9,11 @@ arch=("any")
 license=('OFL-1.1-RFN')
 source=("LXGWNeoXiHei-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHei.ttf"
     "LXGWNeoXiHeiPlus-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHeiPlus.ttf")
-sha256sums=('ccba6c9e6ec20adf831023795fa0da2726d59a6a0f9cb2d898dad4ebd72b4db6'
-            '96ff72c2d2a502fdebd9cb5cf030ee7600987321d7e393f33e573fe2e1c5742f')
+sha256sums=('8ec2dadc7ad0ff89af462516cbc69c3dd4caa0ce2b54f6c9e3bbb380882793d2'
+            'd9f51e2cbb1ef826ed93410ee1c2c11e658ade4fa183538b16d37b7dec817250')
 
 package() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/neo"
-    install -Dm 644 "${srcdir}/LXGWNeoXiHei-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LXGWNeoXiHei.ttf"
-    install -Dm 644 "${srcdir}/LXGWNeoXiHeiPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LXGWNeoXiHeiPlus.ttf"
+    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw"
+    install -Dm 644 "${srcdir}/LXGWNeoXiHei-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LXGWNeoXiHei.ttf"
+    install -Dm 644 "${srcdir}/LXGWNeoXiHeiPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LXGWNeoXiHeiPlus.ttf"
 }

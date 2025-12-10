@@ -1,13 +1,13 @@
 pkgbase = ttf-lxgw-neo-xihei
 	pkgdesc = A Chinese sans-serif font derived from IPAex Gothic.
-	pkgver = 1.231
+	pkgver = 1.234
 	pkgrel = 1
 	url = https://github.com/lxgw/LxgwNeoXiHei
 	arch = any
 	license = OFL-1.1-RFN
-	source = LXGWNeoXiHei-v1.231.ttf::https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.231/LXGWNeoXiHei.ttf
-	source = LXGWNeoXiHeiPlus-v1.231.ttf::https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.231/LXGWNeoXiHeiPlus.ttf
-	sha256sums = ccba6c9e6ec20adf831023795fa0da2726d59a6a0f9cb2d898dad4ebd72b4db6
-	sha256sums = 96ff72c2d2a502fdebd9cb5cf030ee7600987321d7e393f33e573fe2e1c5742f
+	source = LXGWNeoXiHei-v1.234.ttf::https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.234/LXGWNeoXiHei.ttf
+	source = LXGWNeoXiHeiPlus-v1.234.ttf::https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.234/LXGWNeoXiHeiPlus.ttf
+	sha256sums = 8ec2dadc7ad0ff89af462516cbc69c3dd4caa0ce2b54f6c9e3bbb380882793d2
+	sha256sums = d9f51e2cbb1ef826ed93410ee1c2c11e658ade4fa183538b16d37b7dec817250
 
 pkgname = ttf-lxgw-neo-xihei
