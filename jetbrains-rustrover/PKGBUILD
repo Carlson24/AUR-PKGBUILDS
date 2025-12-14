@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rustrover
-_version=2025.2.5
-_buildver=252.28238.28
+_version=2025.3
+_buildver=253.28294.352
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
   "https://download.jetbrains.com/rustrover/RustRover-${_version}.tar.gz"
   "https://download.jetbrains.com/rustrover/RustRover-${_version}.tar.gz.sha256")
 sha256sums=('65603213e1a492f0d6cf0a067ee13d2c4a627275ee85bf71a1740039484fce0e'
-            '01ec30397ec61ac6dcb66cb037ea69b2be8a7e079020e50513f2e1e102ccfc84'
-            'd845c6dff0ec5c9bcdf96e4d2b111e707bf74dae1b555c2fce1a11b55ca60195')
+            'cf4fdda1de96797780f56cf3d340fe107077f33695a25a850c8c7f26f28f6ef7'
+            'c9ffba819ed736e40c625deb01d2f277a6df1b7fa667a568a163cd039f975ab7')
 
 prepare() {
   sha256sum -c RustRover-${_version}.tar.gz.sha256
