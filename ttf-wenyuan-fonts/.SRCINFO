@@ -1,0 +1,22 @@
+pkgbase = wenyuan-fonts
+	pkgdesc = A more suitable open-source Chinese font collection for Simplified Chinese environment & TeX field.
+	pkgver = 2025.10.3
+	pkgrel = 1
+	url = https://github.com/takushun-wu/WenYuanFonts
+	arch = any
+	license = OFL-1.1-RFN
+	noextract = WenYuanSansSC-TTF-v2025.10.3.7z
+	noextract = WenYuanSerifSC-TTF-v2025.10.3.7z
+	noextract = WenYuanRoundedSC-TTF-v2025.10.3.7z
+	source = WenYuanSansSC-TTF-v2025.10.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2025.10.3/WenYuanSansSC-TTF.7z
+	source = WenYuanSerifSC-TTF-v2025.10.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2025.10.3/WenYuanSerifSC-TTF.7z
+	source = WenYuanRoundedSC-TTF-v2025.10.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2025.10.3/WenYuanRoundedSC-TTF.7z
+	sha256sums = 4c2aae18aad2fd6b3933a0b7aa262428183aeb08eaff1dd110133d7fbc5e42e5
+	sha256sums = 11596b87848b4ce7aecd64a1bfd5332afebfb16f289e4dbb299916c51440360a
+	sha256sums = 16e60ab81e61f92b9074d8db69ed0f265e5da7790372521d4aa8f99dbc5626e0
+
+pkgname = ttf-wenyuan-sans
+
+pkgname = ttf-wenyuan-serif
+
+pkgname = ttf-wenyuan-rounded

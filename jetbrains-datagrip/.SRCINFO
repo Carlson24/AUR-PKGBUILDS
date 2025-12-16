@@ -1,0 +1,19 @@
+pkgbase = datagrip
+	pkgdesc = Your powerful cross-platform IDE for relational and NoSQL databases
+	pkgver = 2025.3+253.28294.259
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/datagrip
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	source = jetbrains-datagrip.desktop
+	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.tar.gz
+	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.tar.gz.sha256
+	sha256sums = 2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61
+	sha256sums = 010ad3a676cfe984e7498d1eb4f84686d7a110acbde4f9d288f53967255340e6
+	sha256sums = 1f497d307250dda94ce9892a57810dec625447898592db22f7ff7a5451391acf
+
+pkgname = datagrip

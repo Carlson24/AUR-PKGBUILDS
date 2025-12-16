@@ -13,8 +13,8 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
-  "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
+        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
 sha256sums=('ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58'
             'b9daed1c33f2e4a93bf503e227cda5a9fbaa3129e064bb97d7c2bd1304a4a2a7'
             'e4b5fae919d749335cfe7d88fe0f2e82f6d13c939b40b5eb68b863ec47e25950')

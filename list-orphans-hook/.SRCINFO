@@ -10,7 +10,7 @@ pkgbase = list-orphans-hook
 	depends = bc
 	source = list-orphans.sh
 	source = list-orphans.hook
-	sha256sums = 3da7f439b5874fd80c59f1a449558fbc7bba7d19937ba630a4808a0a21d2120e
+	sha256sums = f8a3c335b53e65da882de1a1fc9dfda0ea0d7fbbd6f0828629e1a04aa1116ec8
 	sha256sums = a7002ef646d4af042afdbb2dec81ae94cf9e5eb5784d62a3ffd666e0baa0ea82
 
 pkgname = list-orphans-hook

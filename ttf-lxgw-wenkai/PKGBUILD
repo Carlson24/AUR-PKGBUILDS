@@ -9,23 +9,23 @@ url="https://github.com/lxgw/LxgwWenKai"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-v${pkgver}.tar.gz"
-    "${url}GB/releases/download/v${pkgver}/lxgw-wenkai-gb-v${pkgver}.tar.gz"
-    "${url}TC/releases/download/v${pkgver}/lxgw-wenkai-tc-v${pkgver}.tar.gz")
+        "${url}GB/releases/download/v${pkgver}/lxgw-wenkai-gb-v${pkgver}.tar.gz"
+        "${url}TC/releases/download/v${pkgver}/lxgw-wenkai-tc-v${pkgver}.tar.gz")
 sha256sums=('e0658248c97e81dc6710f6bc24fcfb73e6d69b13fb1da6478fe0f4c940ea8157'
             '0ad2f814404d2218f89505a1a270d8de311f24a63fb6ab7daf89773465949933'
             'b1e71497dd6c47a0201c3d5a73dea46b806d68c8dd41850f9f354cee382fe67e')
 
 package_ttf-lxgw-wenkai() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
-    install -Dm 644 "${srcdir}/lxgw-wenkai-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+  install -Dm 644 "${srcdir}/lxgw-wenkai-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
 }
 
 package_ttf-lxgw-wenkai-gb() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
-    install -Dm 644 "${srcdir}/lxgw-wenkai-gb-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
+  install -Dm 644 "${srcdir}/lxgw-wenkai-gb-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
 }
 
 package_ttf-lxgw-wenkai-tc() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
-    install -Dm 644 "${srcdir}/lxgw-wenkai-tc-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"
+  install -Dm 644 "${srcdir}/lxgw-wenkai-tc-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai"
 }

@@ -8,12 +8,12 @@ url="https://github.com/lxgw/kose-font"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("Xiaolai-Regular-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/Xiaolai-Regular.ttf"
-    "XiaolaiMono-Regular-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/XiaolaiMono-Regular.ttf")
+        "XiaolaiMono-Regular-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/XiaolaiMono-Regular.ttf")
 sha256sums=('e2f68daf0e72777a8cf58bc83de1b98634b251e537ddbfca24b0ae50d1802da2'
             '802b658db492e02ae5b659f5b56d7d4ef8f77609515bdcc82f462ae912888c33')
 
 package() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw"
-    install -Dm 644 "${srcdir}/Xiaolai-Regular-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/Xiaolai-Regular.ttf"
-    install -Dm 644 "${srcdir}/XiaolaiMono-Regular-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/XiaolaiMono-Regular.ttf"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/kose"
+  install -Dm 644 "${srcdir}/Xiaolai-Regular-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/kose/Xiaolai-Regular.ttf"
+  install -Dm 644 "${srcdir}/XiaolaiMono-Regular-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/kose/XiaolaiMono-Regular.ttf"
 }

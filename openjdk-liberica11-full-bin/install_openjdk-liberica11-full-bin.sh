@@ -1,3 +1,4 @@
+#!/usr/bin/bash
 THIS_JDK='openjdk-liberica11-full-bin'
 
 fix_default() {
@@ -12,16 +13,16 @@ fix_default() {
 post_install() {
   default=$(fix_default)
   case ${default} in
-    "")
-      /usr/bin/archlinux-java set ${THIS_JDK}
-      ;;
-    ${THIS_JDK})
-      # Nothing
-      ;;
-    *)
-      echo "Default Java environment is already set to '${default}'"
-      echo "See 'archlinux-java help' to change it"
-      ;;
+  "")
+    /usr/bin/archlinux-java set ${THIS_JDK}
+    ;;
+  "${THIS_JDK}")
+    # Nothing
+    ;;
+  *)
+    echo "Default Java environment is already set to '${default}'"
+    echo "See 'archlinux-java help' to change it"
+    ;;
   esac
 
   if [ ! -f /etc/ssl/certs/java/cacerts ]; then
@@ -41,7 +42,7 @@ post_upgrade() {
 }
 
 pre_remove() {
-  if [ "x$(fix_default)" = "x${THIS_JDK}" ]; then
+  if [ "$(fix_default)" = "${THIS_JDK}" ]; then
     # Check JRE is still available
     if [ -x /usr/lib/jvm/${THIS_JDK}/bin/java ]; then
       /usr/bin/archlinux-java unset

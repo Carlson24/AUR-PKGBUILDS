@@ -1,0 +1,19 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=ttf-plan-gothic
+pkgver=2.9.5787
+pkgrel=1
+pkgdesc="基于思源黑体，并以中国大陆字形为标准的对中日韩越统一表意文字扩展区进行字形补充的项目。"
+url="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project"
+arch=("any")
+license=('OFL-1.1-RFN')
+makedepends=("7zip")
+source=("${url}/releases/download/V${pkgver}/Plangothic-OTF-V${pkgver}.7z")
+sha256sums=('98e88ae093f0cb4ec7142eb3e517c9117ec00e434f425857adb52c2b333a8e4b')
+noextract=("Plangothic-OTF-V${pkgver}.7z")
+
+package() {
+  7z x -y "Plangothic-OTF-V${pkgver}.7z"
+  install -dm 755 "${pkgdir}/usr/share/fonts/plan-gothic"
+  install -Dm 644 "${srcdir}/"*.otf "${pkgdir}/usr/share/fonts/plan-gothic"
+}

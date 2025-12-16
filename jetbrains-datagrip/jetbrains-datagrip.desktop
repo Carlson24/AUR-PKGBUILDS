@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DataGrip
+Icon=datagrip
+Comment=Your powerful cross-platform IDE for relational and NoSQL databases
+Exec=/usr/bin/datagrip %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-datagrip
+Categories=Development;IDE;

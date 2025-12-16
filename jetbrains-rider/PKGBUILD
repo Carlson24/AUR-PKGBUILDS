@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rider
-_version=2025.3.0.3
-_buildver=253.28294.237
+_version=2025.3.0.4
+_buildver=253.28294.356
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -13,11 +13,11 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz"
-  "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz"
+        "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz.sha256")
 sha256sums=('0860363846e65d4d13abaeef03fcac0041c5ed4e33a866231af7d5f54facf006'
-            'f09d5e060df110316e8abdedc397e6475e5d46d3f99b422d06de69f6e7025dbc'
-            'b87bc03fe081d6553e8d9eaaa5683b574d2301634ac8f7da32f47c1ba5465f16')
+            'ff9a6064aef78ab35f6c1e3544d70d6ab38b6f9af919fdeae9be98942dae8f8f'
+            'da7b1399ee3c7bb07fb300552b497547ff292115600b332bff7d76d6870ad1dc')
 
 prepare() {
   sha256sum -c JetBrains.Rider-${_version}.tar.gz.sha256

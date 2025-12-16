@@ -13,8 +13,8 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz"
-  "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz"
+        "https://download.jetbrains.com/webstorm/WebStorm-${_version}.tar.gz.sha256")
 sha256sums=('251d1d5274d8e350b94ddadce4cfd2f40b8ba7833910cf8da45d7b63c419cfec'
             'c95584e810059c15d8e42f6e0aa09a9c19fa7386bdc2fe50dd6ff27d4274d7ef'
             '0e13b421eb7e583bc4ef9f4c9f0cab8bebb6fd65ce1789b6d01fbc34f0fee77c')

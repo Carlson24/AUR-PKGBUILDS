@@ -1,31 +1,31 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgname=rubymine
+pkgname=datagrip
 _version=2025.3
-_buildver=253.28294.331
+_buildver=253.28294.259
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
-pkgdesc='Empowering Ruby Developers. Code Smarter with Ruby on Rails IDE'
+pkgdesc='Your powerful cross-platform IDE for relational and NoSQL databases'
 arch=('x86_64')
-url="https://www.jetbrains.com/ruby"
+url="https://www.jetbrains.com/datagrip"
 license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz"
-        "https://download.jetbrains.com/ruby/RubyMine-${_version}.tar.gz.sha256")
-sha256sums=('d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800'
-            '05c2164665df4d81088243328193fb43c09b98f761d221e5f2da7666ac8b5243'
-            '9e0d0dec301d12e84560c87b87fd7887adba2977f8b4f29d8c3c30c7bda17838')
+        "https://download.jetbrains.com/datagrip/datagrip-${_version}.tar.gz"
+        "https://download.jetbrains.com/datagrip/datagrip-${_version}.tar.gz.sha256")
+sha256sums=('2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61'
+            '010ad3a676cfe984e7498d1eb4f84686d7a110acbde4f9d288f53967255340e6'
+            '1f497d307250dda94ce9892a57810dec625447898592db22f7ff7a5451391acf')
 
 prepare() {
-  sha256sum -c RubyMine-${_version}.tar.gz.sha256
+  sha256sum -c datagrip-${_version}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/RubyMine-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/DataGrip-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

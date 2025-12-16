@@ -13,8 +13,8 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-  "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
-  "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
+        "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
 sha256sums=('774f82d08909d39da78b619c85c1f03b6747665e51386e4c8237fa49ad704b36'
             '6151856286ea546eb8af9aeb025772cee6bd57134f45494a818e8da20a8691c6'
             '359179cb06f5fe5dd226fb12c798992d1395c910c89c640ee2842e3fe47445e8')

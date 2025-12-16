@@ -8,12 +8,12 @@ url="https://github.com/lxgw/LxgwNeoXiHei"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("LXGWNeoXiHei-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHei.ttf"
-    "LXGWNeoXiHeiPlus-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHeiPlus.ttf")
+        "LXGWNeoXiHeiPlus-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHeiPlus.ttf")
 sha256sums=('8ec2dadc7ad0ff89af462516cbc69c3dd4caa0ce2b54f6c9e3bbb380882793d2'
             'd9f51e2cbb1ef826ed93410ee1c2c11e658ade4fa183538b16d37b7dec817250')
 
 package() {
-    install -dm 755 "${pkgdir}/usr/share/fonts/lxgw"
-    install -Dm 644 "${srcdir}/LXGWNeoXiHei-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LXGWNeoXiHei.ttf"
-    install -Dm 644 "${srcdir}/LXGWNeoXiHeiPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/LXGWNeoXiHeiPlus.ttf"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/neo"
+  install -Dm 644 "${srcdir}/LXGWNeoXiHei-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LXGWNeoXiHei.ttf"
+  install -Dm 644 "${srcdir}/LXGWNeoXiHeiPlus-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/neo/LXGWNeoXiHeiPlus.ttf"
 }
