@@ -1,4 +1,4 @@
-pkgbase = lxgw-wenkai-screen
+pkgbase = ttf-lxgw-wenkai-screen
 	pkgdesc = LXGW WenKai for Screen Reading.
 	pkgver = 1.521
 	pkgrel = 1
@@ -14,4 +14,4 @@ pkgbase = lxgw-wenkai-screen
 	sha256sums = 2c8b852c52721f063359a0454d6aaf43f1b841a070c56326887474ec0a82bcf1
 	sha256sums = 61f581b3ed47f0d7537421635dc5bae645147ce0d752de7aed778d5418e502ca
 
-pkgname = lxgw-wenkai-screen
+pkgname = ttf-lxgw-wenkai-screen

@@ -1,6 +1,6 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgname=lxgw-wenkai-screen
+pkgname=ttf-lxgw-wenkai-screen
 pkgver=1.521
 pkgrel=1
 pkgdesc="LXGW WenKai for Screen Reading."
