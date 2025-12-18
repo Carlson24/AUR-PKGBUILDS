@@ -15,5 +15,5 @@ noextract=("Plangothic-OTF-V${pkgver}.7z")
 package() {
   7z x -y "Plangothic-OTF-V${pkgver}.7z"
   install -dm 755 "${pkgdir}/usr/share/fonts/plan-gothic"
-  install -Dm 644 "${srcdir}/Plangothic-OTF-V${pkgver}"*.otf "${pkgdir}/usr/share/fonts/plan-gothic"
+  install -Dm 644 "${srcdir}/Plangothic-OTF-V${pkgver}/"*.otf "${pkgdir}/usr/share/fonts/plan-gothic"
 }
