@@ -17,9 +17,9 @@ sha256sums=('eeda8c32620e98c1c91dd197add0f482582e0d326fc7ebca6273c375af4e7419'
             '61f581b3ed47f0d7537421635dc5bae645147ce0d752de7aed778d5418e502ca')
 
 package() {
-  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai/screen"
-  install -Dm 644 "${srcdir}/LXGWWenKaiScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai/screen/LXGWWenKaiScreen.ttf"
-  install -Dm 644 "${srcdir}/LXGWWenKaiGBScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai/screen/LXGWWenKaiGBScreen.ttf"
-  install -Dm 644 "${srcdir}/LXGWWenKaiMonoScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai/screen/LXGWWenKaiMonoScreen.ttf"
-  install -Dm 644 "${srcdir}/LXGWWenKaiMonoGBScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai/screen/LXGWWenKaiMonoGBScreen.ttf"
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-screen"
+  install -Dm 644 "${srcdir}/LXGWWenKaiScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai-screen/LXGWWenKaiScreen.ttf"
+  install -Dm 644 "${srcdir}/LXGWWenKaiGBScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai-screen/LXGWWenKaiGBScreen.ttf"
+  install -Dm 644 "${srcdir}/LXGWWenKaiMonoScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai-screen/LXGWWenKaiMonoScreen.ttf"
+  install -Dm 644 "${srcdir}/LXGWWenKaiMonoGBScreen-v${pkgver}.ttf" "${pkgdir}/usr/share/fonts/lxgw/wenkai-screen/LXGWWenKaiMonoGBScreen.ttf"
 }
