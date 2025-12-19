@@ -1,32 +1,10 @@
-#!/bin/bash
-
-# 要执行的命令
-COMMAND="updpkgsums && makepkg --printsrcinfo > .SRCINFO"
-
-# 要排除的目录列表
-EXCLUDED_DIRS=(
-  ".git"
-)
+#!/usr/bin/bash
 
 # 遍历当前目录下的每个子目录
-for dir in */; do
-  # 检查是否是目录
-  if [ -d "$dir" ]; then
-    # 检查该目录是否在排除列表中
-    skip=false
-    for excluded_dir in "${EXCLUDED_DIRS[@]}"; do
-      if [ "$dir" = "$EXCLUDED_DIRS[$i]" ]; then
-        skip=true
-        break
-      fi
-    done
-
-    # 如果没有排除，则执行命令
-    if ! $skip; then
-      echo "进入目录 $dir，更新哈希并生成 SRCINFO 文件"
-      cd "$dir"
-        eval "$COMMAND"
-      cd -  # 返回到原来的目录
-    fi
-  fi
-done
+while IFS= read -r -d '' dir; do
+  printf "\033[0;32m[INFO] 进入目录 %s, 更新哈希并生成 .SRCINFO 文件\n\033[0m" "${dir#./}"
+  pushd "$dir" >/dev/null || exit
+  updpkgsums
+  makepkg --printsrcinfo >.SRCINFO
+  popd >/dev/null || exit
+done < <(find . -maxdepth 1 -mindepth 1 ! -path "./.git" -type d -print0)

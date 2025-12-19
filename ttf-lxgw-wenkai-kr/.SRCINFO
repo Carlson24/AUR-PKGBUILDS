@@ -1,0 +1,11 @@
+pkgbase = ttf-lxgw-wenkai-kr
+	pkgdesc = Korean Version of LXGW WenKai
+	pkgver = 0.900
+	pkgrel = 1
+	url = https://github.com/lxgw/LxgwWenKaiKR
+	arch = any
+	license = OFL-1.1-RFN
+	source = https://github.com/lxgw/LxgwWenKaiKR/releases/download/v0.900/lxgw-wenkai-kr-v0.900.tar.gz
+	sha256sums = d110fc2fb524f67e4eb184c4e93d32de3505edf443c4beeeea72ce614472c28d
+
+pkgname = ttf-lxgw-wenkai-kr

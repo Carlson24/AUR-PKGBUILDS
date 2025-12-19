@@ -1,0 +1,16 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=ttf-lxgw-wenkai-gb
+pkgver=1.521
+pkgrel=1
+pkgdesc="An open-source Simplified Chinese font derived from Klee One. "
+url="https://github.com/lxgw/LxgwWenKaiGB"
+arch=("any")
+license=('OFL-1.1-RFN')
+source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-gb-v${pkgver}.tar.gz")
+sha256sums=('0ad2f814404d2218f89505a1a270d8de311f24a63fb6ab7daf89773465949933')
+
+package() {
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
+  install -Dm 644 "${srcdir}/lxgw-wenkai-gb-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai-gb"
+}

@@ -1,0 +1,16 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=ttf-lxgw-wenkai-kr
+pkgver=0.900
+pkgrel=1
+pkgdesc="Korean Version of LXGW WenKai"
+url="https://github.com/lxgw/LxgwWenKaiKR"
+arch=("any")
+license=('OFL-1.1-RFN')
+source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-kr-v${pkgver}.tar.gz")
+sha256sums=('d110fc2fb524f67e4eb184c4e93d32de3505edf443c4beeeea72ce614472c28d')
+
+package() {
+  install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-kr"
+  install -Dm 644 "${srcdir}/lxgw-wenkai-kr-v${pkgver}/"*.ttf "${pkgdir}/usr/share/fonts/lxgw/wenkai-kr"
+}
