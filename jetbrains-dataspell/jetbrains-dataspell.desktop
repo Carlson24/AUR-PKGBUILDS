@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DataSpell
+Icon=dataspell
+Comment=Your AI-powered tool for analyzing data and sharing insights
+Exec=/usr/bin/dataspell %f
+Terminal=false
+StartupNotify=true
+StartupWMClass=jetbrains-dataspell
+Categories=Development;IDE;

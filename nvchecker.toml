@@ -10,6 +10,10 @@ cmd= "./jetbrains-check.sh CLion"
 source = "cmd"
 cmd= "./jetbrains-check.sh DataGrip"
 
+[jetbrains-dataspell]
+source = "cmd"
+cmd= "./jetbrains-check.sh DataSpell"
+
 [jetbrains-goland]
 source = "cmd"
 cmd= "./jetbrains-check.sh GoLand"
@@ -42,12 +46,6 @@ cmd= "./jetbrains-check.sh RustRover"
 source = "cmd"
 cmd= "./jetbrains-check.sh WebStorm"
 
-[jerbrains-runtime]
-source = "github"
-github = "JetBrains/JetBrainsRuntime"
-use_latest_release = true
-include_prerelease = false
-
 [openjdk-liberica-full-bin]
 source = "apt"
 pkg = "bellsoft-java25-full"
@@ -77,6 +75,12 @@ source = "apt"
 pkg = "bellsoft-java21-full"
 mirror = "https://apt.bell-sw.com"
 suite = "stable"
+
+[jerbrains-runtime]
+source = "github"
+github = "JetBrains/JetBrainsRuntime"
+use_latest_release = true
+include_prerelease = false
 
 [ttf-lxgw-wenkai]
 source = "github"

@@ -1,0 +1,19 @@
+pkgbase = dataspell
+	pkgdesc = Your powerful cross-platform IDE for relational and NoSQL databases
+	pkgver = 2025.3+253.28294.351
+	pkgrel = 1
+	epoch = 1
+	url = https://www.jetbrains.com/dataspell
+	arch = x86_64
+	license = custom:jetbrains
+	depends = libdbusmenu-glib
+	depends = jbr-runtime
+	options = !strip
+	source = jetbrains-dataspell.desktop
+	source = https://download.jetbrains.com/dataspell/dataspell-2025.3.tar.gz
+	source = https://download.jetbrains.com/dataspell/dataspell-2025.3.tar.gz.sha256
+	sha256sums = 2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61
+	sha256sums = 37d8587ee1b2f65c598100ddfa753ee3239ecae5ff8914a941e23fdb42bbdd8a
+	sha256sums = a6ca66ee36c1ea2fe82562caf5a06bfb1275c960f3ea523c42a40846d7af91e8
+
+pkgname = dataspell
