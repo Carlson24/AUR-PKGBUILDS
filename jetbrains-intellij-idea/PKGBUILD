@@ -49,7 +49,4 @@ package() {
   cp -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg" "${pkgdir}/usr/share/pixmaps/${_pkgname}.svg"
   rm -r "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
   ln -s "/usr/share/pixmaps/${_pkgname}.svg" "${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}.svg"
-
-  # Forced use Wayland
-  echo "-Dawt.toolkit.name=WLToolkit" >>"${pkgdir}/opt/jetbrains/${_pkgname}/bin/${_pkgname}64.vmoptions"
 }
