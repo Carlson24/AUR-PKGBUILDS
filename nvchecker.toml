@@ -1,0 +1,155 @@
+[__config__]
+oldver = "version_old.json"
+newver = "version_new.json"
+
+[jetbrains-clion]
+source = "cmd"
+cmd= "./jetbrains-check.sh CLion"
+
+[jetbrains-datagrip]
+source = "cmd"
+cmd= "./jetbrains-check.sh DataGrip"
+
+[jetbrains-goland]
+source = "cmd"
+cmd= "./jetbrains-check.sh GoLand"
+
+[jetbrains-intellij-idea]
+source = "cmd"
+cmd= "./jetbrains-check.sh \"IntelliJ IDEA\""
+
+[jetbrains-phpstorm]
+source = "cmd"
+cmd= "./jetbrains-check.sh PhpStorm"
+
+[jetbrains-pycharm]
+source = "cmd"
+cmd= "./jetbrains-check.sh PyCharm"
+
+[jetbrains-rider]
+source = "cmd"
+cmd= "./jetbrains-check.sh Rider"
+
+[jetbrains-rubymine]
+source = "cmd"
+cmd= "./jetbrains-check.sh RubyMine"
+
+[jetbrains-rustrover]
+source = "cmd"
+cmd= "./jetbrains-check.sh RustRover"
+
+[jetbrains-webstorm]
+source = "cmd"
+cmd= "./jetbrains-check.sh WebStorm"
+
+[jerbrains-runtime]
+source = "github"
+github = "JetBrains/JetBrainsRuntime"
+use_latest_release = true
+include_prerelease = false
+
+[openjdk-liberica-full-bin]
+source = "apt"
+pkg = "bellsoft-java25-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
+
+[openjdk-liberica8-full-bin]
+source = "apt"
+pkg = "bellsoft-java8-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
+
+[openjdk-liberica11-full-bin]
+source = "apt"
+pkg = "bellsoft-java11-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
+
+[openjdk-liberica17-full-bin]
+source = "apt"
+pkg = "bellsoft-java17-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
+
+[openjdk-liberica21-full-bin]
+source = "apt"
+pkg = "bellsoft-java21-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
+
+[ttf-lxgw-wenkai]
+source = "github"
+github = "lxgw/LxgwWenKai"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-wenkai-gb]
+source = "github"
+github = "lxgw/LxgwWenKaiGB"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-wenkai-kr]
+source = "github"
+github = "lxgw/LxgwWenKaiKR"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-wenkai-tc]
+source = "github"
+github = "lxgw/LxgwWenKaiTC"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-wenkai-screen]
+source = "github"
+github = "lxgw/LxgwWenKai-Screen"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-neo-xihei]
+source = "github"
+github = "lxgw/LxgwNeoXiHei"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-neo-zhisong]
+source = "github"
+github = "lxgw/LxgwNeoZhiSong"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-kose]
+source = "github"
+github = "lxgw/kose-font"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-lxgw-yozai]
+source = "github"
+github = "lxgw/yozai-font"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-plan-gothic]
+source = "github"
+github = "Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-wenjin-mincho]
+source = "github"
+github = "takushun-wu/WenJinMincho"
+use_latest_release = true
+include_prerelease = false
+
+[ttf-wenyuan-fonts]
+source = "github"
+github = "takushun-wu/WenYuanFonts"
+use_latest_release = true
+include_prerelease = false
+
+[linuxqq-nt-bwrap]
+source = "aur"
+aur = "linuxqq-nt-bwrap"

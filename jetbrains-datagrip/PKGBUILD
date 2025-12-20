@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=datagrip
-_version=2025.3
-_buildver=253.28294.259
+_version=2025.3.1
+_buildver=253.29346.125
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/datagrip/datagrip-${_version}.tar.gz"
         "https://download.jetbrains.com/datagrip/datagrip-${_version}.tar.gz.sha256")
 sha256sums=('2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61'
-            '010ad3a676cfe984e7498d1eb4f84686d7a110acbde4f9d288f53967255340e6'
-            '1f497d307250dda94ce9892a57810dec625447898592db22f7ff7a5451391acf')
+            '37d8587ee1b2f65c598100ddfa753ee3239ecae5ff8914a941e23fdb42bbdd8a'
+            'a6ca66ee36c1ea2fe82562caf5a06bfb1275c960f3ea523c42a40846d7af91e8')
 
 prepare() {
   sha256sum -c datagrip-${_version}.tar.gz.sha256

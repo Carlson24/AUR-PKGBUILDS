@@ -1,0 +1,119 @@
+{
+  "version": 2,
+  "data": {
+    "jerbrains-runtime": {
+      "version": "jbr-release-21.0.9b895.149",
+      "gitref": "refs/tags/jbr-release-21.0.9b895.149",
+      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-21.0.9b895.149"
+    },
+    "jetbrains-clion": {
+      "version": "2025.3.1+253.29346.141"
+    },
+    "jetbrains-datagrip": {
+      "version": "2025.3.1+253.29346.125"
+    },
+    "jetbrains-goland": {
+      "version": "2025.3+253.28294.337"
+    },
+    "jetbrains-intellij-idea": {
+      "version": "2025.3.1+253.29346.138"
+    },
+    "jetbrains-phpstorm": {
+      "version": "2025.3.1+253.29346.151"
+    },
+    "jetbrains-pycharm": {
+      "version": "2025.3.1+253.29346.142"
+    },
+    "jetbrains-rider": {
+      "version": "2025.3.1+253.29346.144"
+    },
+    "jetbrains-rubymine": {
+      "version": "2025.3.1+253.29346.140"
+    },
+    "jetbrains-rustrover": {
+      "version": "2025.3.1+253.29346.139"
+    },
+    "jetbrains-webstorm": {
+      "version": "2025.3.1+253.29346.143"
+    },
+    "linuxqq-nt-bwrap": {
+      "version": "3.2.22_251203-1",
+      "url": "https://aur.archlinux.org/packages/linuxqq-nt-bwrap"
+    },
+    "openjdk-liberica-full-bin": {
+      "version": "25.0.1+13"
+    },
+    "openjdk-liberica11-full-bin": {
+      "version": "11.0.29+12"
+    },
+    "openjdk-liberica17-full-bin": {
+      "version": "17.0.17+15"
+    },
+    "openjdk-liberica21-full-bin": {
+      "version": "21.0.9+15"
+    },
+    "openjdk-liberica8-full-bin": {
+      "version": "1.8.0.472+11"
+    },
+    "ttf-lxgw-kose": {
+      "version": "v3.126",
+      "gitref": "refs/tags/v3.126",
+      "url": "https://github.com/lxgw/kose-font/releases/tag/v3.126"
+    },
+    "ttf-lxgw-neo-xihei": {
+      "version": "v1.235",
+      "gitref": "refs/tags/v1.235",
+      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.235"
+    },
+    "ttf-lxgw-neo-zhisong": {
+      "version": "v1.055",
+      "gitref": "refs/tags/v1.055",
+      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.055"
+    },
+    "ttf-lxgw-wenkai": {
+      "version": "v1.521",
+      "gitref": "refs/tags/v1.521",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.521"
+    },
+    "ttf-lxgw-wenkai-gb": {
+      "version": "v1.521",
+      "gitref": "refs/tags/v1.521",
+      "url": "https://github.com/lxgw/LxgwWenkaiGB/releases/tag/v1.521"
+    },
+    "ttf-lxgw-wenkai-kr": {
+      "version": "v0.900",
+      "gitref": "refs/tags/v0.900",
+      "url": "https://github.com/lxgw/LxgwWenkaiKR/releases/tag/v0.900"
+    },
+    "ttf-lxgw-wenkai-screen": {
+      "version": "v1.521",
+      "gitref": "refs/tags/v1.521",
+      "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/tag/v1.521"
+    },
+    "ttf-lxgw-wenkai-tc": {
+      "version": "v1.521",
+      "gitref": "refs/tags/v1.521",
+      "url": "https://github.com/lxgw/LxgwWenkaiTC/releases/tag/v1.521"
+    },
+    "ttf-lxgw-yozai": {
+      "version": "v0.868",
+      "gitref": "refs/tags/v0.868",
+      "url": "https://github.com/lxgw/yozai-font/releases/tag/v0.868"
+    },
+    "ttf-plan-gothic": {
+      "version": "V2.9.5787",
+      "gitref": "refs/tags/V2.9.5787",
+      "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/tag/V2.9.5787"
+    },
+    "ttf-wenjin-mincho": {
+      "version": "v2.001",
+      "gitref": "refs/tags/v2.001",
+      "url": "https://github.com/takushun-wu/WenJinMincho/releases/tag/v2.001"
+    },
+    "ttf-wenyuan-fonts": {
+      "version": "2025.10.3",
+      "gitref": "refs/tags/2025.10.3",
+      "url": "https://github.com/takushun-wu/WenYuanFonts/releases/tag/2025.10.3"
+    }
+  }
+}
