@@ -1,6 +1,6 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgname=lfs-boot-make-meta
+pkgname=lfs-book-make-meta
 pkgver=12.4
 pkgrel=1
 pkgdesc='Meta package to make LFS Book'

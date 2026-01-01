@@ -1,4 +1,4 @@
-pkgbase = lfs-boot-make-meta
+pkgbase = lfs-book-make-meta
 	pkgdesc = Meta package to make LFS Book
 	pkgver = 12.4
 	pkgrel = 1
@@ -16,4 +16,4 @@ pkgbase = lfs-boot-make-meta
 	optdepends = jdk-openjdk: Make PDF Book
 	optdepends = fop: Make PDF Book
 
-pkgname = lfs-boot-make-meta
+pkgname = lfs-book-make-meta
