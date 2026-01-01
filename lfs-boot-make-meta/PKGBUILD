@@ -1,0 +1,21 @@
+# Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
+
+pkgname=lfs-boot-make-meta
+pkgver=12.4
+pkgrel=1
+pkgdesc='Meta package to make LFS Book'
+arch=(any)
+license=(None)
+url='https://github.com/xry111/lfs-book-i18n/'
+depends=(
+  make
+  po4a
+  python-polib
+  libxml2
+  libxslt
+  docbook-xml
+  docbook-xsl
+  tidy
+)
+optdepends=('jdk-openjdk: Make PDF Book'
+            'fop: Make PDF Book')

@@ -1,0 +1,19 @@
+pkgbase = lfs-boot-make-meta
+	pkgdesc = Meta package to make LFS Book
+	pkgver = 12.4
+	pkgrel = 1
+	url = https://github.com/xry111/lfs-book-i18n/
+	arch = any
+	license = None
+	depends = make
+	depends = po4a
+	depends = python-polib
+	depends = libxml2
+	depends = libxslt
+	depends = docbook-xml
+	depends = docbook-xsl
+	depends = tidy
+	optdepends = jdk-openjdk: Make PDF Book
+	optdepends = fop: Make PDF Book
+
+pkgname = lfs-boot-make-meta
