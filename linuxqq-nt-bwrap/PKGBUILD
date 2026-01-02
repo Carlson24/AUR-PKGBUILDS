@@ -26,9 +26,10 @@ provides=('qq' 'linuxqq')
 conflicts=('linuxqq')
 options=('!emptydirs')
 install="${pkgname}.install"
-source=('start_mac_fix.sh' 'config.json'
+source=('start_mac_fix.sh' 'start_inner.sh' 'config.json'
         "https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${_base_pkgver}_amd64_01.deb")
 sha256sums=('4efadec6df7a406cd62bd4598f47df9081a821b3ba2f40a0be9cf87197db23f4'
+            '3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             '3f004bdb246b3194d276c636ea96cb40a7e0b813fea470957d1331e80332bd54')
 
@@ -47,7 +48,7 @@ package() {
 
   # 打包相关处理
   mkdir -p "${pkgdir}/opt/QQ/workarounds"
-  cp "${srcdir}/config.json" "${pkgdir}/opt/QQ/workarounds/config.json"
+  install -Dm644 "${srcdir}/config.json" "${pkgdir}/opt/QQ/workarounds/config.json"
   echo "nameserver 10.0.2.3" > "${pkgdir}/opt/QQ/workarounds/resolv.conf"
   cat << "EOF" | install -Dm755 /dev/stdin "${pkgdir}/opt/QQ/workarounds/xdg-open.sh"
 #!/bin/bash
@@ -68,7 +69,8 @@ EOF
   rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,libunwind*,sharp-lib/libvips-cpp.so.42}
 
   # 对 desktop 文件做处理，使其使用正确的图标，启动 start.sh
-  cp "${srcdir}/start_mac_fix.sh" "${pkgdir}/opt/QQ/start.sh"
+  install -Dm755 "${srcdir}/start_mac_fix.sh" "${pkgdir}/opt/QQ/start.sh"
+  install -Dm755 "${srcdir}/start_inner.sh" "${pkgdir}/opt/QQ/start_inner.sh"
   sed -i "s|/opt/QQ/qq|/opt/QQ/start.sh|" "${pkgdir}/usr/share/applications/qq.desktop"
   sed -i "s|Icon=/usr/share/icons/hicolor/512x512/apps/qq.png|Icon=qq|" "${pkgdir}/usr/share/applications/qq.desktop"
 
