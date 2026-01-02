@@ -1,13 +1,13 @@
 pkgbase = ttf-wenjin-mincho
 	pkgdesc = A large character set fonts in Songti(Mincho) style.
-	pkgver = 2.001
+	pkgver = 2.002
 	pkgrel = 1
 	url = https://github.com/takushun-wu/WenJinMincho
 	arch = any
 	license = OFL-1.1-RFN
 	makedepends = 7zip
-	noextract = WenJinMincho-TTF-v2.001.7z
-	source = WenJinMincho-TTF-v2.001.7z::https://github.com/takushun-wu/WenJinMincho/releases/download/v2.001/WenJinMincho-TTF.7z
-	sha256sums = f6b13f4a31f6f7a4efddb42d778cb1d7f0fae39914b4f0036b0ad4b90f8784c3
+	noextract = WenJinMincho-TTF-v2.002.7z
+	source = WenJinMincho-TTF-v2.002.7z::https://github.com/takushun-wu/WenJinMincho/releases/download/v2.002/WenJinMincho-TTF.7z
+	sha256sums = a80f58d001bfba704c0d154d139e7a5d86f81d29e8834c9ff14ea219303efba2
 
 pkgname = ttf-wenjin-mincho

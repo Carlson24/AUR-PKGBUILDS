@@ -10,7 +10,10 @@
       "version": "2025.3.1+253.29346.141"
     },
     "jetbrains-datagrip": {
-      "version": "2025.3.1+253.29346.125"
+      "version": "2025.3.2+253.29346.170"
+    },
+    "jetbrains-dataspell": {
+      "version": "2025.3.1+253.29346.157"
     },
     "jetbrains-goland": {
       "version": "2025.3+253.28294.337"
@@ -61,14 +64,14 @@
       "url": "https://github.com/lxgw/kose-font/releases/tag/v3.126"
     },
     "ttf-lxgw-neo-xihei": {
-      "version": "v1.235",
-      "gitref": "refs/tags/v1.235",
-      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.235"
+      "version": "v1.237",
+      "gitref": "refs/tags/v1.237",
+      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.237"
     },
     "ttf-lxgw-neo-zhisong": {
-      "version": "v1.055",
-      "gitref": "refs/tags/v1.055",
-      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.055"
+      "version": "v1.057",
+      "gitref": "refs/tags/v1.057",
+      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.057"
     },
     "ttf-lxgw-wenkai": {
       "version": "v1.521",
@@ -101,19 +104,19 @@
       "url": "https://github.com/lxgw/yozai-font/releases/tag/v0.868"
     },
     "ttf-plan-gothic": {
-      "version": "V2.9.5787",
-      "gitref": "refs/tags/V2.9.5787",
-      "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/tag/V2.9.5787"
+      "version": "V2.9.5792",
+      "gitref": "refs/tags/V2.9.5792",
+      "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/tag/V2.9.5792"
     },
     "ttf-wenjin-mincho": {
-      "version": "v2.001",
-      "gitref": "refs/tags/v2.001",
-      "url": "https://github.com/takushun-wu/WenJinMincho/releases/tag/v2.001"
+      "version": "v2.002",
+      "gitref": "refs/tags/v2.002",
+      "url": "https://github.com/takushun-wu/WenJinMincho/releases/tag/v2.002"
     },
     "ttf-wenyuan-fonts": {
-      "version": "2025.10.3",
-      "gitref": "refs/tags/2025.10.3",
-      "url": "https://github.com/takushun-wu/WenYuanFonts/releases/tag/2025.10.3"
+      "version": "2026.1.2",
+      "gitref": "refs/tags/2026.1.2",
+      "url": "https://github.com/takushun-wu/WenYuanFonts/releases/tag/2026.1.2"
     }
   }
 }

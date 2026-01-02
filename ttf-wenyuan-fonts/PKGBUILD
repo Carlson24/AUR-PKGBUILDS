@@ -2,7 +2,7 @@
 
 pkgbase=wenyuan-fonts
 pkgname=("ttf-wenyuan-sans" "ttf-wenyuan-serif" "ttf-wenyuan-rounded")
-pkgver=2025.10.3
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc="A more suitable open-source Chinese font collection for Simplified Chinese environment & TeX field. "
 url="https://github.com/takushun-wu/WenYuanFonts"
@@ -11,9 +11,9 @@ license=('OFL-1.1-RFN')
 source=("WenYuanSansSC-TTF-v${pkgver}.7z::${url}/releases/download/${pkgver}/WenYuanSansSC-TTF.7z"
         "WenYuanSerifSC-TTF-v${pkgver}.7z::${url}/releases/download/${pkgver}/WenYuanSerifSC-TTF.7z"
         "WenYuanRoundedSC-TTF-v${pkgver}.7z::${url}/releases/download/${pkgver}/WenYuanRoundedSC-TTF.7z")
-sha256sums=('4c2aae18aad2fd6b3933a0b7aa262428183aeb08eaff1dd110133d7fbc5e42e5'
-            '11596b87848b4ce7aecd64a1bfd5332afebfb16f289e4dbb299916c51440360a'
-            '16e60ab81e61f92b9074d8db69ed0f265e5da7790372521d4aa8f99dbc5626e0')
+sha256sums=('b8230f866fdb7bc8479c84743c342d933a058d832dc57c9e01e9f682494780d2'
+            '0cb8635ef16d48d358719cb9be44709be0775f6492a506f04b7b3fa35f4049e0'
+            '82f0290febc3cd91052b0189953311cf2f31bc6b5a022f94a07d1d46a8c5b8c7')
 noextract=("WenYuanSansSC-TTF-v${pkgver}.7z"
            "WenYuanSerifSC-TTF-v${pkgver}.7z"
            "WenYuanRoundedSC-TTF-v${pkgver}.7z")

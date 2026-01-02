@@ -1,13 +1,13 @@
 pkgbase = ttf-lxgw-neo-zhisong
 	pkgdesc = A Chinese serif font derived from IPAmj Mincho.
-	pkgver = 1.055
+	pkgver = 1.057
 	pkgrel = 1
 	url = https://github.com/lxgw/LxgwNeoZhiSong
 	arch = any
 	license = OFL-1.1-RFN
-	source = LxgwNeoZhiSong-v1.055.ttf::https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v1.055/LxgwNeoZhiSong.ttf
-	source = LxgwNeoZhiSongPlus-v1.055.ttf::https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v1.055/LxgwNeoZhiSongPlus.ttf
-	sha256sums = 12773f5979c7c834b71a475bd2f11dba2791dde2469a96ee6de6c46eedc4c8bb
-	sha256sums = 0f2ae30bd5c2c2b7c28a527ee4e9e4ce83a4d48bb909c066e39fe274845bdc81
+	source = LxgwNeoZhiSong-v1.057.ttf::https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v1.057/LxgwNeoZhiSong.ttf
+	source = LxgwNeoZhiSongPlus-v1.057.ttf::https://github.com/lxgw/LxgwNeoZhiSong/releases/download/v1.057/LxgwNeoZhiSongPlus.ttf
+	sha256sums = 0dbd911d0872d965a0dab49123f558c1fb9575a04d1335e2dd38896bf5d93041
+	sha256sums = 642f6f5e6753062533af5329ea94f82fe8e79c143b1854e9040d76dca99b6c5e
 
 pkgname = ttf-lxgw-neo-zhisong

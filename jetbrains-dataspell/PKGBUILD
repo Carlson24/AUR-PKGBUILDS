@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=dataspell
-_version=2025.3
-_buildver=253.28294.351
+_version=2025.3.1
+_buildver=253.29346.157
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/python/dataspell-${_version}.tar.gz"
         "https://download.jetbrains.com/python/dataspell-${_version}.tar.gz.sha256")
 sha256sums=('239f9c4380cefa84652ec7761af8a011455aa6d558f4e42b47f010c47d8a5321'
-            '40886bb4e31f20dd2e9efa4b724dd67dac647ac3337f2a2b98285097fe55d8a3'
-            'b686044595a112046715ef95e38dc3b43b4aa78c956ebefbb1b7e8b8a5617af2')
+            '37f13426ce4f5d859d7db246f2328ccbad61adf361d43c784cb6932af6644c28'
+            '979a54b008cce6429fa0ba8a0f5cf081f0145df0e3152e1e08ba043fe3b04e98')
 
 prepare() {
   sha256sum -c dataspell-${_version}.tar.gz.sha256
