@@ -31,9 +31,8 @@ fi
 USER_RUN_DIR="/run/user/$(id -u)"
 XAUTHORITY="${XAUTHORITY:-$HOME/.Xauthority}"
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 FONTCONFIG_HOME="${XDG_CONFIG_HOME}/fontconfig"
-QQ_APP_DIR="${XDG_DATA_HOME}/QQ"
+QQ_APP_DIR="${XDG_CONFIG_HOME}/QQ"
 if [ -z "${QQ_DOWNLOAD_DIR}" ]; then
   if [ -z "${XDG_DOWNLOAD_DIR}" ]; then
     XDG_DOWNLOAD_DIR="$(xdg-user-dir DOWNLOAD)"
@@ -159,7 +158,8 @@ PID="$(cat "$INFO_FILE")"
 echo "SubProcess PID: $PID"
 
 SLIRP_API_SOCKET=$INFO_DIR/slirp.sock
-slirp4netns --configure --mtu=65520 --disable-host-loopback --enable-ipv6 "$PID" eth0 --macaddress "$qq_mac" --api-socket "$SLIRP_API_SOCKET" &
+slirp4netns --configure --mtu=65520 --disable-host-loopback \
+  --enable-ipv6 "$PID" eth0 --macaddress "$qq_mac" --api-socket "$SLIRP_API_SOCKET" &
 SLIRP_PID=$!
 
 while [ ! -S "$SLIRP_API_SOCKET" ]; do
@@ -178,7 +178,7 @@ add_hostfwd() {
   shift 2
   local ports=("$@")
   for port in "${ports[@]}"; do
-    result=$(echo -n "{\"execute\": \"add_hostfwd\", \"arguments\": {\"proto\": \"$proto\", \"host_addr\": \"127.0.0.1\", \"host_port\": $port, \"guest_port\": $guest_port}}" | socat UNIX-CONNECT:$SLIRP_API_SOCKET -)
+    result=$(echo -n "{\"execute\": \"add_hostfwd\", \"arguments\": {\"proto\": \"$proto\", \"host_addr\": \"127.0.0.1\", \"host_port\": $port, \"guest_port\": $guest_port}}" | socat "UNIX-CONNECT:$SLIRP_API_SOCKET" -)
     if [[ $result != *"error"* ]]; then
       echo "$proto forwarding setup on port $port"
       return 0

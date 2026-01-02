@@ -28,7 +28,7 @@ options=('!emptydirs')
 install="${pkgname}.install"
 source=('start_mac_fix.sh' 'start_inner.sh' 'config.json'
         "https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${_base_pkgver}_amd64_01.deb")
-sha256sums=('fefb04072da730b057ae314097b2985abf0ee05999b6a470fd2c8c37e487757c'
+sha256sums=('181bd26677af91a7884a5858290a73cca10ab7cd890de98ec2cc22e12920f6a4'
             '3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
             '3f004bdb246b3194d276c636ea96cb40a7e0b813fea470957d1331e80332bd54')
