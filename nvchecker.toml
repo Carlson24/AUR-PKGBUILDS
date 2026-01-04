@@ -76,6 +76,12 @@ pkg = "bellsoft-java21-full"
 mirror = "https://apt.bell-sw.com"
 suite = "stable"
 
+[hyprls]
+source = "github"
+github = "hyprland-community/hyprls"
+use_latest_release = true
+include_prerelease = false
+
 [jerbrains-runtime]
 source = "github"
 github = "JetBrains/JetBrainsRuntime"
