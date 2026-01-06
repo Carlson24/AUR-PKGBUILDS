@@ -1,10 +1,15 @@
 {
   "version": 2,
   "data": {
+    "hyprls": {
+      "version": "v0.12.0",
+      "gitref": "refs/tags/v0.12.0",
+      "url": "https://github.com/hyprland-community/hyprls/releases/tag/v0.12.0"
+    },
     "jerbrains-runtime": {
-      "version": "jbr-release-21.0.9b895.149",
-      "gitref": "refs/tags/jbr-release-21.0.9b895.149",
-      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-21.0.9b895.149"
+      "version": "jbr-release-25.0.1b266.34",
+      "gitref": "refs/tags/jbr-release-25.0.1b266.34",
+      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-25.0.1b266.34"
     },
     "jetbrains-clion": {
       "version": "2025.3.1+253.29346.141"

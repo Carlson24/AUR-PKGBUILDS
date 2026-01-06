@@ -25,7 +25,6 @@ optdepends=('libappindicator-gtk3: 以显示托盘图标'
 provides=('qq' 'linuxqq')
 conflicts=('linuxqq')
 options=('!emptydirs')
-install="${pkgname}.install"
 source=('start_mac_fix.sh' 'start_inner.sh' 'config.json'
         "https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_${_base_pkgver}_amd64_01.deb")
 sha256sums=('181bd26677af91a7884a5858290a73cca10ab7cd890de98ec2cc22e12920f6a4'

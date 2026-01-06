@@ -2,7 +2,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=hyprls
-pkgver=0.11.0
+pkgver=0.12.0
 pkgrel=1
 pkgdesc="A LSP server for Hyprland config files"
 arch=('x86_64')
@@ -11,7 +11,7 @@ license=('MIT')
 optdepends=('hyprland')
 makedepends=('git' 'go' 'just')
 source=("git+$url#tag=v$pkgver" "git+https://github.com/hyprwm/hyprland-wiki.git")
-b2sums=('a36a9d628bbe9a93ae580ec8dbf922df4393691b165879ff4584eeec0942945ac8932c53c02d246f13436e48b2ef8c58e8ceaf4f033e655c805c98e0a553976e'
+b2sums=('40f38df1f788c84ad54bd326b5ef2ba5ebee3b11c917992755b8c93216c009780b588a183df5f880bd376718632182ce037f3d00d87ffe775f9c6d979d2cc8a8'
         'SKIP')
 
 prepare() {
