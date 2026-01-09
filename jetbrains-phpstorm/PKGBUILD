@@ -1,8 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=phpstorm
-_version=2025.3.1
-_buildver=253.29346.151
+_version=2025.3.1.1
+_buildver=253.29346.257
 pkgver=${_version}+${_buildver}
 pkgrel=1
 epoch=1
@@ -16,8 +16,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz"
         "https://download.jetbrains.com/webide/PhpStorm-${_version}.tar.gz.sha256")
 sha256sums=('c823ed26d67670a0bb673dc29f613630087dcd48a3b6f7d5d4b48299bc550238'
-            'fd8937ab6b79605cefc9917ffe6a08e05a6b7cc0256fa2178623d24ec322fa29'
-            'cb1c7f82112ee670d4d7ea5313578bfc55d87bcd55fb2ec28c93c49249580ab9')
+            'bb96ff7a5801e3f90cae0920caa873e0bd8166ab0daade85c1bf89202d5e4849'
+            '580814f05ed7caa7788e9a56796791cd079b8f782bfcd718b8ed751ff1645aec')
 
 prepare() {
   sha256sum -c PhpStorm-${_version}.tar.gz.sha256

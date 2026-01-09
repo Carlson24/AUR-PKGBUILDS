@@ -1,6 +1,6 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgbase=maplemono
+pkgbase=ttf-maplemono-normal
 pkgname=("ttf-maplemono-normal" "ttf-maplemono-normal-cn" "ttf-maplemono-normal-nf" "ttf-maplemono-normal-nf-cn")
 pkgver=7.9.1
 pkgrel=1

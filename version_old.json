@@ -21,13 +21,13 @@
       "version": "2025.3.1+253.29346.157"
     },
     "jetbrains-goland": {
-      "version": "2025.3+253.28294.337"
+      "version": "2025.3.1+253.29346.255"
     },
     "jetbrains-intellij-idea": {
-      "version": "2025.3.1+253.29346.138"
+      "version": "2025.3.1.1+253.29346.240"
     },
     "jetbrains-phpstorm": {
-      "version": "2025.3.1+253.29346.151"
+      "version": "2025.3.1.1+253.29346.257"
     },
     "jetbrains-pycharm": {
       "version": "2025.3.1+253.29346.142"
@@ -42,7 +42,7 @@
       "version": "2025.3.1+253.29346.139"
     },
     "jetbrains-webstorm": {
-      "version": "2025.3.1+253.29346.143"
+      "version": "2025.3.1.1+253.29346.242"
     },
     "linuxqq-nt-bwrap": {
       "version": "3.2.22_251203-1",

@@ -1,5 +1,5 @@
 pkgbase = ttf-plan-gothic
-	pkgdesc = 基于思源黑体，并以中国大陆字形为标准的对中日韩越统一表意文字扩展区进行字形补充的项目。
+	pkgdesc = Plangothic Project is based on Source Han Sans CN and takes the Chinese Mainland variant ideographs as the standard to supplement the CJK Unified Ideographs Extension blocks
 	pkgver = 2.9.5792
 	pkgrel = 1
 	url = https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project

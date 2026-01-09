@@ -4,7 +4,6 @@ pkgbase = linuxqq-nt-bwrap
 	pkgrel = 1
 	epoch = 1
 	url = https://im.qq.com/linuxqq/index.shtml
-	install = linuxqq-nt-bwrap.install
 	arch = x86_64
 	license = custom
 	makedepends = 7zip
