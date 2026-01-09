@@ -15,7 +15,7 @@
       "version": "2025.3.1+253.29346.141"
     },
     "jetbrains-datagrip": {
-      "version": "2025.3.2+253.29346.170"
+      "version": "2025.3.3+253.29346.270"
     },
     "jetbrains-dataspell": {
       "version": "2025.3.1+253.29346.157"
@@ -45,7 +45,7 @@
       "version": "2025.3.1.1+253.29346.242"
     },
     "linuxqq-nt-bwrap": {
-      "version": "3.2.22_251203-1",
+      "version": "3.2.23_260108-1",
       "url": "https://aur.archlinux.org/packages/linuxqq-nt-bwrap"
     },
     "openjdk-liberica-full-bin": {

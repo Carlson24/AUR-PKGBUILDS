@@ -1,6 +1,6 @@
 pkgbase = datagrip
 	pkgdesc = Your powerful cross-platform IDE for relational and NoSQL databases
-	pkgver = 2025.3.2+253.29346.170
+	pkgver = 2025.3.3+253.29346.270
 	pkgrel = 1
 	epoch = 1
 	url = https://www.jetbrains.com/datagrip
@@ -10,10 +10,10 @@ pkgbase = datagrip
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-datagrip.desktop
-	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.2.tar.gz
-	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.2.tar.gz.sha256
+	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.3.tar.gz
+	source = https://download.jetbrains.com/datagrip/datagrip-2025.3.3.tar.gz.sha256
 	sha256sums = 2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61
-	sha256sums = cb6ed6475d21eb8d30754131bd24003c114096bfa84ffccf334dc11cf8ac60cc
-	sha256sums = a2ccd4fc9dc8365ce8c60825df6a2695ef521253d79c71983e06db6870a4a5fe
+	sha256sums = 715d2c859c5ece9be596c33869424f2f0f8fcef4b1ab2e38179584d74540efae
+	sha256sums = 2934105f9f7a03dbc28b14fc5f291892087d3b770442ee0131a798a627e04d0e
 
 pkgname = datagrip
