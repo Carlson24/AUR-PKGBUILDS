@@ -1,31 +1,28 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rider
-_version=2025.3.1
-_buildver=253.29346.144
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1
 pkgrel=1
-epoch=1
-pkgdesc="The world's most loved .NET and game dev IDE"
+pkgdesc="The world is most loved .NET and game dev IDE"
 arch=('x86_64')
 url="https://www.jetbrains.com/rider"
 license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz"
-        "https://download.jetbrains.com/rider/JetBrains.Rider-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/rider/JetBrains.Rider-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/rider/JetBrains.Rider-${pkgver}.tar.gz.sha256")
 sha256sums=('0860363846e65d4d13abaeef03fcac0041c5ed4e33a866231af7d5f54facf006'
             'ba840f7c48da7f118cf57aa8c22df30120d16f175fbce3bec6a65590ed87f2e8'
             'adaa92dc8a15db6ce70f3dbf22039cfedf73f6084e2f8c40ee5ba81b03aeb47b')
 
 prepare() {
-  sha256sum -c JetBrains.Rider-${_version}.tar.gz.sha256
+  sha256sum -c JetBrains.Rider-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/JetBrains Rider-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/JetBrains Rider-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

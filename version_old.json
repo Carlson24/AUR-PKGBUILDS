@@ -7,42 +7,42 @@
       "url": "https://github.com/hyprland-community/hyprls/releases/tag/v0.12.0"
     },
     "jerbrains-runtime": {
-      "version": "jbr-release-25.0.1b266.34",
-      "gitref": "refs/tags/jbr-release-25.0.1b266.34",
-      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-25.0.1b266.34"
+      "version": "jbr-release-25.0.1b268.52",
+      "gitref": "refs/tags/jbr-release-25.0.1b268.52",
+      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-25.0.1b268.52"
     },
     "jetbrains-clion": {
-      "version": "2025.3.1+253.29346.141"
+      "version": "2025.3.1.1"
     },
     "jetbrains-datagrip": {
-      "version": "2025.3.3+253.29346.270"
+      "version": "2025.3.3"
     },
     "jetbrains-dataspell": {
-      "version": "2025.3.1+253.29346.157"
+      "version": "2025.3.1"
     },
     "jetbrains-goland": {
-      "version": "2025.3.1+253.29346.255"
+      "version": "2025.3.1.1"
     },
     "jetbrains-intellij-idea": {
-      "version": "2025.3.1.1+253.29346.240"
+      "version": "2025.3.1.1"
     },
     "jetbrains-phpstorm": {
-      "version": "2025.3.1.1+253.29346.257"
+      "version": "2025.3.1.1"
     },
     "jetbrains-pycharm": {
-      "version": "2025.3.1+253.29346.142"
+      "version": "2025.3.1.1"
     },
     "jetbrains-rider": {
-      "version": "2025.3.1+253.29346.144"
+      "version": "2025.3.1"
     },
     "jetbrains-rubymine": {
-      "version": "2025.3.1+253.29346.140"
+      "version": "2025.3.1.1"
     },
     "jetbrains-rustrover": {
-      "version": "2025.3.1+253.29346.139"
+      "version": "2025.3.2"
     },
     "jetbrains-webstorm": {
-      "version": "2025.3.1.1+253.29346.242"
+      "version": "2025.3.1.1"
     },
     "linuxqq-nt-bwrap": {
       "version": "3.2.23_260108-1",
@@ -69,14 +69,14 @@
       "url": "https://github.com/lxgw/kose-font/releases/tag/v3.126"
     },
     "ttf-lxgw-neo-xihei": {
-      "version": "v1.237",
-      "gitref": "refs/tags/v1.237",
-      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.237"
+      "version": "v1.239",
+      "gitref": "refs/tags/v1.239",
+      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.239"
     },
     "ttf-lxgw-neo-zhisong": {
-      "version": "v1.057",
-      "gitref": "refs/tags/v1.057",
-      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.057"
+      "version": "v1.058",
+      "gitref": "refs/tags/v1.058",
+      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.058"
     },
     "ttf-lxgw-wenkai": {
       "version": "v1.521",

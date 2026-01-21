@@ -1,5 +1,5 @@
 pkgbase = ttf-lxgw-wenkai
-	pkgdesc = An unprofessional open-source Chinese font derived from Fontworks' Klee One.
+	pkgdesc = An unprofessional open-source Chinese font derived from Fontworks Klee One.
 	pkgver = 1.521
 	pkgrel = 1
 	url = https://github.com/lxgw/LxgwWenKai

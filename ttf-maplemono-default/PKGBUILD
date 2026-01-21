@@ -1,9 +1,10 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
-pkgbase=ttf-maplemono
-pkgname=("ttf-maplemono" "ttf-maplemono-cn" "ttf-maplemono-nf" "ttf-maplemono-nf-cn")
-pkgver=7.9.1
+pkgbase=ttf-maplemono-default
+pkgname=("ttf-maplemono-default" "ttf-maplemono-default-cn" "ttf-maplemono-default-nf" "ttf-maplemono-default-nf-cn")
+pkgver=7.9.2
 pkgrel=1
+epoch=1
 pkgdesc="Maple Mono: Open source monospace font with round corner, ligatures and Nerd-Font for IDE and terminal, fine-grained customization options."
 url="https://github.com/Carlson24/maple-font-custom"
 arch=("any")
@@ -16,14 +17,14 @@ source=("MapleMonoNR-TTF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/Map
         "MapleMonoNLNR-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNLNR-CN.zip"
         "MapleMonoNLNR-NF-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNLNR-NF.zip"
         "MapleMonoNLNR-NF-CN-v${pkgver}.zip::${url}/releases/download/v${pkgver}/MapleMonoNLNR-NF-CN.zip")
-sha256sums=('9d845f9f3d9314627d48e519a7357c101724fe3111dc6c62bb3cf438057f4b43'
-            '8e14886fcd892f8f708e4b32ab0b805066134e6404f6d759c2384a42615b70dc'
-            '9a7727811b602efbff3588e71e184ed02390de24292ef0254cf269c833d43364'
-            '14968584aea899132fdd01351f0084e1fb4ff11a8a7ab0af2fa672b049b92495'
-            'afc9009675eff789a4e40666132d2f7c40d79bfaa2bbf7592e01f280b4cfe726'
-            'fd613ac565a26789a8d5cd3eee5b4e1aa1b081d05d4e94b612aad19ddcbe48b5'
-            '7572a2eed433c3dcc05c30a44ef60bb12fbb108dc164918aa56967a49003b8eb'
-            '6340dd3bb3d6d6aeb8119a0d6d11d5f52c55a2a9d34bfde0d60143a914c8c6a6')
+sha256sums=('00a1dea5f5fd305e04129f918c78a309b9d9e792a10c1f0db0cafbc435d4a3dd'
+            '9ba24fd1f5c2f9353249667fae845d3100f48df62d3984598a57e99a8a28eaa2'
+            '9b077720af2cea036bf48a43e19b6d5ed45b76d6474ae3f334a6fe04c67dcfc8'
+            '6f4276ad7ee8f546ba523edb3607dfade3a2d4bd4095e6e69a35bcbf9485b363'
+            '9ed202e6c7cafe06f39f69b871d21fe598bccfaa37fa0997d3b5091f69b71b06'
+            '67f541a0ee029204b3442b27d1331adab3164dc605770e62b762bb635218e027'
+            'b61f8185fc567d952b13405914f020219459926baced15c25056b3b1b9353ab6'
+            'fb4aa929787ec6a9928c7d8e92028443990ec729daaf90f1226656c453497341')
 noextract=("MapleMonoNR-TTF-v${pkgver}.zip"
            "MapleMonoNR-CN-v${pkgver}.zip"
            "MapleMonoNR-NF-v${pkgver}.zip"
@@ -33,7 +34,7 @@ noextract=("MapleMonoNR-TTF-v${pkgver}.zip"
            "MapleMonoNLNR-NF-v${pkgver}.zip"
            "MapleMonoNLNR-NF-CN-v${pkgver}.zip")
 
-package_ttf-maplemono() {
+package_ttf-maplemono-default() {
   unzip -o MapleMonoNR-TTF-v${pkgver}.zip -d MapleMonoNR-TTF
   unzip -o MapleMonoNLNR-TTF-v${pkgver}.zip -d MapleMonoNLNR-TTF
   install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/default"
@@ -41,7 +42,7 @@ package_ttf-maplemono() {
   install -Dm 644 "${srcdir}/MapleMonoNLNR-TTF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/default"
 }
 
-package_ttf-maplemono-cn() {
+package_ttf-maplemono-default-cn() {
   unzip -o MapleMonoNR-CN-v${pkgver}.zip -d MapleMonoNR-CN
   unzip -o MapleMonoNLNR-CN-v${pkgver}.zip -d MapleMonoNLNR-CN
   install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/default"
@@ -49,7 +50,7 @@ package_ttf-maplemono-cn() {
   install -Dm 644 "${srcdir}/MapleMonoNLNR-CN/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/default"
 }
 
-package_ttf-maplemono-nf() {
+package_ttf-maplemono-default-nf() {
   unzip -o MapleMonoNR-NF-v${pkgver}.zip -d MapleMonoNR-NF
   unzip -o MapleMonoNLNR-NF-v${pkgver}.zip -d MapleMonoNLNR-NF
   install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/default-nf"
@@ -57,7 +58,7 @@ package_ttf-maplemono-nf() {
   install -Dm 644 "${srcdir}/MapleMonoNLNR-NF/"*.ttf "${pkgdir}/usr/share/fonts/maplemono/default-nf"
 }
 
-package_ttf-maplemono-nf-cn() {
+package_ttf-maplemono-default-nf-cn() {
   unzip -o MapleMonoNR-NF-CN-v${pkgver}.zip -d MapleMonoNR-NF-CN
   unzip -o MapleMonoNLNR-NF-CN-v${pkgver}.zip -d MapleMonoNLNR-NF-CN
   install -dm 755 "${pkgdir}/usr/share/fonts/maplemono/default-nf"

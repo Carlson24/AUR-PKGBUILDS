@@ -3,7 +3,7 @@
 pkgname=ttf-lxgw-wenkai
 pkgver=1.521
 pkgrel=1
-pkgdesc="An unprofessional open-source Chinese font derived from Fontworks' Klee One. "
+pkgdesc="An unprofessional open-source Chinese font derived from Fontworks Klee One. "
 url="https://github.com/lxgw/LxgwWenKai"
 arch=("any")
 license=('OFL-1.1-RFN')

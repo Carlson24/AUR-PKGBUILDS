@@ -1,11 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=clion
-_version=2025.3.1
-_buildver=253.29346.141
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1.1
 pkgrel=1
-epoch=1
 pkgdesc='A cross-platform IDE for C and C++. Harness the power. Cut the complexity.'
 arch=('x86_64')
 url="https://www.jetbrains.com/${pkgname}"
@@ -13,19 +10,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz"
-        "https://download.jetbrains.com/cpp/CLion-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/cpp/CLion-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/cpp/CLion-${pkgver}.tar.gz.sha256")
 sha256sums=('ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58'
-            '44ae3da5358ba010a62d55ab412b72f364c5dcd2c2dcd2004ae34b7463807bbd'
-            '2c52fdf02db197079b47f98b181b97d25730c55db2cd38fad276be871d4c96f3')
+            'bed4d3aaf1bddf61b42c138449a52f4ce845d6f422caf64a3ee02efd07107736'
+            '22fa88418ef7f305d4b6b25b36ed15e7d932cec5f0b910903712ec28dd932c08')
 
 prepare() {
-  sha256sum -c CLion-${_version}.tar.gz.sha256
+  sha256sum -c CLion-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/clion-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/clion-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

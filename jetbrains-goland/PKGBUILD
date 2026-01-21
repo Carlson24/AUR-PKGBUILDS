@@ -1,11 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=goland
-_version=2025.3.1
-_buildver=253.29346.255
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1.1
 pkgrel=1
-epoch=1
 pkgdesc='Go Productive. The complete IDE crafted for Gophers'
 arch=('x86_64')
 url="https://www.jetbrains.com/go"
@@ -13,19 +10,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/go/goland-${_version}.tar.gz"
-        "https://download.jetbrains.com/go/goland-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/go/goland-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/go/goland-${pkgver}.tar.gz.sha256")
 sha256sums=('774f82d08909d39da78b619c85c1f03b6747665e51386e4c8237fa49ad704b36'
-            '1618471e629b8a5e186764dd1cf401a2bd9aad3ba2ff78fdd896f51a7727f94a'
-            '8a10eca7462cd03665ef182e9d04dd5f3e6e3e6fe79c9ee76fea156775105f86')
+            'fb803ead33308978cab812367547fdd05f4a505686941db180ef815f4f569d6c'
+            '9ff25c6fe31c0988ae473e8f6cc823070b7aa99bd0243c601fd1d36d636a6948')
 
 prepare() {
-  sha256sum -c goland-${_version}.tar.gz.sha256
+  sha256sum -c goland-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/GoLand-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/GoLand-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

@@ -1,8 +1,7 @@
 pkgbase = pycharm
 	pkgdesc = The only Python IDE you need. Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.
-	pkgver = 2025.3.1+253.29346.142
+	pkgver = 2025.3.1.1
 	pkgrel = 1
-	epoch = 1
 	url = https://www.jetbrains.com/pycharm
 	arch = x86_64
 	license = custom:jetbrains
@@ -10,10 +9,10 @@ pkgbase = pycharm
 	depends = jbr-runtime
 	options = !strip
 	source = jetbrains-pycharm.desktop
-	source = https://download.jetbrains.com/python/pycharm-2025.3.1.tar.gz
-	source = https://download.jetbrains.com/python/pycharm-2025.3.1.tar.gz.sha256
+	source = https://download.jetbrains.com/python/pycharm-2025.3.1.1.tar.gz
+	source = https://download.jetbrains.com/python/pycharm-2025.3.1.1.tar.gz.sha256
 	sha256sums = cbdf8c58a6d239fc09733b49e33cb2fb7e3cfa43ebaac06b7189d19935dd35d3
-	sha256sums = 933fd42d7cc2a76ad4ba23f9112294e4df013fa4c3362435a1e3368051c07391
-	sha256sums = 5862cbcc79f583ba30395a26ee2b817c9965a1c2b61221d78340ef51841f0f80
+	sha256sums = de54121e9a8d7ffc9a3b22167ae8588ad23ffe606e246fec7efad631d26fb44b
+	sha256sums = 7bbdfcacbe172fed0f67fbd08e8380ec719bc4f3d3c45036feba300ad1882c89
 
 pkgname = pycharm

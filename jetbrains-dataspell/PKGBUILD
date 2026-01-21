@@ -1,11 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=dataspell
-_version=2025.3.1
-_buildver=253.29346.157
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1
 pkgrel=1
-epoch=1
 pkgdesc='Your powerful cross-platform IDE for relational and NoSQL databases'
 arch=('x86_64')
 url="https://www.jetbrains.com/dataspell"
@@ -13,19 +10,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/python/dataspell-${_version}.tar.gz"
-        "https://download.jetbrains.com/python/dataspell-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/python/dataspell-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/python/dataspell-${pkgver}.tar.gz.sha256")
 sha256sums=('239f9c4380cefa84652ec7761af8a011455aa6d558f4e42b47f010c47d8a5321'
             '37f13426ce4f5d859d7db246f2328ccbad61adf361d43c784cb6932af6644c28'
             '979a54b008cce6429fa0ba8a0f5cf081f0145df0e3152e1e08ba043fe3b04e98')
 
 prepare() {
-  sha256sum -c dataspell-${_version}.tar.gz.sha256
+  sha256sum -c dataspell-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/dataspell-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/dataspell-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

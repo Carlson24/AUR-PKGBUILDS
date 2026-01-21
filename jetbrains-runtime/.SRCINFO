@@ -1,15 +1,15 @@
 pkgbase = jbr-runtime
 	pkgdesc = JetBrains Java Runtime
-	pkgver = 25.0.1+b266.34
+	pkgver = 25.0.1+b268.52
 	pkgrel = 1
 	epoch = 1
 	url = https://github.com/JetBrains/JetBrainsRuntime
 	arch = x86_64
 	license = custom:jetbrains
 	options = !strip
-	source = https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-25.0.1-linux-x64-b266.34.tar.gz
-	source = https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-25.0.1-linux-x64-b266.34.tar.gz.checksum
-	sha256sums = ed09d1d724a948a95e857dd3eca925576f0319cd7469eece75718192b16b467e
-	sha256sums = 7aee78b3b929b3b8dd8777e5feeb78ce3c6e1cd4864e88ef0ebebf82a1a4a715
+	source = https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-25.0.1-linux-x64-b268.52.tar.gz
+	source = https://cache-redirector.jetbrains.com/intellij-jbr/jbr_jcef-25.0.1-linux-x64-b268.52.tar.gz.checksum
+	sha256sums = 7fd69ad1c447a7d25e8b08bb44d1b2c907e1aa00d56c8e056a99273fa0971078
+	sha256sums = 5362f4bb8b537e2c6f9cfbd88d51b2d4d2fb8ae25c036e1b7fc6605e6b58c347
 
 pkgname = jbr-runtime

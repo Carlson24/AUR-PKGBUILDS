@@ -1,11 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rustrover
-_version=2025.3.1
-_buildver=253.29346.139
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.2
 pkgrel=1
-epoch=1
 pkgdesc='A powerhouse IDE for Rust developers'
 arch=('x86_64')
 url="https://www.jetbrains.com/rust"
@@ -13,19 +10,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/rustrover/RustRover-${_version}.tar.gz"
-        "https://download.jetbrains.com/rustrover/RustRover-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/rustrover/RustRover-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/rustrover/RustRover-${pkgver}.tar.gz.sha256")
 sha256sums=('65603213e1a492f0d6cf0a067ee13d2c4a627275ee85bf71a1740039484fce0e'
-            '5a1b34e10a1c59eee30694236baa8233c7787580769381be01b4ccb09618ec89'
-            'a320e46b783fc882c3624ec42473fd03e61488a181b258ff37b99d94d4990ef4')
+            '73a3e8bba6b6edcc0272f7292a78503add8499ffa2487c8e2102325d3101de11'
+            'd94b9d7b8b5962eb477f5679162742cd1962167e71ba8d5f6663f5af6021dd2d')
 
 prepare() {
-  sha256sum -c RustRover-${_version}.tar.gz.sha256
+  sha256sum -c RustRover-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/RustRover-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/RustRover-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"

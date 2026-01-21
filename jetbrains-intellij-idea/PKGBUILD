@@ -2,11 +2,8 @@
 
 pkgname=intellij-idea
 _pkgname=idea
-_version=2025.3.1.1
-_buildver=253.29346.240
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1.1
 pkgrel=1
-epoch=1
 pkgdesc='The IDE for Professional Development, in Java and Kotlin'
 arch=('x86_64')
 url="https://www.jetbrains.com/idea"
@@ -14,19 +11,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/idea/idea-${_version}.tar.gz"
-        "https://download.jetbrains.com/idea/idea-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/idea/idea-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/idea/idea-${pkgver}.tar.gz.sha256")
 sha256sums=('4e9a00665363381a9c17e32f115744af38dc5f987f42502de8e01b120ecc2bfc'
             '3a064b22961f3f39b866b64b628558e0d0f708d423a3f9565d43f0e81196997b'
             '9182c73c9e9847f20d540bd15327922bf7705d2d1dca3a7a447dd432d25c25df')
 
 prepare() {
-  sha256sum -c idea-${_version}.tar.gz.sha256
+  sha256sum -c idea-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${_pkgname}"
-  cp -a "${srcdir}/idea-IU-${_buildver}/." "${pkgdir}/opt/jetbrains/${_pkgname}"
+  cp -a "${srcdir}/idea-IU-"*/. "${pkgdir}/opt/jetbrains/${_pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${_pkgname}/bin/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"

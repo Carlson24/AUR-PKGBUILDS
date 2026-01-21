@@ -1,8 +1,7 @@
 pkgbase = datagrip
 	pkgdesc = Your powerful cross-platform IDE for relational and NoSQL databases
-	pkgver = 2025.3.3+253.29346.270
+	pkgver = 2025.3.3
 	pkgrel = 1
-	epoch = 1
 	url = https://www.jetbrains.com/datagrip
 	arch = x86_64
 	license = custom:jetbrains

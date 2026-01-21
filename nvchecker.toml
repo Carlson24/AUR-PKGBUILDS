@@ -4,47 +4,47 @@ newver = "version_new.json"
 
 [jetbrains-clion]
 source = "cmd"
-cmd= "./jetbrains-check.sh CLion"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='CLion']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-datagrip]
 source = "cmd"
-cmd= "./jetbrains-check.sh DataGrip"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='DataGrip']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-dataspell]
 source = "cmd"
-cmd= "./jetbrains-check.sh DataSpell"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='DataSpell']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-goland]
 source = "cmd"
-cmd= "./jetbrains-check.sh GoLand"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='GoLand']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-intellij-idea]
 source = "cmd"
-cmd= "./jetbrains-check.sh \"IntelliJ IDEA\""
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='IntelliJ IDEA']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-phpstorm]
 source = "cmd"
-cmd= "./jetbrains-check.sh PhpStorm"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='PhpStorm']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-pycharm]
 source = "cmd"
-cmd= "./jetbrains-check.sh PyCharm"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='PyCharm']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-rider]
 source = "cmd"
-cmd= "./jetbrains-check.sh Rider"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='Rider']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-rubymine]
 source = "cmd"
-cmd= "./jetbrains-check.sh RubyMine"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='RubyMine']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-rustrover]
 source = "cmd"
-cmd= "./jetbrains-check.sh RustRover"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='RustRover']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [jetbrains-webstorm]
 source = "cmd"
-cmd= "./jetbrains-check.sh WebStorm"
+cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.jetbrains.com/updates/updates.xml | xmllint --xpath \"string(/products/product[@name='WebStorm']/channel[@status='release' or @status!='eap']/build/@version)\" -"
 
 [openjdk-liberica-full-bin]
 source = "apt"

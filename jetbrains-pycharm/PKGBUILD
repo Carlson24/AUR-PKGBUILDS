@@ -1,11 +1,8 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=pycharm
-_version=2025.3.1
-_buildver=253.29346.142
-pkgver=${_version}+${_buildver}
+pkgver=2025.3.1.1
 pkgrel=1
-epoch=1
 pkgdesc='The only Python IDE you need. Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.'
 arch=('x86_64')
 url="https://www.jetbrains.com/pycharm"
@@ -13,19 +10,19 @@ license=('custom:jetbrains')
 depends=('libdbusmenu-glib' 'jbr-runtime')
 options=('!strip')
 source=("jetbrains-${pkgname}.desktop"
-        "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz"
-        "https://download.jetbrains.com/python/pycharm-${_version}.tar.gz.sha256")
+        "https://download.jetbrains.com/python/pycharm-${pkgver}.tar.gz"
+        "https://download.jetbrains.com/python/pycharm-${pkgver}.tar.gz.sha256")
 sha256sums=('cbdf8c58a6d239fc09733b49e33cb2fb7e3cfa43ebaac06b7189d19935dd35d3'
-            '933fd42d7cc2a76ad4ba23f9112294e4df013fa4c3362435a1e3368051c07391'
-            '5862cbcc79f583ba30395a26ee2b817c9965a1c2b61221d78340ef51841f0f80')
+            'de54121e9a8d7ffc9a3b22167ae8588ad23ffe606e246fec7efad631d26fb44b'
+            '7bbdfcacbe172fed0f67fbd08e8380ec719bc4f3d3c45036feba300ad1882c89')
 
 prepare() {
-  sha256sum -c pycharm-${_version}.tar.gz.sha256
+  sha256sum -c pycharm-${pkgver}.tar.gz.sha256
 }
 
 package() {
   install -dm 755 "${pkgdir}/opt/jetbrains/${pkgname}"
-  cp -a "${srcdir}/pycharm-${_version}/." "${pkgdir}/opt/jetbrains/${pkgname}"
+  cp -a "${srcdir}/pycharm-${pkgver}/." "${pkgdir}/opt/jetbrains/${pkgname}"
 
   install -dm 755 "${pkgdir}/usr/bin"
   ln -s "/opt/jetbrains/${pkgname}/bin/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
