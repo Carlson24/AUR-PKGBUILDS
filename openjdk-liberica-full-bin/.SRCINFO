@@ -1,6 +1,6 @@
 pkgbase = openjdk-liberica-full-bin
 	pkgdesc = Liberica 25 includes LibericaFX, which is based on OpenJFX 25 and Minimal VM, where suitable.
-	pkgver = 25+13+25.0.1
+	pkgver = 25+25.0.3+11
 	pkgrel = 1
 	epoch = 1
 	url = https://bell-sw.com/pages/downloads
@@ -30,7 +30,7 @@ pkgbase = openjdk-liberica-full-bin
 	provides = jdk25-openjdk=25
 	provides = jre25-openjdk-headless=25
 	provides = java25-openjfx=25
-	source = https://download.bell-sw.com/java/25.0.1+13/bellsoft-jdk25.0.1+13-linux-amd64-full.tar.gz
-	sha1sums = caa86daacb7c24462449e3f717cd2bdc7923cd21
+	source = https://download.bell-sw.com/java/25.0.3+11/bellsoft-jdk25.0.3+11-linux-amd64-full.tar.gz
+	sha1sums = 0da4f6fbe9593476e3a2f743d4992cd644d09416
 
 pkgname = openjdk-liberica-full-bin

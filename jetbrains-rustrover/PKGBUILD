@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rustrover
-pkgver=2025.3.2
+pkgver=2026.1.1
 pkgrel=1
 pkgdesc='A powerhouse IDE for Rust developers'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/rustrover/RustRover-${pkgver}.tar.gz"
         "https://download.jetbrains.com/rustrover/RustRover-${pkgver}.tar.gz.sha256")
 sha256sums=('65603213e1a492f0d6cf0a067ee13d2c4a627275ee85bf71a1740039484fce0e'
-            '73a3e8bba6b6edcc0272f7292a78503add8499ffa2487c8e2102325d3101de11'
-            'd94b9d7b8b5962eb477f5679162742cd1962167e71ba8d5f6663f5af6021dd2d')
+            '5189639b8decfd4384be4d0f7a2a360abb1dc742b953949ea39eccdf80350357'
+            '1fd396a2bb26da06de0638e667fd4a19d3403547a5a6012d8d7bcedffce01a06')
 
 prepare() {
   sha256sum -c RustRover-${pkgver}.tar.gz.sha256

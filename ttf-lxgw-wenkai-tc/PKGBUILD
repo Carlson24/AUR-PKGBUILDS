@@ -1,14 +1,14 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-lxgw-wenkai-tc
-pkgver=1.521
+pkgver=1.522
 pkgrel=1
 pkgdesc="The Traditional Chinese Edition of LXGW WenKai."
 url="https://github.com/lxgw/LxgwWenKaiTC"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-tc-v${pkgver}.tar.gz")
-sha256sums=('b1e71497dd6c47a0201c3d5a73dea46b806d68c8dd41850f9f354cee382fe67e')
+sha256sums=('136675dc839a5b076c00f9c716c610d81fddddd8573f876ebdd6983bfe0f09f8')
 
 package() {
   install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai-tc"

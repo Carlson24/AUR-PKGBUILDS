@@ -1,11 +1,11 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _javaver=8
-_bellver=11
-_jdkver=8u472
+_bellver=9
+_jdkver=8u492
 
 pkgname="openjdk-liberica8-full-bin"
-pkgver="${_javaver}+${_bellver}+${_jdkver}"
+pkgver="${_javaver}+${_jdkver}+${_bellver}"
 pkgrel=1
 epoch=1
 pkgdesc="Liberica ${_javaver} includes LibericaFX, which is based on OpenJFX ${_javaver} and Minimal VM, where suitable."
@@ -36,7 +36,7 @@ provides=("java-environment=${_javaver}"
           "jre${_javaver}-openjdk-headless=${_javaver}"
           "java${_javaver}-openjfx=${_javaver}")
 source=("https://download.bell-sw.com/java/${_jdkver}+${_bellver}/bellsoft-jdk${_jdkver}+${_bellver}-linux-amd64-full.tar.gz")
-sha1sums=('ff9f4b2fc62bb977e6675eb9d666cf085dd2c23d')
+sha1sums=('0996541c65cc6eb0afff14271aaa3b2dbd6e67e1')
 install="install_${pkgname}.sh"
 
 _jvmdir="/usr/lib/jvm/${pkgname}"

@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=dataspell
-pkgver=2025.3.1
+pkgver=2026.1.1
 pkgrel=1
 pkgdesc='Your powerful cross-platform IDE for relational and NoSQL databases'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/python/dataspell-${pkgver}.tar.gz"
         "https://download.jetbrains.com/python/dataspell-${pkgver}.tar.gz.sha256")
 sha256sums=('239f9c4380cefa84652ec7761af8a011455aa6d558f4e42b47f010c47d8a5321'
-            '37f13426ce4f5d859d7db246f2328ccbad61adf361d43c784cb6932af6644c28'
-            '979a54b008cce6429fa0ba8a0f5cf081f0145df0e3152e1e08ba043fe3b04e98')
+            'd73edf6923b65206ff70dfc8854bce693f671728e2d8bef7dd8eaf2a9c1198e8'
+            '0aff840e844a077f5d7aeae9e6f504778fc66168169eef5571b8e950287db93e')
 
 prepare() {
   sha256sum -c dataspell-${pkgver}.tar.gz.sha256

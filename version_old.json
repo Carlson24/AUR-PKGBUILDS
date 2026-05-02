@@ -2,66 +2,66 @@
   "version": 2,
   "data": {
     "hyprls": {
-      "version": "v0.12.0",
-      "gitref": "refs/tags/v0.12.0",
-      "url": "https://github.com/hyprland-community/hyprls/releases/tag/v0.12.0"
+      "version": "v0.13.0",
+      "gitref": "refs/tags/v0.13.0",
+      "url": "https://github.com/hyprland-community/hyprls/releases/tag/v0.13.0"
     },
     "jerbrains-runtime": {
-      "version": "jbr-release-25.0.1b268.52",
-      "gitref": "refs/tags/jbr-release-25.0.1b268.52",
-      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-25.0.1b268.52"
+      "version": "jbr-release-25.0.2b432.48",
+      "gitref": "refs/tags/jbr-release-25.0.2b432.48",
+      "url": "https://github.com/JetBrains/JetBrainsRuntime/releases/tag/jbr-release-25.0.2b432.48"
     },
     "jetbrains-clion": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-datagrip": {
-      "version": "2025.3.3"
+      "version": "2026.1.2"
     },
     "jetbrains-dataspell": {
-      "version": "2025.3.1"
+      "version": "2026.1.1"
     },
     "jetbrains-goland": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-intellij-idea": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-phpstorm": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-pycharm": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-rider": {
-      "version": "2025.3.1"
+      "version": "2026.1.1"
     },
     "jetbrains-rubymine": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "jetbrains-rustrover": {
-      "version": "2025.3.2"
+      "version": "2026.1.1"
     },
     "jetbrains-webstorm": {
-      "version": "2025.3.1.1"
+      "version": "2026.1.1"
     },
     "linuxqq-nt-bwrap": {
-      "version": "3.2.23_260108-1",
+      "version": "3.2.28_260429-1",
       "url": "https://aur.archlinux.org/packages/linuxqq-nt-bwrap"
     },
     "openjdk-liberica-full-bin": {
-      "version": "25.0.1+13"
+      "version": "25.0.3+11"
     },
     "openjdk-liberica11-full-bin": {
-      "version": "11.0.29+12"
+      "version": "11.0.31+11"
     },
     "openjdk-liberica17-full-bin": {
-      "version": "17.0.17+15"
+      "version": "17.0.19+11"
     },
     "openjdk-liberica21-full-bin": {
-      "version": "21.0.9+15"
+      "version": "21.0.11+11"
     },
     "openjdk-liberica8-full-bin": {
-      "version": "1.8.0.472+11"
+      "version": "1.8.0.492+9"
     },
     "ttf-lxgw-kose": {
       "version": "v3.126",
@@ -69,39 +69,39 @@
       "url": "https://github.com/lxgw/kose-font/releases/tag/v3.126"
     },
     "ttf-lxgw-neo-xihei": {
-      "version": "v1.239",
-      "gitref": "refs/tags/v1.239",
-      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.239"
+      "version": "v1.242",
+      "gitref": "refs/tags/v1.242",
+      "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/tag/v1.242"
     },
     "ttf-lxgw-neo-zhisong": {
-      "version": "v1.058",
-      "gitref": "refs/tags/v1.058",
-      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.058"
+      "version": "v1.061",
+      "gitref": "refs/tags/v1.061",
+      "url": "https://github.com/lxgw/LxgwNeoZhiSong/releases/tag/v1.061"
     },
     "ttf-lxgw-wenkai": {
-      "version": "v1.521",
-      "gitref": "refs/tags/v1.521",
-      "url": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.521"
+      "version": "v1.522",
+      "gitref": "refs/tags/v1.522",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/tag/v1.522"
     },
     "ttf-lxgw-wenkai-gb": {
-      "version": "v1.521",
-      "gitref": "refs/tags/v1.521",
-      "url": "https://github.com/lxgw/LxgwWenkaiGB/releases/tag/v1.521"
+      "version": "v1.522",
+      "gitref": "refs/tags/v1.522",
+      "url": "https://github.com/lxgw/LxgwWenkaiGB/releases/tag/v1.522"
     },
     "ttf-lxgw-wenkai-kr": {
-      "version": "v0.900",
-      "gitref": "refs/tags/v0.900",
-      "url": "https://github.com/lxgw/LxgwWenkaiKR/releases/tag/v0.900"
+      "version": "v0.901",
+      "gitref": "refs/tags/v0.901",
+      "url": "https://github.com/lxgw/LxgwWenkaiKR/releases/tag/v0.901"
     },
     "ttf-lxgw-wenkai-screen": {
-      "version": "v1.521",
-      "gitref": "refs/tags/v1.521",
-      "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/tag/v1.521"
+      "version": "v1.522",
+      "gitref": "refs/tags/v1.522",
+      "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/tag/v1.522"
     },
     "ttf-lxgw-wenkai-tc": {
-      "version": "v1.521",
-      "gitref": "refs/tags/v1.521",
-      "url": "https://github.com/lxgw/LxgwWenkaiTC/releases/tag/v1.521"
+      "version": "v1.522",
+      "gitref": "refs/tags/v1.522",
+      "url": "https://github.com/lxgw/LxgwWenkaiTC/releases/tag/v1.522"
     },
     "ttf-lxgw-yozai": {
       "version": "v0.868",
@@ -114,14 +114,14 @@
       "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/tag/V2.9.5792"
     },
     "ttf-wenjin-mincho": {
-      "version": "v2.002",
-      "gitref": "refs/tags/v2.002",
-      "url": "https://github.com/takushun-wu/WenJinMincho/releases/tag/v2.002"
+      "version": "v2.010",
+      "gitref": "refs/tags/v2.010",
+      "url": "https://github.com/takushun-wu/WenJinMincho/releases/tag/v2.010"
     },
     "ttf-wenyuan-fonts": {
-      "version": "2026.1.2",
-      "gitref": "refs/tags/2026.1.2",
-      "url": "https://github.com/takushun-wu/WenYuanFonts/releases/tag/2026.1.2"
+      "version": "2026.4.3",
+      "gitref": "refs/tags/2026.4.3",
+      "url": "https://github.com/takushun-wu/WenYuanFonts/releases/tag/2026.4.3"
     }
   }
 }

@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=lfs-book-make-meta
-pkgver=12.4
+pkgver=13.0
 pkgrel=1
 pkgdesc='Meta package to make LFS Book'
 arch=(any)

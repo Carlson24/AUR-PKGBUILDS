@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-lxgw-neo-xihei
-pkgver=1.239
+pkgver=1.242
 pkgrel=1
 pkgdesc="A Chinese sans-serif font derived from IPAex Gothic."
 url="https://github.com/lxgw/LxgwNeoXiHei"
@@ -9,8 +9,8 @@ arch=("any")
 license=('OFL-1.1-RFN')
 source=("LXGWNeoXiHei-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHei.ttf"
         "LXGWNeoXiHeiPlus-v${pkgver}.ttf::${url}/releases/download/v${pkgver}/LXGWNeoXiHeiPlus.ttf")
-sha256sums=('c7c6613feba63234844998dfd11daf21bb3372ce88525115219280403db40f16'
-            '813da0763cffa349240eea3cda075112123bdbd5b45b70a0fb747daff2894904')
+sha256sums=('0124410269436b64263573bab7fb97aeac3dad932079d9e8c42708c6a1330bf8'
+            'b2da2b1060989201baca3806c119f5e37ef3ab586997435d366b7ef23d2e6a6f')
 
 package() {
   install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/neo"

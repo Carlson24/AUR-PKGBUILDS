@@ -1,14 +1,14 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-lxgw-wenkai
-pkgver=1.521
+pkgver=1.522
 pkgrel=1
 pkgdesc="An unprofessional open-source Chinese font derived from Fontworks Klee One. "
 url="https://github.com/lxgw/LxgwWenKai"
 arch=("any")
 license=('OFL-1.1-RFN')
 source=("${url}/releases/download/v${pkgver}/lxgw-wenkai-v${pkgver}.tar.gz")
-sha256sums=('e0658248c97e81dc6710f6bc24fcfb73e6d69b13fb1da6478fe0f4c940ea8157')
+sha256sums=('681a77d5d002175e3a9e1af0fc6fa220164cc9ad6c14f1e842a539878e7ce1a4')
 
 package() {
   install -dm 755 "${pkgdir}/usr/share/fonts/lxgw/wenkai"

@@ -3,7 +3,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 _pkgname=linuxqq
-_base_pkgver=3.2.23_260108
+_base_pkgver=3.2.28_260429
 _update_pkgver=${_base_pkgver}
 #_md5=08c52833
 pkgname=linuxqq-nt-bwrap
@@ -30,7 +30,7 @@ source=('start_mac_fix.sh' 'start_inner.sh' 'config.json'
 sha256sums=('181bd26677af91a7884a5858290a73cca10ab7cd890de98ec2cc22e12920f6a4'
             '3c78b576aa5d07e4cacde95d1088530503478bb0d43d19371c5da56f675d9861'
             'bb2ec0f104da4da7422d9b0f51c71d0ab38ed2a21764a7a643ab42689e098e4b'
-            'a4252719c1beb8adce0da09ebfc310ce50c79ea548f5cce429505765d0bfba84')
+            '68e79d74acdc0c5a70efa8ea1d8b6410b51a21906843774d382f32e0e3a1f0d7')
 
 prepare() {
   local base_ver=${_base_pkgver}
@@ -65,7 +65,7 @@ EOF
   ln -s "/opt/QQ/LICENSES.chromium.html" "${pkgdir}/usr/share/licenses/${_pkgname}/LICENSES.chromium.html"
 
   # 删除原生库
-  rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,libunwind*,sharp-lib/libvips-cpp.so.42}
+  rm -f "${pkgdir}"/opt/QQ/resources/app/{libssh2.so.1,libunwind*}
 
   # 对 desktop 文件做处理，使其使用正确的图标，启动 start.sh
   install -Dm755 "${srcdir}/start_mac_fix.sh" "${pkgdir}/opt/QQ/start.sh"

@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=webstorm
-pkgver=2025.3.1.1
+pkgver=2026.1.1
 pkgrel=1
 pkgdesc='The JavaScript and TypeScript IDE. Make development more productive and enjoyable.'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/webstorm/WebStorm-${pkgver}.tar.gz"
         "https://download.jetbrains.com/webstorm/WebStorm-${pkgver}.tar.gz.sha256")
 sha256sums=('251d1d5274d8e350b94ddadce4cfd2f40b8ba7833910cf8da45d7b63c419cfec'
-            'd551411a3a4a829b1e14c874e9176961b60b35e84cd6c2c99676ab8594a19953'
-            '20db77dcf9f74656354ccb9478d718313aac09890059e3d0536b7aa057cb6139')
+            'afd5deb63ade141eaa53b5506c7b052e7edba0a859ca57f21ac7cf36e985419c'
+            'f961dde24733e709c6deff526de7d4b78ea0200c4498145e2050e055c2af5bea')
 
 prepare() {
   sha256sum -c WebStorm-${pkgver}.tar.gz.sha256

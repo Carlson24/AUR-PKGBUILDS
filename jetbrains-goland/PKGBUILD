@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=goland
-pkgver=2025.3.1.1
+pkgver=2026.1.1
 pkgrel=1
 pkgdesc='Go Productive. The complete IDE crafted for Gophers'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/go/goland-${pkgver}.tar.gz"
         "https://download.jetbrains.com/go/goland-${pkgver}.tar.gz.sha256")
 sha256sums=('774f82d08909d39da78b619c85c1f03b6747665e51386e4c8237fa49ad704b36'
-            'fb803ead33308978cab812367547fdd05f4a505686941db180ef815f4f569d6c'
-            '9ff25c6fe31c0988ae473e8f6cc823070b7aa99bd0243c601fd1d36d636a6948')
+            '012ceac3cc6e45a480c33a2206c2fee8f472b92bc1878ded9c5e2612692eafdb'
+            'd984f7531f78dbebcae992efe3ec59592e8ac5473af98431242cfdae478999cf')
 
 prepare() {
   sha256sum -c goland-${pkgver}.tar.gz.sha256

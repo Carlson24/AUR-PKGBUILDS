@@ -1,19 +1,19 @@
 pkgbase = wenyuan-fonts
 	pkgdesc = A more suitable open-source Chinese font collection for Simplified Chinese environment & TeX field.
-	pkgver = 2026.1.2
+	pkgver = 2026.4.3
 	pkgrel = 1
 	url = https://github.com/takushun-wu/WenYuanFonts
 	arch = any
 	license = OFL-1.1-RFN
-	noextract = WenYuanSansSC-TTF-v2026.1.2.7z
-	noextract = WenYuanSerifSC-TTF-v2026.1.2.7z
-	noextract = WenYuanRoundedSC-TTF-v2026.1.2.7z
-	source = WenYuanSansSC-TTF-v2026.1.2.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.1.2/WenYuanSansSC-TTF.7z
-	source = WenYuanSerifSC-TTF-v2026.1.2.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.1.2/WenYuanSerifSC-TTF.7z
-	source = WenYuanRoundedSC-TTF-v2026.1.2.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.1.2/WenYuanRoundedSC-TTF.7z
-	sha256sums = b8230f866fdb7bc8479c84743c342d933a058d832dc57c9e01e9f682494780d2
-	sha256sums = 0cb8635ef16d48d358719cb9be44709be0775f6492a506f04b7b3fa35f4049e0
-	sha256sums = 82f0290febc3cd91052b0189953311cf2f31bc6b5a022f94a07d1d46a8c5b8c7
+	noextract = WenYuanSansSC-TTF-v2026.4.3.7z
+	noextract = WenYuanSerifSC-TTF-v2026.4.3.7z
+	noextract = WenYuanRoundedSC-TTF-v2026.4.3.7z
+	source = WenYuanSansSC-TTF-v2026.4.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.4.3/WenYuanSansSC-TTF.7z
+	source = WenYuanSerifSC-TTF-v2026.4.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.4.3/WenYuanSerifSC-TTF.7z
+	source = WenYuanRoundedSC-TTF-v2026.4.3.7z::https://github.com/takushun-wu/WenYuanFonts/releases/download/2026.4.3/WenYuanRoundedSC-TTF.7z
+	sha256sums = 8fce3f5b20c3124cff14c9883e99056b4ea93347fe2f7bcb70ad9ae3bfc5f51b
+	sha256sums = bdb48304526d45e75845851bff1f6ecc146025e31a3ca933a3df6a140db588dc
+	sha256sums = 8bf67f1d3f4dd8f02e8c44c348d7097a93a08d68f4a59fb34826db285df273d3
 
 pkgname = ttf-wenyuan-sans
 
