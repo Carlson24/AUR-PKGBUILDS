@@ -8,14 +8,14 @@ DB_NAME="aurcustomrepo.db.tar.gz"
 # 从包文件名中提取包名（利用 pkgver/pkgrel/arch 不含 '-' 的特性）
 extract_pkgname() {
     local filename="$1"
-    local name="${filename%.pkg.tar.*}"       # 去掉尾缀
+    local name="${filename%.pkg.tar.*}"       # 去掉尾缀 .pkg.tar.zst / .pkg.tar.xz 等
     name="${name%-*}"                         # 去掉 arch
     name="${name%-*}"                         # 去掉 pkgrel
-    name="${name%-*}"                         # 去掉 pkgver（包名可包含 '-'）
+    name="${name%-*}"                         # 去掉 pkgver（包名自身可含 '-'）
     basename "$name"
 }
 
-# 修剪尾部空白
+# 修剪字符串尾部空白
 trim() {
     local var="$1"
     var="${var#"${var%%[![:space:]]*}"}"
@@ -24,14 +24,11 @@ trim() {
 }
 
 # ---------- 处理每个目录 ----------
-# 收集本次成功构建的包文件（用于最终 repo-add）
-built_packages=()
-
 while IFS= read -r -d '' dir; do
     dir_display="${dir#./}"
     printf "\033[0;32m[INFO] 处理目录: %s\033[0m\n" "$dir_display"
 
-    # 检查是否为 meta 包（忽略校验和失败）
+    # 检查是否为 meta 包（忽略校验和错误）
     is_meta=false
     if [[ "$dir_display" == *meta* ]]; then
         is_meta=true
@@ -69,16 +66,15 @@ while IFS= read -r -d '' dir; do
     unset pkgbase_name global_pkgver global_pkgrel global_epoch global_arch
     declare -a pkgnames=()
     declare -A pkg_arch=()          # 每个子包的 arch
-    current_pkg=""                  # 当前正在解析的 pkgname
+    current_pkg=""                  # 当前正在解析的 pkgname 块
 
     while IFS= read -r line; do
         # 跳过空行和注释
         [[ -z "$line" || "$line" == \#* ]] && continue
 
-        # 修剪行首尾空白并归一化等号两侧空格
+        # 提取键和值，并修剪值尾部空白
         key=$(echo "$line" | sed -n 's/^[[:space:]]*\([^[:space:]=]*\)[[:space:]]*=[[:space:]]*.*/\1/p')
         value=$(echo "$line" | sed -n 's/^[^=]*=[[:space:]]*\(.*\)/\1/p')
-        # 修剪 value 尾部空白
         value=$(trim "$value")
 
         case "$key" in
@@ -90,7 +86,6 @@ while IFS= read -r -d '' dir; do
                 if [[ -z "$current_pkg" ]]; then
                     global_pkgver="$value"
                 fi
-                # 可扩展：记录子包覆盖的 pkgver
                 ;;
             pkgrel)
                 if [[ -z "$current_pkg" ]]; then
@@ -112,8 +107,8 @@ while IFS= read -r -d '' dir; do
             pkgname)
                 current_pkg="$value"
                 pkgnames+=("$current_pkg")
-                # 继承全局 arch（可能为空）
-                pkg_arch["$current_pkg"]="${global_arch:-}"
+                # 继承全局 arch（可能为空，后续会使用全局值或默认值）
+                pkg_arch["$current_pkg"]="${global_arch:-any}"
                 ;;
         esac
     done <".SRCINFO"
@@ -128,73 +123,78 @@ while IFS= read -r -d '' dir; do
     global_pkgrel="${global_pkgrel:-}"
     global_epoch="${global_epoch:-}"
 
-    # 4. 处理每个子包
+    # 确定删除基准名（多分包用 pkgbase，单包用该包名）
+    delete_base=""
+    if [[ -n "${pkgbase_name:-}" && "$pkgbase_name" != "${pkgnames[0]}" ]]; then
+        delete_base="$pkgbase_name"
+        printf "\033[0;36m[NOTE] 多分包: pkgbase='%s', 将以此名称清理旧文件\033[0m\n" "$pkgbase_name"
+    else
+        delete_base="${pkgnames[0]}"
+    fi
+
+    # 生成所有子包的预期文件名列表
+    declare -a expected_files=()
     for pkgname in "${pkgnames[@]}"; do
         arch="${pkg_arch[$pkgname]}"
-        # 构造预期包文件名（正确处理 epoch）
         if [[ -n "$global_epoch" && "$global_epoch" != "0" ]]; then
-            expected_file="${pkgname}-${global_epoch}:${global_pkgver}-${global_pkgrel}-${arch}.pkg.tar.zst"
+            f="${pkgname}-${global_epoch}:${global_pkgver}-${global_pkgrel}-${arch}.pkg.tar.zst"
         else
-            expected_file="${pkgname}-${global_pkgver}-${global_pkgrel}-${arch}.pkg.tar.zst"
+            f="${pkgname}-${global_pkgver}-${global_pkgrel}-${arch}.pkg.tar.zst"
         fi
-        file_path="${REPO_DIR}/${expected_file}"
+        expected_files+=("$f")
+    done
 
-        # 确定删除基准名（多分包用 pkgbase，否则用 pkgname）
-        if [[ "${pkgbase_name}" != "$pkgname" ]]; then
-            delete_base="$pkgbase_name"
-            printf "\033[0;36m[NOTE] 多分包: pkgbase='%s', pkgname='%s', 清理时将使用 pkgbase 名称\033[0m\n" \
-                "$pkgbase_name" "$pkgname"
-        else
-            delete_base="$pkgname"
+    # 4. 检查是否需要构建（缺少任意一个预期文件就触发）
+    need_build=false
+    for ef in "${expected_files[@]}"; do
+        if [[ ! -f "${REPO_DIR}/${ef}" ]]; then
+            need_build=true
+            break
         fi
+    done
 
-        if [[ -f "$file_path" ]]; then
-            printf "\033[0;34m[NOTE] 包已存在，跳过构建: %s\033[0m\n" "$expected_file"
-            continue
-        fi
-
-        printf "\033[0;33m[INFO] 构建包: %s\033[0m\n" "$expected_file"
-
-        # 5. 构建包（不预先删除旧文件）
+    if $need_build; then
+        printf "\033[0;33m[INFO] 构建 %s ...\033[0m\n" "${pkgbase_name:-$dir_display}"
         if PKGDEST="$REPO_DIR" makepkg -c -f -d; then
-            printf "\033[0;32m[MARK] 构建成功: %s\033[0m\n" "$pkgname"
+            printf "\033[0;32m[MARK] 构建成功: %s\033[0m\n" "$dir_display"
 
-            # 记录新生成的文件
-            new_file="${REPO_DIR}/${expected_file}"
-            if [[ -f "$new_file" ]]; then
-                built_packages+=("$new_file")
-            else
-                printf "\033[0;33m[WARN] 未找到生成的包文件: %s\033[0m\n" "$new_file"
-            fi
+            # 5. 安全删除同一包的旧版本（只删除不属于本次构建的文件）
+            declare -A keep_files=()
+            for ef in "${expected_files[@]}"; do
+                keep_files["$ef"]=1
+            done
 
-            # 6. 安全删除该包的其他旧版本（仅删除同一 base 的其他包文件）
-            while IFS= read -r -d '' oldfile; do
-                oldname=$(basename "$oldfile")
-                if [[ "$oldname" != "$expected_file" ]]; then
-                    printf "\033[0;35m[INFO] 删除旧版本: %s\033[0m\n" "$oldname"
-                    rm -vf "$oldfile"
+            while IFS= read -r -d '' cand; do
+                cname=$(basename "$cand")
+                if [[ -z "${keep_files[$cname]+_}" ]]; then
+                    printf "\033[0;35m[INFO] 删除旧版本/无关文件: %s\033[0m\n" "$cname"
+                    rm -vf "$cand"
                 fi
             done < <(find "$REPO_DIR" -maxdepth 1 \( -name "*.pkg.tar.zst" -o -name "*.pkg.tar.xz" \) -print0 | \
                 while IFS= read -r -d '' f; do
-                    candidate_name=$(basename "$f")
-                    if [[ "$(extract_pkgname "$candidate_name")" == "$delete_base" ]]; then
-                        printf '%s\0' "$f"
-                    fi
+                    [[ "$(extract_pkgname "$(basename "$f")")" == "$delete_base" ]] && printf '%s\0' "$f"
                 done)
         else
-            printf "\033[0;31m[ERROR] 构建失败: %s，保留旧版本不变\033[0m\n" "$pkgname"
+            printf "\033[0;31m[ERROR] 构建失败: %s，保留旧版本不变\033[0m\n" "$dir_display"
+            popd >/dev/null
+            continue
         fi
-    done
+    else
+        printf "\033[0;34m[NOTE] 所有包已存在，跳过构建: %s\033[0m\n" "$dir_display"
+    fi
 
     popd >/dev/null
 done < <(find . -maxdepth 1 -mindepth 1 ! -path "./.git" -type d -print0)
 
-# 7. 更新仓库数据库（仅添加本次成功构建的包）
-if [ ${#built_packages[@]} -gt 0 ]; then
-    printf "\033[0;32m[INFO] 更新仓库数据库，包含 %d 个新包\033[0m\n" "${#built_packages[@]}"
-    repo-add "${REPO_DIR}/${DB_NAME}" "${built_packages[@]}"
+# 6. 更新仓库数据库（添加仓库中所有 .pkg.tar.zst 文件，确保拆分包完整）
+shopt -s nullglob
+repo_files=("$REPO_DIR"/*.pkg.tar.zst)
+if [ ${#repo_files[@]} -gt 0 ]; then
+    printf "\033[0;32m[INFO] 更新仓库数据库，包含 %d 个包文件\033[0m\n" "${#repo_files[@]}"
+    repo-add "${REPO_DIR}/${DB_NAME}" "${repo_files[@]}"
 else
-    printf "\033[0;34m[INFO] 无新包构建，仓库数据库未更新\033[0m\n"
+    printf "\033[0;34m[INFO] 仓库目录为空，跳过数据库更新\033[0m\n"
 fi
+shopt -u nullglob
 
 printf "\033[0;32m[INFO] 所有目录处理完成\033[0m\n"

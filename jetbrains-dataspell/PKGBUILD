@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=dataspell
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='Your powerful cross-platform IDE for relational and NoSQL databases'
 arch=('x86_64')

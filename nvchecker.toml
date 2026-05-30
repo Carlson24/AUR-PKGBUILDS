@@ -48,7 +48,7 @@ cmd = "curl -s --location --header \"Accept: application/rdf+xml\" https://www.j
 
 [openjdk-liberica-full-bin]
 source = "apt"
-pkg = "bellsoft-java25-full"
+pkg = "bellsoft-java26-full"
 mirror = "https://apt.bell-sw.com"
 suite = "stable"
 
@@ -76,11 +76,11 @@ pkg = "bellsoft-java21-full"
 mirror = "https://apt.bell-sw.com"
 suite = "stable"
 
-[hyprls]
-source = "github"
-github = "hyprland-community/hyprls"
-use_latest_release = true
-include_prerelease = false
+[openjdk-liberica25-full-bin]
+source = "apt"
+pkg = "bellsoft-java25-full"
+mirror = "https://apt.bell-sw.com"
+suite = "stable"
 
 [jerbrains-runtime]
 source = "github"

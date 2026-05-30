@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rubymine
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='Empowering Ruby Developers. Code Smarter with Ruby on Rails IDE'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz"
         "https://download.jetbrains.com/ruby/RubyMine-${pkgver}.tar.gz.sha256")
 sha256sums=('d7772957d2ea7ff37e952d74fc5b96005662253d982de00a63883aa3a5eac800'
-            'b5d4fc2f0b07182e635311ac44f570d557ca7ca674e6066c18bea4a6cc5c3c50'
-            'f06284394df88ea258aa32386ef91fa08c618e2c7286f6130f62ebfd80d3a1d2')
+            'eabbed2b54ec66cbae56a7f26bd7a1edf1e4ecb272cb1838498ad4ff25e72b52'
+            '1b6d59e2224707569c3af9e57c20879157e8fd34db8c9157fc3d39aaa537175f')
 
 prepare() {
   sha256sum -c RubyMine-${pkgver}.tar.gz.sha256

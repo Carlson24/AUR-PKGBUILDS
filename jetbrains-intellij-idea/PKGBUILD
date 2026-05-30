@@ -2,7 +2,7 @@
 
 pkgname=intellij-idea
 _pkgname=idea
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='The IDE for Professional Development, in Java and Kotlin'
 arch=('x86_64')
@@ -14,8 +14,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/idea/idea-${pkgver}.tar.gz"
         "https://download.jetbrains.com/idea/idea-${pkgver}.tar.gz.sha256")
 sha256sums=('4e9a00665363381a9c17e32f115744af38dc5f987f42502de8e01b120ecc2bfc'
-            '7a58d386f2a2e5a8cd7e4591657b4fe599aeac22d960c7accf5f927846507bfb'
-            'fa3588c7a643c4440532e0a9399fcf7431e070dc98a420168b697f2ed94b490d')
+            'e820175d1a7d0ee2492e7b38f6b7f046a132bfe4b082086d9b035edb03c777b1'
+            'bc6f571f92d015e7b0f9fd790133b8a06aec373b87d72c6ee67d1127121a6ec5')
 
 prepare() {
   sha256sum -c idea-${pkgver}.tar.gz.sha256

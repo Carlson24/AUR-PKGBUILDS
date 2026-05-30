@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=clion
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='A cross-platform IDE for C and C++. Harness the power. Cut the complexity.'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/cpp/CLion-${pkgver}.tar.gz"
         "https://download.jetbrains.com/cpp/CLion-${pkgver}.tar.gz.sha256")
 sha256sums=('ac56066946e2386f28a393d4afa2362be4f0b878feebbd68825af39a11691b58'
-            'e92d3e012585eddbb4b47c9f2eeffa666c7298fefd9b76f0c4ec504c57eca09b'
-            '70c70149d00a022ecc72066477c56851b1eadf5c98d8bb43d4aadbad63aad966')
+            '4372ce869c2953abeb3d613303eb366676d1c68f847a8741507518b375e292bb'
+            'df8e8c5dc6f4136f3ad1d8ac7ad3fd76011dae98a1d318463838d074e2f76a4b')
 
 prepare() {
   sha256sum -c CLion-${pkgver}.tar.gz.sha256

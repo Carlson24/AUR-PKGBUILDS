@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=pycharm
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='The only Python IDE you need. Built for web, data, and AI/ML professionals. Supercharged with an AI-enhanced IDE experience.'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/python/pycharm-${pkgver}.tar.gz"
         "https://download.jetbrains.com/python/pycharm-${pkgver}.tar.gz.sha256")
 sha256sums=('cbdf8c58a6d239fc09733b49e33cb2fb7e3cfa43ebaac06b7189d19935dd35d3'
-            '6f81c5874438965f2566001ad265e727c02e4db7d0b57287d86f3479fd647891'
-            '82ede6f5583b4b31ea2d18d8d5133cb9af9d22d4c76f0a3190722de728b06bd1')
+            '91c775be16fb0859f9b18ebd456d88e131cadf337b0ce9f9d8ed187886561966'
+            '8d24b816d23bce75c26de2446833912b26707e900c2b88baa8b539543986b206')
 
 prepare() {
   sha256sum -c pycharm-${pkgver}.tar.gz.sha256

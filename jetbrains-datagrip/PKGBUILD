@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=datagrip
-pkgver=2026.1.2
+pkgver=2026.1.3
 pkgrel=1
 pkgdesc='Your powerful cross-platform IDE for relational and NoSQL databases'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/datagrip/datagrip-${pkgver}.tar.gz"
         "https://download.jetbrains.com/datagrip/datagrip-${pkgver}.tar.gz.sha256")
 sha256sums=('2587382271da13e5ed3a83b2692f64630dedb998a574da2006e70d5e0804fb61'
-            '0da02a83a5dc7b5464bc433afbeec2c42ef602f0754872850563b3243f5122e6'
-            '792f527f50144530505bb4dd05244aa2d58bd02525f05f5980193f71c90eb174')
+            '5f1c2f5e269601f2b7d7c0636f328f2d50de30194eaf9045b83d9ba94f3ed76a'
+            'a31ce8d0108c715a219e707eec26a6c1eb92e8d46d5f8d26d8713d0074916792')
 
 prepare() {
   sha256sum -c datagrip-${pkgver}.tar.gz.sha256

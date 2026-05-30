@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=phpstorm
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc='Empowering PHP Developers. Code smarter with the PHP IDE'
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/webide/PhpStorm-${pkgver}.tar.gz"
         "https://download.jetbrains.com/webide/PhpStorm-${pkgver}.tar.gz.sha256")
 sha256sums=('c823ed26d67670a0bb673dc29f613630087dcd48a3b6f7d5d4b48299bc550238'
-            '4ce4a2140a6157f258ad483db41fc102d0068e7e8fd03a5a6073b65b715c0864'
-            '765fd2d904163e59a44d98d1cbcbc9426ad3d12a08fa9ca132e9a9bd29b6a064')
+            '55b5ec7ca6a1a755f8030002d74560844f999314e1a2f9d81c7632be4393b457'
+            '7f990e504c092845d816d9fb3c46e0265db49ad233005f294613a98f4cc46dd1')
 
 prepare() {
   sha256sum -c PhpStorm-${pkgver}.tar.gz.sha256

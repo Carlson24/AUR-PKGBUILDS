@@ -6,7 +6,7 @@ _jdkver=17.0.19
 
 pkgname="openjdk-liberica17-full-bin"
 pkgver="${_javaver}+${_jdkver}+${_bellver}"
-pkgrel=1
+pkgrel=2
 epoch=1
 pkgdesc="Liberica ${_javaver} includes LibericaFX, which is based on OpenJFX ${_javaver} and Minimal VM, where suitable."
 arch=('x86_64')
@@ -45,6 +45,7 @@ package() {
   cd "${srcdir}/jdk-${_jdkver}-full"
   install -dm 755 "${pkgdir}${_jvmdir}"
   cp -a . "${pkgdir}${_jvmdir}"
+  ln -s "${_jvmdir}" "${pkgdir}/usr/lib/jvm/java-${_javaver}-openjdk"
 
   # Conf
   install -dm 755 "${pkgdir}/etc/openjdk-liberica"

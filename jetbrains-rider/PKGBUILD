@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=rider
-pkgver=2026.1.1
+pkgver=2026.1.2
 pkgrel=1
 pkgdesc="The world is most loved .NET and game dev IDE"
 arch=('x86_64')
@@ -13,8 +13,8 @@ source=("jetbrains-${pkgname}.desktop"
         "https://download.jetbrains.com/rider/JetBrains.Rider-${pkgver}.tar.gz"
         "https://download.jetbrains.com/rider/JetBrains.Rider-${pkgver}.tar.gz.sha256")
 sha256sums=('0860363846e65d4d13abaeef03fcac0041c5ed4e33a866231af7d5f54facf006'
-            '0e32cdf2fab450312624a5c4a4b7ae12382655605e50a128eb8ef514930fcc23'
-            'f4af949310a842b41400117008a1f75d7489b8f2f842b8e567f3bde6adfc2323')
+            '3a6cac6865c6331c4001adaaac7bd7f325c8c092d4eed286f3f1011a1af9e440'
+            '769bb6fbf231e9a2cd0c433cd0b1387962b093dd7cb739dd291055786c3401fb')
 
 prepare() {
   sha256sum -c JetBrains.Rider-${pkgver}.tar.gz.sha256

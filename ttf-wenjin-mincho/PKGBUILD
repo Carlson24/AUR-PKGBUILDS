@@ -1,7 +1,7 @@
 # Maintainer: Aubrey Carlson (Carlson) <aubreycarlson24@outlook.com>
 
 pkgname=ttf-wenjin-mincho
-pkgver=2.010
+pkgver=2.011
 pkgrel=1
 pkgdesc="A large character set fonts in Songti(Mincho) style."
 url="https://github.com/takushun-wu/WenJinMincho"
@@ -9,7 +9,7 @@ arch=("any")
 license=('OFL-1.1-RFN')
 makedepends=("7zip")
 source=("WenJinMincho-TTF-v${pkgver}.7z::${url}/releases/download/v${pkgver}/WenJinMincho-TTF.7z")
-sha256sums=('23d9a874bd7740eff67da7eee1412c7cb0ed5ddbcc2f65eef0bb0f3c55b07833')
+sha256sums=('ef12220d913f3873cae00972b4724c19d83cce74693e75adfc836c57a21add9c')
 noextract=("WenJinMincho-TTF-v${pkgver}.7z")
 
 package() {
